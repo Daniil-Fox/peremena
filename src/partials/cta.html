@@ -1,0 +1,73 @@
+<section class="cta">
+  <div class="container">
+    <div class="cta__container">
+      <div class="cta__content">
+        <div class="cta__header">
+          <h2 class="title2 cta__title">напишите нам</h2>
+        </div>
+
+        <form action="#" class="cta__form form">
+          <div class="form__field form__field--long">
+            <input id="cta-name" type="text" class="form__input" name="Имя" />
+            <label for="cta-name" class="form__label">как ваше имя?</label>
+          </div>
+          <div class="form__field">
+            <select name="Способ связи" class="visually-hidden" id="">
+              <option value="Способ1">Способ1</option>
+              <option value="Способ2">Способ2</option>
+              <option value="Способ3">Способ3</option>
+            </select>
+
+            <div class="dropdown form__dropdown">
+              <div class="dropdown__header">
+                <div class="dropdown__label">где с вами связаться?</div>
+                <div class="dropdown__capture">где с вами связаться?</div>
+              </div>
+              <div class="dropdown__body">
+                <div class="dropdown__content">
+                  <div class="dropdown__item">Способ1</div>
+                  <div class="dropdown__item">Способ2</div>
+                  <div class="dropdown__item">Способ3</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form__field">
+            <input
+              id="tel"
+              type="text"
+              class="form__input"
+              name="Телефон/почта"
+            />
+            <label for="tel" class="form__label">телефон/почта</label>
+          </div>
+          <div class="form__field form__field--long">
+            <textarea
+              id="mess"
+              type="text"
+              class="form__input form__input--area"
+              name="Сообщение"
+            ></textarea>
+            <label for="mess" class="form__label"
+              >введите текст сообщения</label
+            >
+          </div>
+          <button class="btn btn-reset btn--accent form__btn" disabled>
+            отправить
+          </button>
+        </form>
+      </div>
+      <div class="cta__img">
+        <img src="./img/hero-bg.webp" alt="" />
+      </div>
+      <div class="cta__row flex al-c jc-sb">
+        <p class="desc1 cta__capture">Не любите заполнять формы?</p>
+        <p class="desc1 cta__capture">
+          Пишите на <a href="mailto:hello@peremena.ru" class="link-btn"
+            >hello@peremena.ru</a
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

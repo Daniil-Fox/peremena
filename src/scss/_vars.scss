@@ -1,0 +1,26 @@
+:root {
+  --font-family: "Geologica", sans-serif;
+  --second-family: "Wix Madefor Display", sans-serif;
+  --third-family: "Commissioner", sans-serif;
+  --font3: "Wix Madefor Text", sans-serif;
+  --font4: "Ubuntu", sans-serif;
+  --font5: "Sofia Sans Extra Condensed", sans-serif;
+  --font6: "Montserrat", sans-serif;
+  --font7: "Leporid", sans-serif;
+  --font8: "Roboto", sans-serif;
+  --font9: "Geometria", sans-serif;
+
+  --content-width: 180rem;
+  --container-offset: 2rem;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  --accent-cyan: #379e98;
+  --dirty-blue: #376d87;
+  --black: #000;
+  --white: #fff;
+  --30-black: #fff;
+  --grey1: #fcffff;
+  --grey2: #fcffff;
+  --grey3: #fcffff;
+  --grey4: #f7fffe;
+}

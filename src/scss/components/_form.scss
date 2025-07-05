@@ -1,0 +1,75 @@
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+
+  &__field {
+    display: block;
+    width: 100%;
+    position: relative;
+    &--long {
+      grid-column: 2 span;
+    }
+
+    @include hover {
+      .form__label {
+        color: rgba(0, 0, 0, 0.45);
+      }
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 1.4rem;
+    left: 3rem;
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 150%;
+    text-transform: lowercase;
+    color: rgba(0, 0, 0, 0.25);
+    transition: color 0.3s ease-out;
+
+    transition: transform 0.3s ease-in, font-size 0.3s ease-in;
+
+    &.filled {
+      font-size: 1.4rem;
+      transform: translateY(-1.6rem);
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    border-radius: 2rem;
+    padding: 1.5rem 3rem;
+    background: rgba(0, 0, 0, 0.02);
+    border: none;
+
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 150%;
+    text-transform: lowercase;
+
+    transition: color 0.3s ease-out, background-color 0.3s ease-out;
+    &--area {
+      height: 14rem;
+      resize: none;
+    }
+    &:focus {
+      outline: 2px solid var(--black);
+
+      & ~ .form__label {
+        font-size: 1.4rem;
+        transform: translateY(-1.6rem);
+      }
+    }
+  }
+
+  &__btn {
+    margin-top: 2rem;
+    display: flex;
+    width: 100%;
+    grid-column: 2 span;
+    padding: 1.5rem 3rem 1.6rem;
+  }
+}
