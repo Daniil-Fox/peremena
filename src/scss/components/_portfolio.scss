@@ -1,16 +1,60 @@
 .portfolio {
   padding: 13rem 0;
-
+  &--main {
+    padding: 3rem 0 13rem;
+  }
   &__header {
     margin-bottom: 4.1rem;
-    padding: 2.4rem 6rem 3rem;
+    padding: 2.2rem 6rem 3rem;
     background: var(--white);
     border-radius: 4rem;
+
+    &--main {
+      background: none;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 3rem;
+      padding: 0;
+      .portfolio__title {
+        border-radius: 4rem;
+        padding: 3.8rem 6rem 4rem;
+        background: var(--white);
+        line-height: 100%;
+      }
+    }
+  }
+
+  &__title {
+    grid-column: 3 span;
+  }
+
+  &__buttons {
+    grid-column: 9 span;
+    border-radius: 4rem;
+    padding: 4rem 6rem;
+    background: var(--white);
+
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    flex-wrap: wrap;
   }
 
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
+  }
+
+  &__btn {
+    padding: 0.8rem 3rem 1rem;
+    @include hover {
+      color: var(--white);
+    }
+  }
+
+  &__label input:checked ~ .portfolio__btn {
+    background-color: var(--accent-cyan);
+    color: var(--white);
   }
 }

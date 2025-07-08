@@ -1,0 +1,42 @@
+.contacts {
+  padding: 3rem 0;
+  margin-bottom: 10rem;
+
+  &__header {
+    margin-bottom: 3rem;
+  }
+  &__desc {
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  &__content {
+    min-height: 50rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 3rem;
+  }
+  &__address {
+    grid-column: 4 span;
+    background: var(--white);
+    border-radius: 4rem;
+    padding: 4rem 6rem;
+  }
+
+  &__map {
+    grid-column: 8 span;
+    border-radius: 4rem;
+    overflow: hidden;
+    background: var(--white);
+    position: relative;
+    #map {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+    }
+  }
+}

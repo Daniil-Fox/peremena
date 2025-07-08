@@ -415,8 +415,16 @@ a {
   background-color: var(--accent-cyan);
   color: var(--white);
 }
+.btn--grey {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+.btn--small {
+  font-size: 1.8rem;
+  padding: 1.2rem 3rem 2rem;
+  border-radius: 1rem;
+}
 @media (any-hover: hover) {
-  .btn--accent:hover {
+  .btn:hover {
     background-color: var(--dirty-blue);
   }
 }
@@ -499,11 +507,30 @@ a {
 }
 .dropdown__header {
   position: relative;
+  color: rgba(0, 0, 0, 0.25);
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.dropdown__btn {
+  position: absolute;
+  top: 50%;
+  right: -1.6rem;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 0.8rem;
+  height: 0.6rem;
+}
+.dropdown__btn svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
 }
 .dropdown__label {
   position: absolute;
   top: 0rem;
-  color: rgba(0, 0, 0, 0.25);
+  color: currentColor;
   -webkit-transition: color 0.3s ease, font-size 0.3s ease, -webkit-transform 0.3s ease;
   transition: color 0.3s ease, font-size 0.3s ease, -webkit-transform 0.3s ease;
   transition: color 0.3s ease, transform 0.3s ease, font-size 0.3s ease;
@@ -511,7 +538,7 @@ a {
 }
 .dropdown__capture {
   opacity: 0;
-  color: rgba(0, 0, 0, 0.25);
+  color: currentColor;
   -webkit-transition: color 0.3s ease, opacity 0.3s ease-in;
   transition: color 0.3s ease, opacity 0.3s ease-in;
 }
@@ -562,7 +589,7 @@ a {
   border-color: var(--black);
   background-color: var(--white);
 }
-.dropdown.open .dropdown__capture {
+.dropdown.open .dropdown__header {
   color: var(--black);
 }
 @media (any-hover: hover) {
@@ -573,23 +600,91 @@ a {
     color: var(--black);
   }
 }
+.dropdown.filled .dropdown__capture {
+  color: var(--black);
+}
 .dropdown.filled .dropdown__label {
   -webkit-transform: translateY(-1.6rem);
   -ms-transform: translateY(-1.6rem);
   transform: translateY(-1.6rem);
   font-size: 1.2rem;
-  color: rgba(0, 0, 0, 0.45);
 }
 .dropdown.filled .dropdown__capture {
   opacity: 1;
 }
-.dropdown.open.filled .dropdown__label {
-  color: rgba(0, 0, 0, 0.25);
+@media (any-hover: hover) {
+  .dropdown.filled:hover .dropdown__capture {
+    color: var(--black);
+  }
+}
+.dropdown.open.filled .dropdown__capture {
+  color: var(--black);
 }
 @media (any-hover: hover) {
   .dropdown:hover .dropdown__capture {
     color: rgba(0, 0, 0, 0.45);
   }
+}
+
+.heading {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+  grid-template-columns: repeat(12, 1fr);
+  gap: 3rem;
+}
+.heading__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-grid-column-span: 3;
+  grid-column: 3 span;
+  background-color: var(--white);
+  border-radius: 4rem;
+  padding: 3.5rem 6rem 4rem;
+}
+.heading__desc {
+  background: var(--white);
+  -ms-grid-column-span: 9;
+  grid-column: 9 span;
+  border-radius: 4rem;
+  padding: 4rem 6rem;
+}
+
+.marker {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 6rem;
+  height: 7rem;
+  background-image: url("./../img/svg/building.svg"), url("./../img/svg/icon-map.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 40%, center;
+  background-size: 2.4rem 2.4rem, contain;
+}
+
+.marker-container {
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.4rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.marker-text {
+  font-size: 1.4rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 4rem;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .header {
@@ -892,11 +987,49 @@ a {
 .portfolio {
   padding: 13rem 0;
 }
+.portfolio--main {
+  padding: 3rem 0 13rem;
+}
 .portfolio__header {
   margin-bottom: 4.1rem;
-  padding: 2.4rem 6rem 3rem;
+  padding: 2.2rem 6rem 3rem;
   background: var(--white);
   border-radius: 4rem;
+}
+.portfolio__header--main {
+  background: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+  grid-template-columns: repeat(12, 1fr);
+  gap: 3rem;
+  padding: 0;
+}
+.portfolio__header--main .portfolio__title {
+  border-radius: 4rem;
+  padding: 3.8rem 6rem 4rem;
+  background: var(--white);
+  line-height: 100%;
+}
+.portfolio__title {
+  -ms-grid-column-span: 3;
+  grid-column: 3 span;
+}
+.portfolio__buttons {
+  -ms-grid-column-span: 9;
+  grid-column: 9 span;
+  border-radius: 4rem;
+  padding: 4rem 6rem;
+  background: var(--white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  gap: 2rem;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .portfolio__grid {
   display: -ms-grid;
@@ -904,6 +1037,18 @@ a {
   -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
+}
+.portfolio__btn {
+  padding: 0.8rem 3rem 1rem;
+}
+@media (any-hover: hover) {
+  .portfolio__btn:hover {
+    color: var(--white);
+  }
+}
+.portfolio__label input:checked ~ .portfolio__btn {
+  background-color: var(--accent-cyan);
+  color: var(--white);
 }
 
 .p-item {
@@ -1162,4 +1307,53 @@ a {
 }
 .cta__capture a {
   font-size: inherit;
+}
+
+.contacts {
+  padding: 3rem 0;
+  margin-bottom: 10rem;
+}
+.contacts__header {
+  margin-bottom: 3rem;
+}
+.contacts__desc p {
+  margin: 0;
+}
+.contacts__desc p:not(:last-child) {
+  margin-bottom: 3rem;
+}
+.contacts__content {
+  min-height: 50rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+  grid-template-columns: repeat(12, 1fr);
+  gap: 3rem;
+}
+.contacts__address {
+  -ms-grid-column-span: 4;
+  grid-column: 4 span;
+  background: var(--white);
+  border-radius: 4rem;
+  padding: 4rem 6rem;
+}
+.contacts__map {
+  -ms-grid-column-span: 8;
+  grid-column: 8 span;
+  border-radius: 4rem;
+  overflow: hidden;
+  background: var(--white);
+  position: relative;
+}
+.contacts__map #map {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+}
+
+.address {
+  font-style: normal;
+}
+.address__row:not(:last-child) {
+  margin-bottom: 3rem;
 }/*# sourceMappingURL=main.css.map */
