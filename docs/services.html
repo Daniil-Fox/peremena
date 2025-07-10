@@ -34,8 +34,6 @@
 </head>
 
   <body class="page__body">
-    <script src="https://api-maps.yandex.ru/v3/?apikey=8c9bb3f5-07ef-4aa2-8a70-b84bc9e8879b
-&lang=ru_RU"></script>
     <div class="site-container">
       <header class="header">
   <div class="container">
@@ -98,17 +96,19 @@
   </div>
 </header>
       <main class="main">
-        <section class="contacts">
+        <section class="services">
           <div class="container">
-            <div class="contacts__header heading">
+            <div class="heading services__header">
               <div class="heading__title">
-                <h2 class="title2 contacts__title">контакты</h2>
+                <h1 class="title2 services__title">услуги перемены</h1>
               </div>
-              <div class="heading__desc desc1 desc1--300">
-                <div class="contacts__desc">
+              <div class="heading__desc">
+                <div class="services__desc desc1">
                   <p>
-                    Наша команда находится в разных городах нашей страны. Но наш
-                    офис располагается в городе Владивосток.
+                    Мы создаем лаконичный и современный дизайн, который помогает
+                    бизнесу находить общий язык с аудиторией.<br />
+                    Наша команда работает с различными отраслями, учитывая
+                    уникальные потребности каждого клиента.
                   </p>
                   <p>
                     У вас есть проект?
@@ -120,26 +120,161 @@
               </div>
             </div>
 
-            <div class="contacts__content">
-              <address class="contacts__address address">
-                <div class="address__row desc1 desc1--300">
-                  <a href="mailto:hello@peremena.ru">hello@peremena.ru</a>
+            <div class="services__grid">
+              <article class="services__item service">
+                <h3 class="title3 service__title">аудит</h3>
+                <div class="desc1 service__desc">
+                  <p>
+                    выслушаем ваш запрос<br />
+                    проведём анализ,<br />
+                    поможем поставить<br />
+                    задачу
+                  </p>
                 </div>
-                <div class="address__row desc1 desc1--300">
-                  <a href="tel:+79510011818">+7 951 001-18-18</a>
+                <div class="service__img">
+                  <img src="./img/services/01.webp" aria-hidden="true" alt="" />
                 </div>
-                <div class="address__row desc1 desc1--300">
-                  г. Владивосток, ул. Фастовская, д. 29
+              </article>
+              <article class="services__item service">
+                <h3 class="title3 service__title">
+                  Дизайн логотипа<br />
+                  и&nbsp;фирменного стиля
+                </h3>
+                <div class="desc1 service__desc">
+                  <p>
+                    разработаем логотип и&nbsp;систему фирменного стиля
+                    для&nbsp;вашего бренда
+                  </p>
                 </div>
-                <div class="address__row desc1 desc1--300">
-                  Работаем с&nbsp;9:00&nbsp;до&nbsp;19:00&nbsp;по будням<br />и
-                  с&nbsp;10:00 до 18:00 по выходным
+                <div class="service__img">
+                  <img src="./img/services/02.webp" aria-hidden="true" alt="" />
                 </div>
-              </address>
-
-              <div class="contacts__map">
-                <div id="map"></div>
-              </div>
+              </article>
+              <article class="services__item service">
+                <h3 class="title3 service__title">полиграфия</h3>
+                <div class="desc1 service__desc">
+                  <p>
+                    разработаем макет,<br />
+                    любой печатной<br />
+                    продукции<br />
+                    и&nbsp;подготовим<br />его&nbsp;к&nbsp;печати
+                  </p>
+                </div>
+                <div class="service__img">
+                  <img src="./img/services/03.webp" aria-hidden="true" alt="" />
+                </div>
+              </article>
+              <article class="services__item service">
+                <h3 class="title3 service__title">брендинг</h3>
+                <div class="desc1 service__desc">
+                  <p>
+                    проработаем каждый аспект вашего<br />брендинга
+                    для&nbsp;вашей компании
+                  </p>
+                </div>
+                <div class="service__img">
+                  <img src="./img/services/04.webp" aria-hidden="true" alt="" />
+                </div>
+              </article>
+              <article class="services__item service">
+                <h3 class="title3 service__title">дизайн сайтов</h3>
+                <div class="desc1 service__desc">
+                  <p>разработаем прототип и&nbsp;дизайн макет вашего сайта</p>
+                </div>
+                <div class="service__img">
+                  <img src="./img/services/05.webp" aria-hidden="true" alt="" />
+                </div>
+              </article>
+              <article class="services__item service">
+                <h3 class="title3 service__title">веб дизайн</h3>
+                <div class="desc1 service__desc">
+                  <p>
+                    создадим дизайн для&nbsp;веб&nbsp;пространства, от&nbsp;соц.
+                    сетей до&nbsp;маркетплейсов
+                  </p>
+                </div>
+                <div class="service__img">
+                  <img src="./img/services/06.webp" aria-hidden="true" alt="" />
+                </div>
+              </article>
+              <article class="services__item service">
+                <h3 class="title3 service__title">
+                  контекстная<br />
+                  реклама
+                </h3>
+                <div class="desc1 service__desc">
+                  <p>
+                    создадим баннеры и&nbsp;тексты<br />
+                    затем запустим контекстную рекламу
+                  </p>
+                </div>
+                <div class="service__img">
+                  <img src="./img/services/07.webp" aria-hidden="true" alt="" />
+                </div>
+              </article>
+              <article class="services__item service">
+                <h3 class="title3 service__title">дизайн упаковки</h3>
+                <div class="desc1 service__desc">
+                  <p>
+                    разработаем<br />современную айдентику<br />и&nbsp;дизайн
+                    для&nbsp;вашего<br />продукта
+                  </p>
+                </div>
+                <div class="service__img">
+                  <img src="./img/services/08.webp" aria-hidden="true" alt="" />
+                </div>
+              </article>
+              <article class="services__item service">
+                <h3 class="title3 service__title">наружная реклама</h3>
+                <div class="desc1 service__desc">
+                  <p>
+                    создадим макет баннеров различного<br />
+                    формата, подготовим их&nbsp;к&nbsp;печати
+                  </p>
+                </div>
+                <div class="service__img">
+                  <img src="./img/services/09.webp" aria-hidden="true" alt="" />
+                </div>
+              </article>
+              <article class="services__item service">
+                <h3 class="title3 service__title">мерч</h3>
+                <div class="desc1 service__desc">
+                  <p>
+                    разработаем<br />
+                    стильную фирменную<br />
+                    продукцию вашей<br />
+                    компании
+                  </p>
+                </div>
+                <div class="service__img">
+                  <img src="./img/services/10.webp" aria-hidden="true" alt="" />
+                </div>
+              </article>
+              <article class="services__item service">
+                <h3 class="title3 service__title">smm сопровождение</h3>
+                <div class="desc1 service__desc">
+                  <p>
+                    создадим образ вашей компании в&nbsp;интернете, подготовим
+                    и&nbsp;выложим контент
+                  </p>
+                </div>
+                <div class="service__img">
+                  <img src="./img/services/11.webp" aria-hidden="true" alt="" />
+                </div>
+              </article>
+              <article class="services__item service">
+                <h3 class="title3 service__title">маркетинг услуги</h3>
+                <div class="desc1 service__desc">
+                  <p>
+                    продвинем вашу<br />
+                    компанию, установим<br />
+                    связь с&nbsp;клиентом
+                  </p>
+                </div>
+                <div class="service__img">
+                  <img src="./img/services/12.webp" aria-hidden="true" alt="" />
+                </div>
+              </article>
             </div>
           </div>
         </section>
@@ -355,48 +490,5 @@
 </footer>
 
     </div>
-
-    <script>
-      main();
-      async function main() {
-        await ymaps3.ready;
-        const {
-          YMap,
-          YMapDefaultSchemeLayer,
-          YMapDefaultFeaturesLayer,
-          YMapMarker,
-        } = ymaps3;
-
-        map = new YMap(
-          document.getElementById("map"),
-          {
-            location: {
-              center: [131.898555, 43.099193],
-              zoom: 16,
-            },
-          },
-          [new YMapDefaultSchemeLayer({}), new YMapDefaultFeaturesLayer({})]
-        );
-        const markerContainerElement = document.createElement("div");
-        markerContainerElement.classList.add("marker-container");
-        const markerText = document.createElement("div");
-        markerText.textContent = "Фастовская улица, 29";
-        markerText.classList.add("marker-text");
-        const markerElement = document.createElement("div");
-        markerElement.classList.add("marker");
-
-        markerContainerElement.appendChild(markerText);
-        markerContainerElement.appendChild(markerElement);
-
-        map.addChild(
-          new YMapMarker(
-            {
-              coordinates: [131.898555, 43.099193],
-            },
-            markerContainerElement
-          )
-        );
-      }
-    </script>
   </body>
 </html>

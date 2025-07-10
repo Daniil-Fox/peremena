@@ -328,6 +328,16 @@ a {
   color: var(--black);
 }
 
+.title3 {
+  margin: 0;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 120%;
+  text-transform: lowercase;
+  color: var(--black);
+}
+
 .desc1 {
   margin: 0;
   font-family: var(--font-family);
@@ -335,6 +345,9 @@ a {
   font-size: 2rem;
   line-height: 150%;
   color: var(--black);
+}
+.desc1--300 {
+  font-weight: 300;
 }
 .desc1 a {
   color: inherit;
@@ -632,6 +645,7 @@ a {
   -ms-grid-columns: (1fr)[12];
   grid-template-columns: repeat(12, 1fr);
   gap: 3rem;
+  min-height: 16.8rem;
 }
 .heading__title {
   display: -webkit-box;
@@ -644,14 +658,26 @@ a {
   grid-column: 3 span;
   background-color: var(--white);
   border-radius: 4rem;
-  padding: 3.5rem 6rem 4rem;
+  padding: 3.5rem 6rem;
 }
 .heading__desc {
   background: var(--white);
   -ms-grid-column-span: 9;
   grid-column: 9 span;
   border-radius: 4rem;
-  padding: 4rem 6rem;
+  padding: 3.3rem 6rem;
+}
+.heading__desc p {
+  margin: 0;
+}
+.heading__desc p:not(:last-child) {
+  margin-bottom: 1.4rem;
+}
+.heading__desc a {
+  font-weight: inherit;
+  font-size: inherit;
+  text-decoration: underline;
+  text-transform: inherit;
 }
 
 .marker {
@@ -1316,12 +1342,6 @@ a {
 .contacts__header {
   margin-bottom: 3rem;
 }
-.contacts__desc p {
-  margin: 0;
-}
-.contacts__desc p:not(:last-child) {
-  margin-bottom: 3rem;
-}
 .contacts__content {
   min-height: 50rem;
   display: -ms-grid;
@@ -1331,13 +1351,15 @@ a {
   gap: 3rem;
 }
 .contacts__address {
+  margin-right: -3rem;
   -ms-grid-column-span: 4;
   grid-column: 4 span;
   background: var(--white);
   border-radius: 4rem;
-  padding: 4rem 6rem;
+  padding: 3.3rem 6rem;
 }
 .contacts__map {
+  margin-left: 3rem;
   -ms-grid-column-span: 8;
   grid-column: 8 span;
   border-radius: 4rem;
@@ -1355,5 +1377,51 @@ a {
   font-style: normal;
 }
 .address__row:not(:last-child) {
-  margin-bottom: 3rem;
+  margin-bottom: 1.4rem;
+}
+
+.services {
+  padding: 3rem 0;
+  margin-bottom: 10rem;
+}
+.services__header {
+  margin-bottom: 3.8rem;
+}
+.services__header .heading__title {
+  padding-top: 2.9rem;
+}
+.services__title {
+  line-height: 1;
+}
+.services__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.service {
+  background-color: var(--white);
+  border-radius: 4rem;
+  overflow: hidden;
+  padding: 5.3rem 6rem;
+  position: relative;
+  height: 50rem;
+}
+.service__title {
+  margin-bottom: 1.4rem;
+}
+.service__img {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.service__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.service__desc p {
+  margin: 0;
 }/*# sourceMappingURL=main.css.map */

@@ -24,6 +24,15 @@
   text-transform: lowercase;
   color: var(--black);
 }
+.title3 {
+  margin: 0;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 120%;
+  text-transform: lowercase;
+  color: var(--black);
+}
 .desc1 {
   margin: 0;
   font-family: var(--font-family);
@@ -31,7 +40,9 @@
   font-size: 2rem;
   line-height: 150%;
   color: var(--black);
-
+  &--300 {
+    font-weight: 300;
+  }
   a {
     color: inherit;
   }
@@ -292,7 +303,7 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 3rem;
-
+  min-height: 16.8rem;
   &__title {
     display: flex;
     align-items: center;
@@ -300,14 +311,28 @@
     background-color: var(--white);
 
     border-radius: 4rem;
-    padding: 3.5rem 6rem 4rem;
+    padding: 3.5rem 6rem;
   }
 
   &__desc {
     background: var(--white);
     grid-column: 9 span;
     border-radius: 4rem;
-    padding: 4rem 6rem;
+    padding: 3.3rem 6rem;
+
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 1.4rem;
+      }
+    }
+
+    a {
+      font-weight: inherit;
+      font-size: inherit;
+      text-decoration: underline;
+      text-transform: inherit;
+    }
   }
 }
 
