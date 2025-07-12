@@ -43,9 +43,21 @@
   &--300 {
     font-weight: 300;
   }
+  &--400 {
+    font-weight: 400;
+  }
   a {
     color: inherit;
   }
+}
+
+.desc2 {
+  margin: 0;
+  font-family: var(--font-family);
+  font-weight: 200;
+  font-size: 2.2rem;
+  line-height: 150%;
+  color: var(--black);
 }
 
 .desc4 {
@@ -55,6 +67,13 @@
   line-height: 120%;
   text-transform: lowercase;
   color: var(--black);
+
+  &--300 {
+    font-weight: 300;
+  }
+  &--400 {
+    font-weight: 400;
+  }
 }
 
 .link-btn {
@@ -333,6 +352,10 @@
       text-decoration: underline;
       text-transform: inherit;
     }
+  }
+
+  &--only {
+    display: block;
   }
 }
 
