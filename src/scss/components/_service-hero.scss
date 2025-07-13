@@ -1,0 +1,153 @@
+.service-hero {
+  padding: 3rem 0;
+
+  &__header {
+    margin-bottom: 6rem;
+    padding: 4.8rem 6rem 4.7rem;
+    border-radius: 4rem;
+    background-color: var(--white);
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 3rem;
+
+    &:not(:last-child) {
+      margin-bottom: 6rem;
+    }
+
+    &--span3 {
+      .service-hero__right {
+        grid-column: 3 span;
+      }
+      .service-hero__content {
+        grid-column: 9 span;
+      }
+    }
+
+    &--span4 {
+      .service-hero__right {
+        grid-column: 4 span;
+      }
+      .service-hero__content {
+        grid-column: 8 span;
+      }
+    }
+
+    &--span6 {
+      .service-hero__right {
+        grid-column: 6 span;
+      }
+      .service-hero__content {
+        grid-column: 6 span;
+      }
+    }
+
+    &--span7 {
+      .service-hero__right {
+        grid-column: 7 span;
+      }
+      .service-hero__content {
+        grid-column: 9 span;
+      }
+    }
+
+    &--span8 {
+      .service-hero__right {
+        grid-column: 8 span;
+      }
+      .service-hero__content {
+        grid-column: 4 span;
+      }
+    }
+  }
+
+  &__content {
+    grid-column: 7 span;
+    padding: 5.2rem 6.1rem;
+    border-radius: 4rem;
+    overflow: hidden;
+    background-color: var(--white);
+  }
+  &__right {
+    grid-column: 5 span;
+    padding: 5.2rem 6.1rem;
+    border-radius: 4rem;
+    overflow: hidden;
+    background-color: var(--white);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 4;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__capture {
+    margin-bottom: 2.5rem;
+  }
+
+  &__desc {
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0;
+      margin-bottom: 1.4rem;
+      font-size: inherit;
+      line-height: inherit;
+      font-weight: 400;
+    }
+    ul,
+    ol {
+      margin: 0;
+      padding: 0;
+      margin-left: 3rem;
+      &:not(:last-child) {
+        margin-bottom: 2.4rem;
+      }
+      li {
+        &:not(:last-child) {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+      b {
+        font-weight: 400;
+      }
+    }
+
+    &--cost {
+      p {
+        &:not(:last-child) {
+          margin-bottom: 2.4rem;
+        }
+      }
+    }
+  }
+
+  &__price {
+    margin: 0;
+    font-weight: 400;
+    font-size: 2.6rem;
+    line-height: 150%;
+    color: var(--black);
+  }
+  &__limit {
+    font-weight: 400;
+  }
+}
