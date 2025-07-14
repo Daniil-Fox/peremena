@@ -1797,8 +1797,6 @@ a {
   z-index: 4;
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-  object-fit: contain;
 }
 .service-hero__capture {
   margin-bottom: 2.5rem;
@@ -1822,6 +1820,10 @@ a {
 .service-hero__desc ul:not(:last-child),
 .service-hero__desc ol:not(:last-child) {
   margin-bottom: 2.4rem;
+}
+.service-hero__desc ul li::marker,
+.service-hero__desc ol li::marker {
+  font-weight: 400;
 }
 .service-hero__desc ul li:not(:last-child),
 .service-hero__desc ol li:not(:last-child) {
@@ -1848,4 +1850,28 @@ a {
 }
 .service-hero__limit {
   font-weight: 400;
+}
+
+.case {
+  padding: 13rem 0 2.6rem;
+}
+.case__hero {
+  height: 82rem;
+  border-radius: 4rem;
+  overflow: hidden;
+}
+.case__hero:not(:last-child) {
+  margin-bottom: 3rem;
+}
+.case__hero img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.case__img:not(:last-child) {
+  margin-bottom: 2.6rem;
+}
+.case__img img {
+  width: 100%;
+  height: auto;
 }/*# sourceMappingURL=main.css.map */

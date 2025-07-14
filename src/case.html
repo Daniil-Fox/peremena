@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body class="page__body">
+    <div class="site-container">
+      @include('partials/header.html')
+      <main class="main">
+        <section class="case">
+          <div class="container">
+            <div class="case__hero">
+              <h2 class="visually-hidden title2">Загловок кейса</h2>
+              <picture>
+                <source srcset="./img/case1.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="./img/case1.webp"
+                  class="image"
+                  width="1920"
+                  height="700"
+                  alt=""
+                />
+              </picture>
+            </div>
+            <div class="case__container">
+              <div class="case__img">
+                <picture>
+                  <source srcset="./img/case2.webp" type="image/webp" />
+                  <img
+                    loading="lazy"
+                    src="./img/case2.webp"
+                    class="image"
+                    width="1920"
+                    height="700"
+                    alt=""
+                  />
+                </picture>
+              </div>
+              <div class="case__img">
+                <picture>
+                  <source srcset="./img/case3.webp" type="image/webp" />
+                  <img
+                    loading="lazy"
+                    src="./img/case3.webp"
+                    class="image"
+                    width="1920"
+                    height="700"
+                    alt=""
+                  />
+                </picture>
+              </div>
+              <div class="case__img">
+                <picture>
+                  <source srcset="./img/case4.webp" type="image/webp" />
+                  <img
+                    loading="lazy"
+                    src="./img/case4.webp"
+                    class="image"
+                    width="1920"
+                    height="700"
+                    alt=""
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="portfolio">
+          <div class="container">
+            <div class="portfolio__grid">
+              <div class="portfolio__item p-item">
+                <a href="#" class="p-item__link"></a>
+                <div class="p-item__img">
+                  <img src="./img/portfolio/01.webp" alt="" />
+                </div>
+                <div class="p-item__content desc4">
+                  <p class="p-item__capture">сделкиpro</p>
+                  <ul class="list-reset p-item__list">
+                    <li>брендинг</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="portfolio__item p-item p-item--dark">
+                <a href="#" class="p-item__link"></a>
+                <div class="p-item__img">
+                  <img src="./img/portfolio/02.webp" alt="" />
+                </div>
+                <div class="p-item__content desc4">
+                  <p class="p-item__capture">академия недвижимости</p>
+                  <ul class="list-reset p-item__list">
+                    <li>брендинг</li>
+                    <li>дизайн сайта</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="portfolio__item p-item p-item--full p-item--dark">
+                <a href="#" class="p-item__link"></a>
+                <div class="p-item__img">
+                  <img src="./img/portfolio/03.webp" alt="" />
+                </div>
+                <div class="p-item__content desc4">
+                  <p class="p-item__capture">жк тихвинсикй</p>
+                  <ul class="list-reset p-item__list">
+                    <li>веб-дизайн</li>
+                    <li>полиграфия</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="portfolio__item p-item p-item--dark p-item--long">
+                <a href="#" class="p-item__link"></a>
+                <div class="p-item__img">
+                  <img src="./img/portfolio/05.webp" alt="" />
+                </div>
+                <div class="p-item__content desc4">
+                  <p class="p-item__capture">лукоморье</p>
+                  <ul class="list-reset p-item__list">
+                    <li>брендинг</li>
+                    <li>дизайн упаковки</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="portfolio__item p-item p-item--dark">
+                <a href="#" class="p-item__link"></a>
+                <div class="p-item__img">
+                  <img src="./img/portfolio/06.webp" alt="" />
+                </div>
+                <div class="p-item__content desc4">
+                  <p class="p-item__capture">жк тимирязев</p>
+                  <ul class="list-reset p-item__list">
+                    <li>брендинг</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        @include('partials/cta.html')
+      </main>
+      @include('partials/footer.html')
+    </div>
+  </body>
+</html>
