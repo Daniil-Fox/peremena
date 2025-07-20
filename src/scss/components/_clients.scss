@@ -1,11 +1,19 @@
 .clients {
   padding: 3rem 0;
   margin-bottom: 10rem;
+  @include mobile {
+    margin-bottom: 4.7rem;
+    padding: 2.5rem 0;
+  }
   &__header {
     border-radius: 4rem;
     padding: 2.4rem 6rem 2.6rem;
     background-color: var(--white);
     margin-bottom: 3rem;
+
+    @include mobile {
+      padding: 3.1rem 4rem 3.9rem;
+    }
   }
 
   &__desc {
@@ -13,11 +21,28 @@
     border-radius: 4rem;
     padding: 5.2rem 6rem 5.1rem;
     background-color: var(--white);
+    @include mobile {
+      padding: 4.1rem 4rem;
+      font-size: 2rem;
+    }
     p {
       margin: 0;
 
       &:not(:last-child) {
         margin-bottom: 1rem;
+        @include mobile {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+
+  &__slider {
+    @include mobile {
+      margin: 0 calc(-1 * var(--container-offset));
+      padding: 0 var(--container-offset);
+      .swiper-slide {
+        width: auto;
       }
     }
   }
@@ -28,6 +53,10 @@
     background-color: var(--white);
     border-radius: 4rem;
     overflow: hidden;
+    @include mobile {
+      height: 32.6rem;
+      width: 42.5rem;
+    }
     img {
       display: block;
       width: 100%;

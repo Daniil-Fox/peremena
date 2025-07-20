@@ -12,8 +12,25 @@
               <h1 class="title2 service-hero__title">контекстная реклама</h1>
             </div>
             <div class="service-hero__container">
-              <div class="service-hero__right">
-                <img src="./img/service-context.webp" alt="" />
+              <div class="service-hero__right service-hero__right--img">
+                <picture>
+                  <source
+                    srcset="./img/service-context-mob.webp"
+                    type="image/webp"
+                    media="(max-width: 600px)"
+                  />
+                  <source
+                    srcset="./img/service-context.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./img/service-context.webp"
+                    aria-hidden="true"
+                    width="520"
+                    height="520"
+                    alt="дизайн упаковки"
+                  />
+                </picture>
               </div>
               <div class="service-hero__content">
                 <div class="service-hero__desc desc1">

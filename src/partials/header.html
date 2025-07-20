@@ -1,6 +1,7 @@
 <header class="header">
   <div class="container">
     <div class="header__container">
+      <div class="header__overlay corner-smooth-60"></div>
       <a href="#" class="header__logo logo">
         <svg class="">
           <use xlink:href="img/sprite.svg#logo"></use>
@@ -8,36 +9,59 @@
       </a>
       <nav class="nav header__nav">
         <ul id="menu-main" class="menu">
-          <li id="menu-item-1"
-            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page-item-2 current_page_item menu-item-1">
+          <li
+            id="menu-item-1"
+            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page-item-2 current_page_item menu-item-1"
+          >
             <a href="#" aria-current="page">о нас</a>
           </li>
-          <li id="menu-item-2"
-            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2">
-            <a href="#">работы
+          <li
+            id="menu-item-2"
+            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2"
+          >
+            <a href="#"
+              >работы
               <svg class="">
                 <use xlink:href="img/sprite.svg#arr-down"></use>
               </svg>
             </a>
             <ul class="sub-menu">
-              <li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21">
+              <li
+                id="menu-item-21"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"
+              >
                 <a href="#">работа1</a>
               </li>
-              <li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22">
+              <li
+                id="menu-item-22"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"
+              >
                 <a href="#">работа2</a>
               </li>
-              <li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22">
+              <li
+                id="menu-item-23"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"
+              >
                 <a href="#">работа3</a>
               </li>
             </ul>
           </li>
-          <li id="menu-item-3" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3">
+          <li
+            id="menu-item-3"
+            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3"
+          >
             <a href="#">услуги</a>
           </li>
-          <li id="menu-item-4" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4">
+          <li
+            id="menu-item-4"
+            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4"
+          >
             <a href="#">цены</a>
           </li>
-          <li id="menu-item-5" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4">
+          <li
+            id="menu-item-5"
+            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4"
+          >
             <a href="#">контакты</a>
           </li>
         </ul>
@@ -55,6 +79,17 @@
           </li>
         </ul>
       </div>
+
+      <button
+        class="btn-reset burger header__burger"
+        aria-label="Открыть меню"
+        aria-expanded="false"
+        data-burger
+      >
+        <span class="burger__line"></span>
+      </button>
+
+      @include('./menu.html')
     </div>
   </div>
 </header>

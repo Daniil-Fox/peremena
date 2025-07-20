@@ -2,8 +2,14 @@
   height: 58rem;
   border-radius: 4rem;
   overflow: hidden;
-
+  background-color: var(--white);
   position: relative;
+
+  @include mobile {
+    height: auto;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
   &__img {
     display: block;
     width: 100%;

@@ -1,16 +1,30 @@
 .prices {
   padding: 3rem 0;
   margin-bottom: 10rem;
+  @include mobile {
+    margin-bottom: 4.4rem;
+  }
   &__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+    }
   }
   &__heading {
     margin-bottom: 2.9rem;
     min-height: 13rem;
+    @include mobile {
+      margin-bottom: 4rem;
+    }
     .heading__title {
       padding: 4.8rem 6rem;
+      @include mobile {
+        padding: 3rem 4rem 4rem;
+      }
     }
   }
 }
@@ -23,6 +37,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @include mobile {
+    padding: 4.2rem 4rem;
+    min-height: unset;
+    gap: 2.4rem;
+  }
   &__title {
     margin-bottom: 1.4rem;
   }
@@ -31,6 +51,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__desc {

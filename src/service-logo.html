@@ -8,16 +8,32 @@
       <main class="main">
         <section class="service-hero">
           <div class="container">
-            <div class="service-hero__header">
+            <div class="service-hero__header corner-smooth-40">
               <h1 class="title2 service-hero__title">
-                логотип и&nbsp;фирменный стиль
+                логотип и&nbsp;фирменный&nbsp;стиль
               </h1>
             </div>
             <div class="service-hero__container">
-              <div class="service-hero__right">
-                <img src="./img/service-logo.webp" alt="" />
+              <div
+                class="service-hero__right service-hero__right--img corner-smooth-40"
+              >
+                <picture>
+                  <source
+                    srcset="./img/service-logo-mob.webp"
+                    type="image/webp"
+                    media="(max-width: 600px)"
+                  />
+                  <source srcset="./img/service-logo.webp" type="image/webp" />
+                  <img
+                    src="./img/service-logo.webp"
+                    aria-hidden="true"
+                    width="520"
+                    height="520"
+                    alt="дизайн упаковки"
+                  />
+                </picture>
               </div>
-              <div class="service-hero__content">
+              <div class="service-hero__content corner-smooth-40">
                 <div class="service-hero__desc desc1">
                   <p>Надёжная основа вашего бренда.</p>
                   <p>
@@ -52,7 +68,7 @@
             </div>
 
             <div class="service-hero__container">
-              <div class="service-hero__content">
+              <div class="service-hero__content corner-smooth-40">
                 <h3 class="title3 service-hero__capture">процесс разработки</h3>
                 <div class="service-hero__desc desc1">
                   <h4>Анализ</h4>
@@ -109,7 +125,7 @@
                 </div>
               </div>
 
-              <div class="service-hero__right">
+              <div class="service-hero__right corner-smooth-40">
                 <div class="service-hero__top">
                   <p class="service-hero__capture title3">
                     Стоимость разработки

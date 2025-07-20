@@ -15,6 +15,10 @@
   font-size: 7rem;
   line-height: 100%;
   color: var(--black);
+
+  @include mobile {
+    font-size: 4.6rem;
+  }
 }
 .title2 {
   margin: 0;
@@ -23,6 +27,10 @@
   line-height: 120%;
   text-transform: lowercase;
   color: var(--black);
+
+  @include mobile {
+    font-size: 3.6rem;
+  }
 }
 .title3 {
   margin: 0;
@@ -89,6 +97,10 @@
   color: var(--black);
 
   transition: color 0.3s ease-out;
+
+  @include mobile {
+    font-size: 2rem;
+  }
   svg {
     fill: none;
     stroke: currentColor;
@@ -129,6 +141,10 @@
     color: var(--white);
   }
   &--grey {
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+
+  &--light {
     background-color: rgba(0, 0, 0, 0.02);
   }
   &--small {
@@ -323,6 +339,10 @@
   grid-template-columns: repeat(12, 1fr);
   gap: 3rem;
   min-height: 16.8rem;
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+  }
   &__title {
     display: flex;
     align-items: center;
@@ -331,6 +351,10 @@
 
     border-radius: 4rem;
     padding: 3.5rem 6rem;
+
+    @include mobile {
+      padding: 3.5rem 4rem 4rem;
+    }
   }
 
   &__desc {
@@ -338,7 +362,9 @@
     grid-column: 9 span;
     border-radius: 4rem;
     padding: 3.3rem 6rem;
-
+    @include mobile {
+      padding: 4.2rem 4rem;
+    }
     p {
       margin: 0;
       &:not(:last-child) {
@@ -382,4 +408,8 @@
   padding: 0.5rem 0.9rem;
   border-radius: 4rem;
   background-color: rgba(#fff, 0.8);
+}
+
+.burger {
+  @include burger;
 }

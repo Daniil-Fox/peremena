@@ -1,8 +1,8 @@
 /* stylelint-disable */
 
 @mixin burger {
-  --burger-width: 30px;
-  --burger-height: 30px;
+  --burger-width: 3.4rem;
+  --burger-height: 3rem;
   --burger-line-height: 2px;
 
   position: relative;
@@ -18,6 +18,8 @@
   &::after {
     content: "";
     position: absolute;
+    border-radius: 100px;
+    display: block;
     left: 0;
     width: 100%;
     height: var(--burger-line-height);
@@ -35,6 +37,8 @@
 
   &__line {
     position: absolute;
+    border-radius: 100px;
+    display: block;
     left: 0;
     top: 50%;
     width: 100%;

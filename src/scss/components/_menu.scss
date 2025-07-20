@@ -1,0 +1,35 @@
+.f-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: var(--white);
+  padding-top: 8rem;
+  border-radius: 4rem;
+  box-shadow: 0 4px 60px 0 rgba(0, 0, 0, 0.05);
+  max-height: 0;
+  padding-top: 0;
+  opacity: 0;
+  transition: max-height 0.3s ease-in, padding-top 0.3s ease-in,
+    opacity 0.3s ease-in;
+  will-change: max-height;
+  overflow: hidden;
+  &.menu--active {
+    max-height: 100rem;
+    padding-top: 8rem;
+    opacity: 1;
+  }
+  &__body {
+    padding: 4rem;
+  }
+
+  &__nav {
+    margin-bottom: 4rem;
+  }
+
+  &__btn {
+    width: 100%;
+    display: flex;
+  }
+}

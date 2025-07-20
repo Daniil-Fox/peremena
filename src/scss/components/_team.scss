@@ -1,12 +1,18 @@
 .team {
   padding: 3rem 0;
   margin-bottom: 10rem;
-
+  @include mobile {
+    margin-bottom: 4.5rem;
+  }
   &__header {
     margin-bottom: 3rem;
     border-radius: 4rem;
     padding: 2.3rem 6rem 2.7rem;
     background-color: var(--white);
+
+    @include mobile {
+      padding: 3rem 4rem 4rem;
+    }
   }
 
   &__desc {
@@ -14,6 +20,9 @@
     border-radius: 4rem;
     padding: 5.1rem 6rem;
     background-color: var(--white);
+    @include mobile {
+      padding: 4rem 4rem;
+    }
     p {
       margin: 0;
       &:not(:last-child) {
@@ -24,6 +33,13 @@
 
   &__slider {
     padding: 0 calc((100% - var(--content-width)) / 2);
+
+    @include mobile {
+      padding: 0 var(--container-offset);
+      .swiper-slide {
+        width: auto;
+      }
+    }
   }
 }
 
@@ -35,6 +51,9 @@
   padding: 3.5rem 4rem;
   border-radius: 4rem;
   overflow: hidden;
+  @include mobile {
+    width: 42.5rem;
+  }
   &__img {
     position: absolute;
     left: 0;

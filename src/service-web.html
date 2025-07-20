@@ -12,8 +12,25 @@
               <h1 class="title2 service-hero__title">веб дизайн</h1>
             </div>
             <div class="service-hero__container">
-              <div class="service-hero__right">
-                <img src="./img/service-design.webp" alt="" />
+              <div class="service-hero__right service-hero__right--img">
+                <picture>
+                  <source
+                    srcset="./img/service-design-mob.webp"
+                    type="image/webp"
+                    media="(max-width: 600px)"
+                  />
+                  <source
+                    srcset="./img/service-design.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./img/service-design.webp"
+                    aria-hidden="true"
+                    width="520"
+                    height="520"
+                    alt="веб дизайн"
+                  />
+                </picture>
               </div>
               <div class="service-hero__content">
                 <div class="service-hero__desc desc1">

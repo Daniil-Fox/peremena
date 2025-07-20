@@ -1,5 +1,49 @@
 .footer {
   padding-bottom: 3rem;
+
+  &__sm {
+    font-weight: 200;
+    font-size: 1.6rem;
+    line-height: 120%;
+    color: #00081a;
+
+    a {
+      color: inherit;
+    }
+  }
+  &__mob {
+    display: none;
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__sm {
+    font-weight: 200;
+    font-size: 1.6rem;
+    line-height: 120%;
+    color: #00081a;
+
+    &--right {
+      text-align: right;
+    }
+  }
+  &__col {
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding-top: 0.6rem;
+    }
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: 4.5rem;
+    }
+  }
   &__container {
     padding: 5.2rem 6rem 5.4rem;
     border-radius: 4rem;
@@ -7,10 +51,21 @@
     display: flex;
     justify-content: space-between;
     gap: 2rem;
+
+    @include mobile {
+      padding: 4rem 3rem 4.6rem;
+      flex-direction: column;
+      gap: 4rem;
+    }
   }
   &__left {
     display: flex;
     gap: 10.1rem;
+
+    @include mobile {
+      flex-direction: column;
+      display: none;
+    }
   }
 
   &__right {
@@ -19,6 +74,10 @@
     align-items: flex-end;
     justify-content: space-between;
     text-align: right;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__logo {
@@ -37,6 +96,11 @@
     flex-direction: column;
     align-items: flex-end;
     gap: 1rem;
+
+    @include mobile {
+      align-items: flex-start;
+      text-align: left;
+    }
   }
 
   &__block {
@@ -50,6 +114,10 @@
       &:not(:last-child) {
         margin-bottom: 1.3rem;
       }
+
+      @include mobile {
+        text-align: left;
+      }
     }
   }
 }
@@ -58,6 +126,10 @@
   &__capture {
     margin: 0;
     margin-bottom: 2.7rem;
+
+    @include mobile {
+      margin-bottom: 2rem;
+    }
   }
 
   &__link {
@@ -66,16 +138,25 @@
     line-height: 120%;
     text-transform: lowercase;
     color: var(--black);
-
+    @include mobile {
+      font-size: 2.2rem;
+    }
     &--main {
       font-weight: 400;
       font-size: 3rem;
+
+      @include mobile {
+        font-size: 2.8rem;
+      }
     }
   }
 
   &__item {
     &:not(:last-child) {
       margin-bottom: 1.5rem;
+      @include mobile {
+        margin-bottom: 1.7rem;
+      }
     }
   }
 }

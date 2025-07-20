@@ -1,275 +1,318 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
-@include('partials/head.html')
+  @include('partials/head.html')
 
-<body class="page__body">
-  <div class="site-container">
-    @include('partials/header.html')
-    <main class="main">
-      <section class="prices">
-        <div class="container">
-          <div class="prices__heading heading heading--only">
-            <div class="heading__title">
-              <h1 class="title2 prices__title">цены на&nbsp;услуги перемены</h1>
+  <body class="page__body">
+    <div class="site-container">
+      @include('partials/header.html')
+      <main class="main">
+        <section class="prices">
+          <div class="container">
+            <div class="prices__heading heading heading--only">
+              <div class="heading__title corner-smooth-40">
+                <h1 class="title2 prices__title">
+                  цены на&nbsp;услуги перемены
+                </h1>
+              </div>
+            </div>
+            <div class="prices__container">
+              <div class="prices__item corner-smooth-40 pr-sr">
+                <div class="pr-sr__content">
+                  <p class="pr-sr__title title3">аудит</p>
+                  <div class="desc1 pr-sr__desc">
+                    <p>
+                      Договариваемся с&nbsp;вами о&nbsp;встрече, в&nbsp;течении
+                      часа разбираем ваш&nbsp;запрос: суть проблемы,
+                      что&nbsp;можно сделать и&nbsp;как&nbsp;мы можем
+                      вам&nbsp;помочь
+                    </p>
+                  </div>
+                </div>
+                <div class="pr-sr__bottom">
+                  <div class="pr-sr__left">
+                    <p class="desc1 desc1--300 pr-sr__capture">
+                      стоимость: <span class="desc1--400">бесплатно</span>
+                    </p>
+                  </div>
+                  <div class="pr-sr__left">
+                    <p class="desc1 desc1--300 pr-sr__capture">
+                      сроки: 1&nbsp;час
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="prices__item corner-smooth-40 pr-sr">
+                <div class="pr-sr__content">
+                  <p class="pr-sr__title title3">
+                    Анализ дизайна вашего продукта
+                  </p>
+                  <div class="desc1 pr-sr__desc">
+                    <p>
+                      Разбираем дизайн вашего продукта,
+                      есть&nbsp;два&nbsp;подхода:
+                    </p>
+                    <ol>
+                      <li>быстрый анализ, разбираются общие проблемы</li>
+                      <li>
+                        подробный анализ, более детальный разбор<br />
+                        с&nbsp;акцентами на&nbsp;каждый элемент
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="pr-sr__bottom">
+                  <div class="pr-sr__left">
+                    <p class="desc1 desc1--300 pr-sr__capture">
+                      стоимость:
+                      <span class="desc1--400"
+                        >1600&nbsp;рублей в&nbsp;час</span
+                      >
+                    </p>
+                  </div>
+                  <div class="pr-sr__left">
+                    <p class="desc1 desc1--300 pr-sr__capture">
+                      сроки: в&nbsp;зависимости от&nbsp;объёма
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="prices__item corner-smooth-40 pr-sr">
+                <div class="pr-sr__content">
+                  <p class="pr-sr__title title3">брендинг</p>
+                  <div class="desc1 pr-sr__desc">
+                    <p>
+                      На основе данных о бренде, учитывая его характер создаём и
+                      обсуждаем мудборд. Разрабатываем три варианта логотипа, на
+                      основе выбранного варианта дорабатываем фирменный стиль.
+                    </p>
+                  </div>
+                </div>
+                <div class="pr-sr__bottom">
+                  <div class="pr-sr__left">
+                    <p class="desc1 desc1--300 pr-sr__capture">
+                      стоимость:
+                      <span class="desc1--400">от 70 000 рублей</span>
+                    </p>
+                  </div>
+                  <div class="pr-sr__left">
+                    <p class="desc1 desc1--300 pr-sr__capture">
+                      сроки: от двух недель
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="prices__item corner-smooth-40 pr-sr">
+                <div class="pr-sr__content">
+                  <p class="pr-sr__title title3">
+                    разработка логотипа и фирменного стиля
+                  </p>
+                  <div class="desc1 pr-sr__desc">
+                    <p>
+                      На основе данных о бренде, учитывая его характер создаём и
+                      обсуждаем мудборд. Разрабатываем три варианта логотипа,
+                      выбранный вариант дорабатываем и готовим логобук.
+                    </p>
+                  </div>
+                </div>
+                <div class="pr-sr__bottom">
+                  <div class="pr-sr__left">
+                    <p class="desc1 desc1--300 pr-sr__capture">
+                      стоимость:
+                      <span class="desc1--400">от 35 000 рублей</span>
+                    </p>
+                  </div>
+                  <div class="pr-sr__left">
+                    <p class="desc1 desc1--300 pr-sr__capture">
+                      сроки: от одной недели
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="prices__item corner-smooth-40 pr-sr">
+                <div class="pr-sr__content">
+                  <p class="pr-sr__title title3">полиграфия</p>
+                  <div class="desc1 pr-sr__desc">
+                    <p>
+                      На основе фирменного стиля, логики и содержания оцениваем
+                      каждый носитель, разрабатываем несколько вариантов и
+                      дорабатываем выбранный, готовим файлы к печати.
+                    </p>
+                  </div>
+                </div>
+                <div class="pr-sr__bottom">
+                  <div class="pr-sr__left">
+                    <p class="desc1 desc1--300 pr-sr__capture">
+                      стоимость:
+                      <span class="desc1--400">1600 рублей в час</span>
+                    </p>
+                  </div>
+                  <div class="pr-sr__left">
+                    <p class="desc1 desc1--300 pr-sr__capture">
+                      сроки: в зависимости от объёма
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="prices__item corner-smooth-40 pr-sr">
+                <div class="pr-sr__content">
+                  <p class="pr-sr__title title3">дизайн упаковки</p>
+                  <div class="desc1 pr-sr__desc">
+                    <p>
+                      На основе данных о бренде, а так же логики и содержания
+                      продукта создаём и обсуждаем мудборд. Разрабатываем два
+                      варианта упаковки, выбранный вариант дорабатываем и
+                      подготавливаем к производству.
+                    </p>
+                  </div>
+                </div>
+                <div class="pr-sr__bottom">
+                  <div class="pr-sr__left">
+                    <p class="desc1 desc1--300 pr-sr__capture">
+                      стоимость:
+                      <span class="desc1--400">от 35 000 рублей</span>
+                    </p>
+                  </div>
+                  <div class="pr-sr__left">
+                    <p class="desc1 desc1--300 pr-sr__capture">
+                      сроки: от одной недели
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="prices__item corner-smooth-40 pr-sr">
+                <div class="pr-sr__content">
+                  <p class="pr-sr__title title3">дизайн сайтов</p>
+                  <div class="desc1 pr-sr__desc">
+                    <p>
+                      На&nbsp;основе логики и функциональности сайта,
+                      разрабатываем прототипы и&nbsp;дизайн макет, подбираем
+                      контент, контролируем вёрстку.
+                    </p>
+                  </div>
+                </div>
+                <div class="pr-sr__bottom">
+                  <div class="pr-sr__left">
+                    <p class="desc1 desc1--300 pr-sr__capture">
+                      стоимость:
+                      <span class="desc1--400">от 70 000 рублей</span>
+                    </p>
+                  </div>
+                  <div class="pr-sr__left">
+                    <p class="desc1 desc1--300 pr-sr__capture">
+                      сроки: от двух недель
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="prices__item corner-smooth-40 pr-sr">
+                <div class="pr-sr__content">
+                  <p class="pr-sr__title title3">веб дизайн</p>
+                  <div class="desc1 pr-sr__desc">
+                    <p>
+                      На основе фирменного стиля, логики и содержания оцениваем
+                      каждый носитель, разрабатываем варианты и дорабатываем
+                      выбранный.
+                    </p>
+                  </div>
+                </div>
+                <div class="pr-sr__bottom">
+                  <div class="pr-sr__left">
+                    <p class="desc1 desc1--300 pr-sr__capture">
+                      стоимость:
+                      <span class="desc1--400">1600 рублей в час</span>
+                    </p>
+                  </div>
+                  <div class="pr-sr__left">
+                    <p class="desc1 desc1--300 pr-sr__capture">
+                      сроки: в зависимости от объёма
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="prices__item corner-smooth-40 pr-sr">
+                <div class="pr-sr__content">
+                  <p class="pr-sr__title title3">контекстная реклама</p>
+                  <div class="desc1 pr-sr__desc">
+                    <p>
+                      На&nbsp;основе фирменного стиля, логики и&nbsp;содержания
+                      и&nbsp;рекламного запроса, разрабатываем варианты баннеров
+                      и&nbsp;дорабатываем выбранный, после&nbsp;чего настраиваем
+                      и&nbsp;запускаем контекстную рекламу.
+                    </p>
+                  </div>
+                </div>
+                <div class="pr-sr__bottom">
+                  <div class="pr-sr__left">
+                    <p class="desc1 desc1--300 pr-sr__capture">
+                      стоимость:
+                      <span class="desc1--400">1600 рублей в час</span>
+                    </p>
+                  </div>
+                  <div class="pr-sr__left">
+                    <p class="desc1 desc1--300 pr-sr__capture">
+                      сроки: в зависимости от объёма
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="prices__item corner-smooth-40 pr-sr">
+                <div class="pr-sr__content">
+                  <p class="pr-sr__title title3">мерч</p>
+                  <div class="desc1 pr-sr__desc">
+                    <p>
+                      На&nbsp;основе данных о&nbsp;бренде,
+                      а&nbsp;так&nbsp;же&nbsp;логики и&nbsp;содержании создаём
+                      и&nbsp;обсуждаем мудбор. Разрабатываем два&nbsp;варианта,
+                      выбранный вариант дорабатываем и&nbsp;подготавливаем
+                      к&nbsp;производству.
+                    </p>
+                  </div>
+                </div>
+                <div class="pr-sr__bottom">
+                  <div class="pr-sr__left">
+                    <p class="desc1 desc1--300 pr-sr__capture">
+                      стоимость:
+                      <span class="desc1--400">1600 рублей в час</span>
+                    </p>
+                  </div>
+                  <div class="pr-sr__left">
+                    <p class="desc1 desc1--300 pr-sr__capture">
+                      сроки: в зависимости от объёма
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="prices__item corner-smooth-40 pr-sr">
+                <div class="pr-sr__content">
+                  <p class="pr-sr__title title3">наружная реклама</p>
+                  <div class="desc1 pr-sr__desc">
+                    <p>
+                      На основе фирменного стиля, логики и содержания оцениваем
+                      каждый носитель, разрабатываем несколько вариантов и
+                      дорабатываем выбранный, готовим файлы к печати.
+                    </p>
+                  </div>
+                </div>
+                <div class="pr-sr__bottom">
+                  <div class="pr-sr__left">
+                    <p class="desc1 desc1--300 pr-sr__capture">
+                      стоимость:
+                      <span class="desc1--400">1600 рублей в час</span>
+                    </p>
+                  </div>
+                  <div class="pr-sr__left">
+                    <p class="desc1 desc1--300 pr-sr__capture">
+                      сроки: в зависимости от объёма
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="prices__container">
-            <div class="prices__item pr-sr">
-              <div class="pr-sr__content">
-                <p class="pr-sr__title title3">аудит</p>
-                <div class="desc1 pr-sr__desc">
-                  <p>
-                    Договариваемся с&nbsp;вами о&nbsp;встрече, в&nbsp;течении
-                    часа разбираем ваш&nbsp;запрос: суть проблемы,
-                    что&nbsp;можно сделать и&nbsp;как&nbsp;мы можем
-                    вам&nbsp;помочь
-                  </p>
-                </div>
-              </div>
-              <div class="pr-sr__bottom">
-                <div class="pr-sr__left">
-                  <p class="desc1 desc1--300 pr-sr__capture">
-                    стоимость: <span class="desc1--400">бесплатно</span>
-                  </p>
-                </div>
-                <div class="pr-sr__left">
-                  <p class="desc1 desc1--300 pr-sr__capture">сроки: 1&nbsp;час</p>
-                </div>
-              </div>
-            </div>
-            <div class="prices__item pr-sr">
-              <div class="pr-sr__content">
-                <p class="pr-sr__title title3">
-                  Анализ дизайна вашего продукта
-                </p>
-                <div class="desc1 pr-sr__desc">
-                  <p>
-                    Разбираем дизайн вашего продукта,
-                    есть&nbsp;два&nbsp;подхода:
-                  </p>
-                  <ol>
-                    <li>быстрый анализ, разбираются общие проблемы</li>
-                    <li>
-                      подробный анализ, более детальный разбор<br />
-                      с&nbsp;акцентами на&nbsp;каждый элемент
-                    </li>
-                  </ol>
-                </div>
-              </div>
-              <div class="pr-sr__bottom">
-                <div class="pr-sr__left">
-                  <p class="desc1 desc1--300 pr-sr__capture">
-                    стоимость:
-                    <span class="desc1--400">1600&nbsp;рублей в&nbsp;час</span>
-                  </p>
-                </div>
-                <div class="pr-sr__left">
-                  <p class="desc1 desc1--300 pr-sr__capture">
-                    сроки: в&nbsp;зависимости от&nbsp;объёма
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="prices__item pr-sr">
-              <div class="pr-sr__content">
-                <p class="pr-sr__title title3">брендинг</p>
-                <div class="desc1 pr-sr__desc">
-                  <p>
-                    На основе данных о бренде, учитывая его характер создаём и обсуждаем мудборд. Разрабатываем три
-                    варианта логотипа, на основе выбранного варианта дорабатываем фирменный стиль.
-                  </p>
-                </div>
-              </div>
-              <div class="pr-sr__bottom">
-                <div class="pr-sr__left">
-                  <p class="desc1 desc1--300 pr-sr__capture">
-                    стоимость: <span class="desc1--400">от 70 000 рублей</span>
-                  </p>
-                </div>
-                <div class="pr-sr__left">
-                  <p class="desc1 desc1--300 pr-sr__capture">сроки: от двух недель</p>
-                </div>
-              </div>
-            </div>
-            <div class="prices__item pr-sr">
-              <div class="pr-sr__content">
-                <p class="pr-sr__title title3">разработка логотипа и фирменного стиля</p>
-                <div class="desc1 pr-sr__desc">
-                  <p>
-                    На основе данных о бренде, учитывая его характер создаём и обсуждаем мудборд. Разрабатываем три
-                    варианта логотипа, выбранный вариант дорабатываем и готовим логобук.
-                  </p>
-                </div>
-              </div>
-              <div class="pr-sr__bottom">
-                <div class="pr-sr__left">
-                  <p class="desc1 desc1--300 pr-sr__capture">
-                    стоимость: <span class="desc1--400">от 35 000 рублей</span>
-                  </p>
-                </div>
-                <div class="pr-sr__left">
-                  <p class="desc1 desc1--300 pr-sr__capture">сроки: от одной недели</p>
-                </div>
-              </div>
-            </div>
-            <div class="prices__item pr-sr">
-              <div class="pr-sr__content">
-                <p class="pr-sr__title title3">полиграфия</p>
-                <div class="desc1 pr-sr__desc">
-                  <p>
-                    На основе фирменного стиля, логики и содержания оцениваем каждый носитель, разрабатываем несколько
-                    вариантов и дорабатываем выбранный, готовим файлы к печати.
-                  </p>
-                </div>
-              </div>
-              <div class="pr-sr__bottom">
-                <div class="pr-sr__left">
-                  <p class="desc1 desc1--300 pr-sr__capture">
-                    стоимость: <span class="desc1--400">1600 рублей в час</span>
-                  </p>
-                </div>
-                <div class="pr-sr__left">
-                  <p class="desc1 desc1--300 pr-sr__capture">сроки: в зависимости от объёма</p>
-                </div>
-              </div>
-            </div>
-            <div class="prices__item pr-sr">
-              <div class="pr-sr__content">
-                <p class="pr-sr__title title3">дизайн упаковки</p>
-                <div class="desc1 pr-sr__desc">
-                  <p>
-                    На основе данных о бренде, а так же логики и содержания продукта создаём и обсуждаем мудборд.
-                    Разрабатываем два варианта упаковки, выбранный вариант дорабатываем и подготавливаем к производству.
-                  </p>
-                </div>
-              </div>
-              <div class="pr-sr__bottom">
-                <div class="pr-sr__left">
-                  <p class="desc1 desc1--300 pr-sr__capture">
-                    стоимость: <span class="desc1--400">от 35 000 рублей</span>
-                  </p>
-                </div>
-                <div class="pr-sr__left">
-                  <p class="desc1 desc1--300 pr-sr__capture">сроки: от одной недели</p>
-                </div>
-              </div>
-            </div>
-            <div class="prices__item pr-sr">
-              <div class="pr-sr__content">
-                <p class="pr-sr__title title3">дизайн сайтов</p>
-                <div class="desc1 pr-sr__desc">
-                  <p>
-                    На&nbsp;основе логики и функциональности сайта, разрабатываем прототипы и&nbsp;дизайн макет,
-                    подбираем
-                    контент, контролируем вёрстку.
-                  </p>
-                </div>
-              </div>
-              <div class="pr-sr__bottom">
-                <div class="pr-sr__left">
-                  <p class="desc1 desc1--300 pr-sr__capture">
-                    стоимость: <span class="desc1--400">от 70 000 рублей</span>
-                  </p>
-                </div>
-                <div class="pr-sr__left">
-                  <p class="desc1 desc1--300 pr-sr__capture">сроки: от двух недель</p>
-                </div>
-              </div>
-            </div>
-            <div class="prices__item pr-sr">
-              <div class="pr-sr__content">
-                <p class="pr-sr__title title3">веб дизайн</p>
-                <div class="desc1 pr-sr__desc">
-                  <p>
-                    На основе фирменного стиля, логики и содержания оцениваем каждый носитель, разрабатываем варианты и
-                    дорабатываем выбранный.
-                  </p>
-                </div>
-              </div>
-              <div class="pr-sr__bottom">
-                <div class="pr-sr__left">
-                  <p class="desc1 desc1--300 pr-sr__capture">
-                    стоимость: <span class="desc1--400">1600 рублей в час</span>
-                  </p>
-                </div>
-                <div class="pr-sr__left">
-                  <p class="desc1 desc1--300 pr-sr__capture">сроки: в зависимости от объёма</p>
-                </div>
-              </div>
-            </div>
-            <div class="prices__item pr-sr">
-              <div class="pr-sr__content">
-                <p class="pr-sr__title title3">контекстная реклама</p>
-                <div class="desc1 pr-sr__desc">
-                  <p>
-                    На&nbsp;основе фирменного стиля, логики и&nbsp;содержания и&nbsp;рекламного запроса, разрабатываем
-                    варианты
-                    баннеров и&nbsp;дорабатываем выбранный, после&nbsp;чего настраиваем и&nbsp;запускаем контекстную
-                    рекламу.
-                  </p>
-                </div>
-              </div>
-              <div class="pr-sr__bottom">
-                <div class="pr-sr__left">
-                  <p class="desc1 desc1--300 pr-sr__capture">
-                    стоимость: <span class="desc1--400">1600 рублей в час</span>
-                  </p>
-                </div>
-                <div class="pr-sr__left">
-                  <p class="desc1 desc1--300 pr-sr__capture">сроки: в зависимости от объёма</p>
-                </div>
-              </div>
-            </div>
-            <div class="prices__item pr-sr">
-              <div class="pr-sr__content">
-                <p class="pr-sr__title title3">мерч</p>
-                <div class="desc1 pr-sr__desc">
-                  <p>
-                    На&nbsp;основе данных о&nbsp;бренде, а&nbsp;так&nbsp;же&nbsp;логики и&nbsp;содержании создаём
-                    и&nbsp;обсуждаем мудбор. Разрабатываем два&nbsp;варианта, выбранный вариант дорабатываем
-                    и&nbsp;подготавливаем к&nbsp;производству.
-                  </p>
-                </div>
-              </div>
-              <div class="pr-sr__bottom">
-                <div class="pr-sr__left">
-                  <p class="desc1 desc1--300 pr-sr__capture">
-                    стоимость: <span class="desc1--400">1600 рублей в час</span>
-                  </p>
-                </div>
-                <div class="pr-sr__left">
-                  <p class="desc1 desc1--300 pr-sr__capture">сроки: в зависимости от объёма</p>
-                </div>
-              </div>
-            </div>
-            <div class="prices__item pr-sr">
-              <div class="pr-sr__content">
-                <p class="pr-sr__title title3">наружная реклама</p>
-                <div class="desc1 pr-sr__desc">
-                  <p>
-                    На основе фирменного стиля, логики и содержания оцениваем каждый носитель, разрабатываем несколько
-                    вариантов и дорабатываем выбранный, готовим файлы к печати.
-                  </p>
-                </div>
-              </div>
-              <div class="pr-sr__bottom">
-                <div class="pr-sr__left">
-                  <p class="desc1 desc1--300 pr-sr__capture">
-                    стоимость: <span class="desc1--400">1600 рублей в час</span>
-                  </p>
-                </div>
-                <div class="pr-sr__left">
-                  <p class="desc1 desc1--300 pr-sr__capture">сроки: в зависимости от объёма</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      @include('partials/cta.html')
-    </main>
-    @include('partials/footer.html')
-  </div>
-</body>
-
+        </section>
+        @include('partials/cta.html')
+      </main>
+      @include('partials/footer.html')
+    </div>
+  </body>
 </html>

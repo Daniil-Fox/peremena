@@ -38,6 +38,7 @@
       <header class="header">
   <div class="container">
     <div class="header__container">
+      <div class="header__overlay corner-smooth-60"></div>
       <a href="#" class="header__logo logo">
         <svg class="">
           <use xlink:href="img/sprite.svg#logo"></use>
@@ -45,36 +46,59 @@
       </a>
       <nav class="nav header__nav">
         <ul id="menu-main" class="menu">
-          <li id="menu-item-1"
-            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page-item-2 current_page_item menu-item-1">
+          <li
+            id="menu-item-1"
+            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page-item-2 current_page_item menu-item-1"
+          >
             <a href="#" aria-current="page">о нас</a>
           </li>
-          <li id="menu-item-2"
-            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2">
-            <a href="#">работы
+          <li
+            id="menu-item-2"
+            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2"
+          >
+            <a href="#"
+              >работы
               <svg class="">
                 <use xlink:href="img/sprite.svg#arr-down"></use>
               </svg>
             </a>
             <ul class="sub-menu">
-              <li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21">
+              <li
+                id="menu-item-21"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"
+              >
                 <a href="#">работа1</a>
               </li>
-              <li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22">
+              <li
+                id="menu-item-22"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"
+              >
                 <a href="#">работа2</a>
               </li>
-              <li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22">
+              <li
+                id="menu-item-23"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"
+              >
                 <a href="#">работа3</a>
               </li>
             </ul>
           </li>
-          <li id="menu-item-3" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3">
+          <li
+            id="menu-item-3"
+            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3"
+          >
             <a href="#">услуги</a>
           </li>
-          <li id="menu-item-4" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4">
+          <li
+            id="menu-item-4"
+            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4"
+          >
             <a href="#">цены</a>
           </li>
-          <li id="menu-item-5" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4">
+          <li
+            id="menu-item-5"
+            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4"
+          >
             <a href="#">контакты</a>
           </li>
         </ul>
@@ -92,9 +116,46 @@
           </li>
         </ul>
       </div>
+
+      <button
+        class="btn-reset burger header__burger"
+        aria-label="Открыть меню"
+        aria-expanded="false"
+        data-burger
+      >
+        <span class="burger__line"></span>
+      </button>
+
+      <div class="f-menu" data-menu>
+  <div class="f-menu__body">
+    <nav class="f-menu__nav nav">
+      <ul>
+        <li>
+          <a href="#">о нас</a>
+        </li>
+        <li>
+          <a href="#">рабооты</a>
+        </li>
+        <li>
+          <a href="#">услуги</a>
+        </li>
+        <li>
+          <a href="#">цены</a>
+        </li>
+        <li>
+          <a href="#">контакты</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="btn btn--light btn-reset f-menu__btn">Обратная связь</button>
+  </div>
+</div>
+
     </div>
   </div>
 </header>
+
       <main class="main">
         <section class="hero">
   <div class="container">
@@ -105,8 +166,11 @@
           дизайн, маректинг smm&nbsp;будущего в&nbsp;настоящем
         </h1>
       </div>
+      <div class="hero__img">
+        <img src="./img/hero-bg-mob.webp" aria-hidden="true" alt="" />
+      </div>
       <div class="hero__row">
-        <div class="hero__desc desc1">
+        <div class="hero__desc desc1 corner-smooth-40">
           <p>
             перемена&nbsp;&mdash; дизайн агентство, которое создаёт современный
             и&nbsp;лаконичный дизайн Рыбатекст используется дизайнерами,
@@ -121,12 +185,12 @@
 </section>
  <section class="portfolio">
   <div class="container">
-    <div class="portfolio__header flex jc-sb ai-c">
+    <div class="portfolio__header flex jc-sb ai-c corner-smooth-40">
       <h2 class="title2 portfolio__title">наши работы</h2>
       <a href="#" class="link-btn portfolio__btn"> смотреть все </a>
     </div>
     <div class="portfolio__grid">
-      <div class="portfolio__item p-item">
+      <div class="portfolio__item corner-smooth-40 p-item">
         <a href="#" class="p-item__link"></a>
         <div class="p-item__img">
           <img src="./img/portfolio/01.webp" alt="" />
@@ -138,7 +202,7 @@
           </ul>
         </div>
       </div>
-      <div class="portfolio__item p-item p-item--dark">
+      <div class="portfolio__item corner-smooth-40 p-item p-item--dark">
         <a href="#" class="p-item__link"></a>
         <div class="p-item__img">
           <img src="./img/portfolio/02.webp" alt="" />
@@ -151,7 +215,9 @@
           </ul>
         </div>
       </div>
-      <div class="portfolio__item p-item p-item--full p-item--dark">
+      <div
+        class="portfolio__item corner-smooth-40 p-item p-item--full p-item--dark"
+      >
         <a href="#" class="p-item__link"></a>
         <div class="p-item__img">
           <img src="./img/portfolio/03.webp" alt="" />
@@ -164,7 +230,9 @@
           </ul>
         </div>
       </div>
-      <div class="portfolio__item p-item p-item--full p-item--dark">
+      <div
+        class="portfolio__item corner-smooth-40 p-item p-item--full p-item--dark"
+      >
         <a href="#" class="p-item__link"></a>
         <div class="p-item__img">
           <img src="./img/portfolio/04.webp" alt="" />
@@ -176,7 +244,9 @@
           </ul>
         </div>
       </div>
-      <div class="portfolio__item p-item p-item--dark p-item--long">
+      <div
+        class="portfolio__item corner-smooth-40 p-item p-item--dark p-item--long"
+      >
         <a href="#" class="p-item__link"></a>
         <div class="p-item__img">
           <img src="./img/portfolio/05.webp" alt="" />
@@ -189,7 +259,7 @@
           </ul>
         </div>
       </div>
-      <div class="portfolio__item p-item p-item--dark">
+      <div class="portfolio__item corner-smooth-40 p-item p-item--dark">
         <a href="#" class="p-item__link"></a>
         <div class="p-item__img">
           <img src="./img/portfolio/06.webp" alt="" />
@@ -201,7 +271,9 @@
           </ul>
         </div>
       </div>
-      <div class="portfolio__item p-item p-item--full p-item--dark">
+      <div
+        class="portfolio__item corner-smooth-40 p-item p-item--full p-item--dark"
+      >
         <a href="#" class="p-item__link"></a>
         <div class="p-item__img">
           <img src="./img/portfolio/07.webp" alt="" />
@@ -213,7 +285,7 @@
           </ul>
         </div>
       </div>
-      <div class="portfolio__item p-item p-item--all">
+      <div class="portfolio__item corner-smooth-40 p-item p-item--all">
         <a href="#" class="p-item__link link-btn">
           смотреть все
           <svg class="">
@@ -232,11 +304,13 @@
   <div class="container">
     <div class="cta__container">
       <div class="cta__content">
-        <div class="cta__header">
+        <div class="cta__header corner-smooth-40">
           <h2 class="title2 cta__title">напишите нам</h2>
         </div>
-
-        <form action="#" class="cta__form form">
+        <div class="cta__img cta__img--mob">
+          <img src="./img/hero-bg.webp" alt="" />
+        </div>
+        <form action="#" class="cta__form form corner-smooth-40">
           <div class="form__field form__field--long">
             <input id="cta-name" type="text" class="form__input" name="Имя" />
             <label for="cta-name" class="form__label">как ваше имя?</label>
@@ -295,7 +369,7 @@
       <div class="cta__img">
         <img src="./img/hero-bg.webp" alt="" />
       </div>
-      <div class="cta__row flex al-c jc-sb">
+      <div class="cta__row flex al-c jc-sb corner-smooth-40">
         <p class="desc1 cta__capture">Не любите заполнять формы?</p>
         <p class="desc1 cta__capture">
           Пишите на <a href="mailto:hello@peremena.ru" class="link-btn"
@@ -310,7 +384,7 @@
       </main>
       <footer class="footer">
   <div class="container">
-    <div class="footer__container">
+    <div class="footer__container corner-smooth-40">
       <div class="footer__left">
         <nav class="footer__nav f-nav">
           <div class="f-nav__capture">
@@ -416,6 +490,36 @@
         </nav>
       </div>
 
+      <div class="footer__mob">
+        <nav class="footer__nav f-nav">
+          <div class="f-nav__capture">
+            <a href="#" class="f-nav__link link-btn f-nav__link--main"
+              >Информация</a
+            >
+          </div>
+          <ul class="list-reset">
+            <li class="f-nav__item">
+              <a href="#" class="f-nav__link link-btn">главная</a>
+            </li>
+            <li class="f-nav__item">
+              <a href="#" class="f-nav__link link-btn">о нас</a>
+            </li>
+            <li class="f-nav__item">
+              <a href="#" class="f-nav__link link-btn">работы</a>
+            </li>
+            <li class="f-nav__item">
+              <a href="#" class="f-nav__link link-btn">услуги</a>
+            </li>
+            <li class="f-nav__item">
+              <a href="#" class="f-nav__link link-btn">цены</a>
+            </li>
+            <li class="f-nav__item">
+              <a href="#" class="f-nav__link link-btn">контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
       <div class="footer__right">
         <a href="./" class="logo footer__logo">
           <svg class="">
@@ -430,9 +534,46 @@
           <a href="#" class="f-nav__link link-btn">Документация</a>
         </div>
 
+        <div class="footer__mob">
+          <a href="tel:+7 000 000 00 00" class="footer__sm">+7 000 000 00 00</a>
+          <a href="tel:+7 000 000 00 00" class="footer__sm"
+            >hello@peremena.ru</a
+          >
+        </div>
+
         <div class="footer__block">
           <small> не является публичной офертой </small>
           <small> ООО “Перемена”, 2025 © </small>
+        </div>
+      </div>
+
+      <div class="footer__mob">
+        <div class="footer__row">
+          <a href="./" class="logo footer__logo">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#logo"></use>
+            </svg>
+          </a>
+
+          <div class="footer__col">
+            <div class="footer__sm">
+              <a href="tel:+7 000 000 00 00">+7 000 000 00 00</a>
+            </div>
+            <div class="footer__sm">
+              <a href="mailto:hello@peremena.ru">hello@peremena.ru</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__row">
+          <div class="footer__block">
+            <small>
+              ООО “Перемена”, 2025 ©<br />
+              не&nbsp;является&nbsp;публичной&nbsp;офертой
+            </small>
+          </div>
+          <a href="#" target="_blank" class="footer__sm footer__sm--right">
+            Политика конфиденциальности
+          </a>
         </div>
       </div>
     </div>

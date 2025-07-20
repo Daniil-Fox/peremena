@@ -38,6 +38,7 @@
       <header class="header">
   <div class="container">
     <div class="header__container">
+      <div class="header__overlay corner-smooth-60"></div>
       <a href="#" class="header__logo logo">
         <svg class="">
           <use xlink:href="img/sprite.svg#logo"></use>
@@ -45,36 +46,59 @@
       </a>
       <nav class="nav header__nav">
         <ul id="menu-main" class="menu">
-          <li id="menu-item-1"
-            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page-item-2 current_page_item menu-item-1">
+          <li
+            id="menu-item-1"
+            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page-item-2 current_page_item menu-item-1"
+          >
             <a href="#" aria-current="page">о нас</a>
           </li>
-          <li id="menu-item-2"
-            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2">
-            <a href="#">работы
+          <li
+            id="menu-item-2"
+            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2"
+          >
+            <a href="#"
+              >работы
               <svg class="">
                 <use xlink:href="img/sprite.svg#arr-down"></use>
               </svg>
             </a>
             <ul class="sub-menu">
-              <li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21">
+              <li
+                id="menu-item-21"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"
+              >
                 <a href="#">работа1</a>
               </li>
-              <li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22">
+              <li
+                id="menu-item-22"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"
+              >
                 <a href="#">работа2</a>
               </li>
-              <li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22">
+              <li
+                id="menu-item-23"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"
+              >
                 <a href="#">работа3</a>
               </li>
             </ul>
           </li>
-          <li id="menu-item-3" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3">
+          <li
+            id="menu-item-3"
+            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3"
+          >
             <a href="#">услуги</a>
           </li>
-          <li id="menu-item-4" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4">
+          <li
+            id="menu-item-4"
+            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4"
+          >
             <a href="#">цены</a>
           </li>
-          <li id="menu-item-5" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4">
+          <li
+            id="menu-item-5"
+            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4"
+          >
             <a href="#">контакты</a>
           </li>
         </ul>
@@ -92,20 +116,64 @@
           </li>
         </ul>
       </div>
+
+      <button
+        class="btn-reset burger header__burger"
+        aria-label="Открыть меню"
+        aria-expanded="false"
+        data-burger
+      >
+        <span class="burger__line"></span>
+      </button>
+
+      <div class="f-menu" data-menu>
+  <div class="f-menu__body">
+    <nav class="f-menu__nav nav">
+      <ul>
+        <li>
+          <a href="#">о нас</a>
+        </li>
+        <li>
+          <a href="#">рабооты</a>
+        </li>
+        <li>
+          <a href="#">услуги</a>
+        </li>
+        <li>
+          <a href="#">цены</a>
+        </li>
+        <li>
+          <a href="#">контакты</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="btn btn--light btn-reset f-menu__btn">Обратная связь</button>
+  </div>
+</div>
+
     </div>
   </div>
 </header>
+
       <main class="main">
         <section class="about-hero">
   <div class="container">
     <div class="about-hero__container">
       <div class="about-hero__content">
-        <div class="about-hero__header">
+        <div class="about-hero__header corner-smooth-40">
           <h2 class="title2 about-hero__title">
             мы перемена, диджитал агентство
           </h2>
         </div>
-        <div class="about-hero__desc desc2">
+        <div class="about-hero__img corner-smooth-40 about-hero__img--mob">
+          <img src="./img/about-hero.webp" aria-hidden="true" alt="" />
+
+          <div class="about-hero__union">
+            <img src="./img/union.svg" alt="" />
+          </div>
+        </div>
+        <div class="about-hero__desc corner-smooth-40 desc2">
           <p>Перемена&nbsp;— это&nbsp;движущая сила вашей бизнес-эволюции.</p>
           <p>
             Мы&nbsp;создаём не&nbsp;просто дизайн, SMM или&nbsp;маркетинговые
@@ -115,7 +183,7 @@
           <p>
             Наша философия: истинные перемены рождаются на&nbsp;стыке
             стратегического видения, креативного исполнения, технологий
-            завтрашнего&nbsp;дня&nbsp;и&nbsp;функциональной лаконичности.
+            завтрашнего&nbsp;дня и&nbsp;функциональной лаконичности.
           </p>
           <p>
             Добро пожаловать в&nbsp;дизайн/SMM/маркетинг будущего
@@ -123,7 +191,7 @@
           </p>
         </div>
       </div>
-      <div class="about-hero__img">
+      <div class="about-hero__img corner-smooth-40">
         <img src="./img/about-hero.webp" aria-hidden="true" alt="" />
 
         <div class="about-hero__union">
@@ -135,10 +203,10 @@
 </section>
  <section class="clients">
   <div class="container">
-    <div class="clients__header">
+    <div class="clients__header corner-smooth-40">
       <h2 class="title2 clients__title">клиенты</h2>
     </div>
-    <div class="clients__desc desc2">
+    <div class="clients__desc corner-smooth-40 desc2">
       <p>
         Работаем с&nbsp;компаниями из&nbsp;разных сфер: от&nbsp;недвижимости
         и&nbsp;FMCG (товары повседневного спроса) до&nbsp;ритейла, HoReCa
@@ -149,32 +217,32 @@
     <div class="clients__slider swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <div class="clients__card">
+          <div class="clients__card corner-smooth-40">
             <img src="./img/clients/01.webp" alt="" />
           </div>
         </div>
         <div class="swiper-slide">
-          <div class="clients__card">
+          <div class="clients__card corner-smooth-40">
             <img src="./img/clients/02.webp" alt="" />
           </div>
         </div>
         <div class="swiper-slide">
-          <div class="clients__card">
+          <div class="clients__card corner-smooth-40">
             <img src="./img/clients/03.webp" alt="" />
           </div>
         </div>
         <div class="swiper-slide">
-          <div class="clients__card">
+          <div class="clients__card corner-smooth-40">
             <img src="./img/clients/04.webp" alt="" />
           </div>
         </div>
         <div class="swiper-slide">
-          <div class="clients__card">
+          <div class="clients__card corner-smooth-40">
             <img src="./img/clients/05.webp" alt="" />
           </div>
         </div>
         <div class="swiper-slide">
-          <div class="clients__card">
+          <div class="clients__card corner-smooth-40">
             <img src="./img/clients/06.webp" alt="" />
           </div>
         </div>
@@ -185,10 +253,10 @@
 
         <section class="team">
   <div class="container">
-    <div class="team__header">
+    <div class="team__header corner-smooth-40">
       <h2 class="title2 team__title">команда</h2>
     </div>
-    <div class="team__desc desc2">
+    <div class="team__desc corner-smooth-40 desc2">
       <p>Перемена&nbsp;— это&nbsp;движущая сила вашей бизнес-эволюции.</p>
       <p>
         Мы&nbsp;создаём не&nbsp;просто дизайн, SMM или&nbsp;маркетинговые
@@ -208,7 +276,7 @@
   <div class="team__slider swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <div class="team__card t-card">
+        <div class="team__card corner-smooth-40 t-card">
           <div class="t-card__img">
             <img src="./img/team/01.webp" alt="ефим лакиенко, дизайнер" />
           </div>
@@ -219,7 +287,7 @@
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="team__card t-card">
+        <div class="team__card corner-smooth-40 t-card">
           <div class="t-card__img">
             <img src="./img/team/02.webp" alt="Эмилиана Тавакалова, smm" />
           </div>
@@ -230,7 +298,7 @@
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="team__card t-card">
+        <div class="team__card corner-smooth-40 t-card">
           <div class="t-card__img">
             <img
               src="./img/team/03.webp"
@@ -244,7 +312,7 @@
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="team__card t-card">
+        <div class="team__card corner-smooth-40 t-card">
           <div class="t-card__img">
             <img src="./img/team/04.webp" alt="григорий марков, оператор" />
           </div>
@@ -255,7 +323,7 @@
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="team__card t-card">
+        <div class="team__card corner-smooth-40 t-card">
           <div class="t-card__img">
             <img src="./img/team/01.webp" alt="ефим лакиенко, дизайнер" />
           </div>
@@ -266,7 +334,7 @@
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="team__card t-card">
+        <div class="team__card corner-smooth-40 t-card">
           <div class="t-card__img">
             <img src="./img/team/02.webp" alt="Эмилиана Тавакалова, smm" />
           </div>
@@ -277,7 +345,7 @@
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="team__card t-card">
+        <div class="team__card corner-smooth-40 t-card">
           <div class="t-card__img">
             <img
               src="./img/team/03.webp"
@@ -291,7 +359,7 @@
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="team__card t-card">
+        <div class="team__card corner-smooth-40 t-card">
           <div class="t-card__img">
             <img src="./img/team/04.webp" alt="григорий марков, оператор" />
           </div>
@@ -308,11 +376,13 @@
   <div class="container">
     <div class="cta__container">
       <div class="cta__content">
-        <div class="cta__header">
+        <div class="cta__header corner-smooth-40">
           <h2 class="title2 cta__title">напишите нам</h2>
         </div>
-
-        <form action="#" class="cta__form form">
+        <div class="cta__img cta__img--mob">
+          <img src="./img/hero-bg.webp" alt="" />
+        </div>
+        <form action="#" class="cta__form form corner-smooth-40">
           <div class="form__field form__field--long">
             <input id="cta-name" type="text" class="form__input" name="Имя" />
             <label for="cta-name" class="form__label">как ваше имя?</label>
@@ -371,7 +441,7 @@
       <div class="cta__img">
         <img src="./img/hero-bg.webp" alt="" />
       </div>
-      <div class="cta__row flex al-c jc-sb">
+      <div class="cta__row flex al-c jc-sb corner-smooth-40">
         <p class="desc1 cta__capture">Не любите заполнять формы?</p>
         <p class="desc1 cta__capture">
           Пишите на <a href="mailto:hello@peremena.ru" class="link-btn"
@@ -386,7 +456,7 @@
       </main>
       <footer class="footer">
   <div class="container">
-    <div class="footer__container">
+    <div class="footer__container corner-smooth-40">
       <div class="footer__left">
         <nav class="footer__nav f-nav">
           <div class="f-nav__capture">
@@ -492,6 +562,36 @@
         </nav>
       </div>
 
+      <div class="footer__mob">
+        <nav class="footer__nav f-nav">
+          <div class="f-nav__capture">
+            <a href="#" class="f-nav__link link-btn f-nav__link--main"
+              >Информация</a
+            >
+          </div>
+          <ul class="list-reset">
+            <li class="f-nav__item">
+              <a href="#" class="f-nav__link link-btn">главная</a>
+            </li>
+            <li class="f-nav__item">
+              <a href="#" class="f-nav__link link-btn">о нас</a>
+            </li>
+            <li class="f-nav__item">
+              <a href="#" class="f-nav__link link-btn">работы</a>
+            </li>
+            <li class="f-nav__item">
+              <a href="#" class="f-nav__link link-btn">услуги</a>
+            </li>
+            <li class="f-nav__item">
+              <a href="#" class="f-nav__link link-btn">цены</a>
+            </li>
+            <li class="f-nav__item">
+              <a href="#" class="f-nav__link link-btn">контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
       <div class="footer__right">
         <a href="./" class="logo footer__logo">
           <svg class="">
@@ -506,9 +606,46 @@
           <a href="#" class="f-nav__link link-btn">Документация</a>
         </div>
 
+        <div class="footer__mob">
+          <a href="tel:+7 000 000 00 00" class="footer__sm">+7 000 000 00 00</a>
+          <a href="tel:+7 000 000 00 00" class="footer__sm"
+            >hello@peremena.ru</a
+          >
+        </div>
+
         <div class="footer__block">
           <small> не является публичной офертой </small>
           <small> ООО “Перемена”, 2025 © </small>
+        </div>
+      </div>
+
+      <div class="footer__mob">
+        <div class="footer__row">
+          <a href="./" class="logo footer__logo">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#logo"></use>
+            </svg>
+          </a>
+
+          <div class="footer__col">
+            <div class="footer__sm">
+              <a href="tel:+7 000 000 00 00">+7 000 000 00 00</a>
+            </div>
+            <div class="footer__sm">
+              <a href="mailto:hello@peremena.ru">hello@peremena.ru</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__row">
+          <div class="footer__block">
+            <small>
+              ООО “Перемена”, 2025 ©<br />
+              не&nbsp;является&nbsp;публичной&nbsp;офертой
+            </small>
+          </div>
+          <a href="#" target="_blank" class="footer__sm footer__sm--right">
+            Политика конфиденциальности
+          </a>
         </div>
       </div>
     </div>

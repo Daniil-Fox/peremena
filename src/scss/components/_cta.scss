@@ -1,10 +1,19 @@
 .cta {
   padding: 3rem 0 12rem;
+  @include mobile {
+    padding: 2.5rem 0 6rem;
+  }
   &__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: flex-start;
     gap: 3rem;
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
   }
 
   &__content {
@@ -23,6 +32,19 @@
     position: relative;
     border-radius: 4rem;
     overflow: hidden;
+    @include mobile {
+      display: none;
+      height: 29.5rem;
+      padding: 0;
+      order: -1;
+      margin-bottom: 3rem;
+    }
+    &--mob {
+      display: none;
+      @include mobile {
+        display: block;
+      }
+    }
     img {
       position: absolute;
       left: 0;
@@ -37,12 +59,25 @@
     border-radius: 4rem;
     background: var(--white);
     margin-bottom: 3rem;
-  }
 
+    @include mobile {
+      padding: 3.3rem 4rem;
+      order: -10;
+    }
+  }
+  &__title {
+    @include mobile {
+      font-size: 3rem;
+    }
+  }
   &__form {
     border-radius: 4rem;
     padding: 6rem;
     background-color: var(--white);
+
+    @include mobile {
+      padding: 4rem;
+    }
   }
 
   &__row {
@@ -50,6 +85,11 @@
     padding: 3.4rem 6rem;
     background: var(--white);
     border-radius: 4rem;
+
+    @include mobile {
+      padding: 3.1rem 4rem;
+      flex-direction: column;
+    }
   }
   &__capture {
     font-weight: 300;

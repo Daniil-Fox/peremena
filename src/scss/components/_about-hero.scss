@@ -1,10 +1,18 @@
 .about-hero {
   padding: 3rem 0;
   margin-bottom: 10rem;
+  @include mobile {
+    margin-bottom: 4.5rem;
+  }
   &__container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 3rem;
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+    }
   }
   &__content {
     grid-column: 7 span;
@@ -30,6 +38,18 @@
       left: 0;
       top: 0;
     }
+
+    @include mobile {
+      display: none;
+      height: 32.6rem;
+      margin-bottom: 3rem;
+    }
+    &--mob {
+      display: none;
+      @include mobile {
+        display: flex;
+      }
+    }
   }
   &__union {
     position: relative;
@@ -37,6 +57,10 @@
     flex-shrink: 0;
     width: 31.5rem;
     height: 25.4rem;
+    @include mobile {
+      width: 19.8rem;
+      height: 16rem;
+    }
     img {
       display: block;
       width: 100%;
@@ -49,6 +73,10 @@
     padding: 4.9rem 6rem 4.7rem;
     background: var(--white);
     margin-bottom: 3rem;
+
+    @include mobile {
+      padding: 3rem 4rem 3.9rem;
+    }
   }
 
   &__desc {
@@ -56,7 +84,9 @@
     border-radius: 4rem;
     padding: 5.1rem 6rem;
     background: var(--white);
-
+    @include mobile {
+      padding: 4.1rem 4rem;
+    }
     p {
       margin: 0;
 
