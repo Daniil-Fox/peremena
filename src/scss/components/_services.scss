@@ -44,6 +44,7 @@
   }
   &__title {
     margin-bottom: 1.4rem;
+    transition: color 0.3s ease-in;
   }
 
   &__img {
@@ -66,6 +67,12 @@
   &__desc {
     p {
       margin: 0;
+    }
+  }
+
+  @include hover {
+    .service__title {
+      color: var(--accent-cyan);
     }
   }
 }

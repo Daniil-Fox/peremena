@@ -4,5 +4,10 @@
     &:not(:last-child) {
       margin-bottom: 1.4rem;
     }
+
+    a {
+      font-size: inherit;
+      font-weight: inherit;
+    }
   }
 }

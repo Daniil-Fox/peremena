@@ -9,6 +9,7 @@ html {
   @media (min-width: 1920px) {
     font-size: 10px;
   }
+
   @media (max-width: 600px) {
     font-size: calc(100vw / 57.6);
   }
@@ -107,4 +108,78 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease-in;
+  @include mobile {
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+  &.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .cta {
+    width: 100%;
+
+    &__container {
+      position: relative;
+    }
+  }
+  &__close {
+    position: absolute;
+    right: 2rem;
+    top: -6rem;
+    z-index: 6;
+    width: 2.8rem;
+    height: 2.8rem;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include mobile {
+      position: static;
+      display: flex;
+    }
+    &--md {
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+  .cta__header {
+    @include mobile {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  .modal__form {
+    border-radius: 4rem;
+    padding: 6rem;
+    background-color: var(--white);
+
+    @include mobile {
+      padding: 4rem;
+    }
+  }
+}
+
+.just-validate-error-label {
+  display: none;
 }

@@ -10,14 +10,17 @@
         </div>
         <form action="#" class="cta__form form corner-smooth-40">
           <div class="form__field form__field--long">
-            <input id="cta-name" type="text" class="form__input" name="Имя" />
-            <label for="cta-name" class="form__label">как ваше имя?</label>
+            <div class="form__field-wrapper">
+              <input type="text" class="form__input input-name" name="Имя" />
+              <label class="form__label">как ваше имя?</label>
+            </div>
           </div>
           <div class="form__field">
-            <select name="Способ связи" class="visually-hidden" id="">
-              <option value="Способ1">Способ1</option>
-              <option value="Способ2">Способ2</option>
-              <option value="Способ3">Способ3</option>
+            <select name="Способ связи" class="visually-hidden select-contact">
+              <option value="">где с вами связаться?</option>
+              <option value="Telegram">Telegram</option>
+              <option value="Whatsapp">Whatsapp</option>
+              <option value="Email">Email</option>
             </select>
 
             <div class="dropdown form__dropdown">
@@ -32,32 +35,39 @@
               </div>
               <div class="dropdown__body">
                 <div class="dropdown__content">
-                  <div class="dropdown__item">Способ1</div>
-                  <div class="dropdown__item">Способ2</div>
-                  <div class="dropdown__item">Способ3</div>
+                  <div class="dropdown__item"></div>
+                  <div class="dropdown__item">Telegram</div>
+                  <div class="dropdown__item">Whatsapp</div>
+                  <div class="dropdown__item">Email</div>
                 </div>
               </div>
             </div>
           </div>
           <div class="form__field">
-            <input
-              id="tel"
-              type="text"
-              class="form__input"
-              name="Телефон/почта"
-            />
-            <label for="tel" class="form__label">телефон/почта</label>
+            <div class="form__field-wrapper">
+              <input
+                type="text"
+                class="form__input input-tel"
+                name="Телефон"
+                style="display: block"
+              />
+              <input
+                type="email"
+                class="form__input input-email"
+                name="Почта"
+                style="display: none"
+              />
+              <label class="form__label">телефон/почта</label>
+            </div>
           </div>
           <div class="form__field form__field--long">
-            <textarea
-              id="mess"
-              type="text"
-              class="form__input form__input--area"
-              name="Сообщение"
-            ></textarea>
-            <label for="mess" class="form__label"
-              >введите текст сообщения</label
-            >
+            <div class="form__field-wrapper form__field-wrapper--area">
+              <textarea
+                class="form__input form__input--area input-mess"
+                name="Сообщение"
+              ></textarea>
+              <label class="form__label">введите текст сообщения</label>
+            </div>
           </div>
           <button class="btn btn-reset btn--accent form__btn" disabled>
             отправить
@@ -70,9 +80,11 @@
       <div class="cta__row flex al-c jc-sb corner-smooth-40">
         <p class="desc1 cta__capture">Не любите заполнять формы?</p>
         <p class="desc1 cta__capture">
-          Пишите на <a href="mailto:hello@peremena.ru" class="link-btn"
+          Пишите на
+          <a href="mailto:hello@peremena.ru" class="link-btn"
             >hello@peremena.ru</a
           >
+          или <a href="#" class="link-btn">whatsapp</a>
         </p>
       </div>
     </div>

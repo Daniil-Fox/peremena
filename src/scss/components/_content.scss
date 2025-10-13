@@ -1,0 +1,79 @@
+.content {
+  margin: 3rem 0 6rem;
+  padding: 6rem;
+  border-radius: 4rem;
+  background-color: var(--white);
+  @include mobile {
+    padding: 4rem;
+    margin: 2rem 0 4rem;
+  }
+  h1 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 6.5rem;
+    line-height: 100%;
+    color: var(--black);
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+    @include mobile {
+      font-size: 4.6rem;
+    }
+  }
+  h2 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 5rem;
+    line-height: 120%;
+    text-transform: lowercase;
+    color: var(--black);
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+    @include mobile {
+      font-size: 3.6rem;
+    }
+  }
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 120%;
+    text-transform: lowercase;
+    color: var(--black);
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+  }
+  p {
+    margin: 0;
+    font-weight: 200;
+    font-size: 2rem;
+    line-height: 150%;
+    color: var(--black);
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+  }
+  ul,
+  ol {
+    font-weight: 200;
+    font-size: 2rem;
+    line-height: 150%;
+    color: var(--black);
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+  }
+  a {
+    margin: 0;
+    font-weight: 200;
+    font-size: 2rem;
+    line-height: 150%;
+    color: var(--black);
+    text-decoration: underline;
+  }
+}

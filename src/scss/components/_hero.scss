@@ -1,36 +1,52 @@
 .hero {
-  padding: 2rem 0;
+  padding: 2.8rem 0 3rem;
+  @media screen and (max-height: 1024px) and (max-width: 1366px) {
+    height: 80vh;
+  }
   @include mobile {
     padding: 2.5rem 0;
+    height: auto;
+  }
+  .container {
+    height: 100%;
   }
   &__container {
-    height: 79rem;
+    // height: 79rem;
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-
+    gap: 3rem;
+    @media screen and (max-height: 1024px) and (max-width: 1366px) {
+      flex-grow: 1;
+      height: 100%;
+    }
     @include mobile {
-      height: auto;
+      gap: 2rem;
     }
   }
 
   &__overlay {
     position: absolute;
     z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
+    right: 0;
+    top: 1px;
+    width: 128rem;
     height: 100%;
     background-image: url("./../img/hero-bg.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 38.5%;
 
-    mask-image: url("./../img/svg/hero-mask.svg");
+    mask-image: url("./../img/hero-mask.svg");
     mask-size: 100% 100%;
     mask-repeat: no-repeat;
-
+    &--block {
+      right: unset;
+      left: 0;
+      mask: none;
+      width: 134.3rem;
+      border-radius: 4rem;
+    }
     @include mobile {
       display: none;
     }
@@ -39,16 +55,21 @@
   &__img {
     display: none;
     @include mobile {
+      position: relative;
       display: block;
       mask-image: url("./../img/mask-mob.svg");
       mask-size: 100% 100%;
       mask-repeat: no-repeat;
       mask-position: center;
+      // flex-grow: 1;
       height: 39.6rem;
       margin-top: -4.4rem;
     }
 
     img {
+      position: absolute;
+      left: 0;
+      top: 0;
       display: block;
       width: 100%;
       height: 100%;
@@ -57,28 +78,40 @@
   }
 
   &__title {
+    text-transform: lowercase;
     position: relative;
     z-index: 4;
-    padding: 6rem;
+    padding: 5rem 6rem;
     background-color: var(--white);
-    max-width: 79.5rem;
-
+    width: 59rem;
+    height: 31rem;
     mask-image: url("./../img/svg/title-mask.svg");
     mask-size: 100% 100%;
     mask-repeat: no-repeat;
     mask-position: center;
     @include mobile {
+      height: auto;
+      width: 100%;
       mask-image: url("./../img/mask-title.svg");
       padding: 3.7rem 4rem 6.6rem;
     }
   }
   &__row {
+    position: relative;
+    &:first-child {
+      justify-content: space-between;
+    }
     &:last-child {
       display: flex;
       justify-content: flex-end;
-
+      min-height: 43rem;
+      @media screen and (max-height: 1024px) and (max-width: 1366px) {
+        flex-grow: 1;
+      }
       @include mobile {
+        min-height: unset;
         display: block;
+        flex: unset;
       }
     }
   }
@@ -89,11 +122,14 @@
     border-radius: 4rem;
     max-width: 42.5rem;
     background-color: var(--white);
-
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     @include mobile {
       max-width: 100%;
       margin-top: 1rem;
       padding: 3.2rem 4rem 3.6rem;
+      height: 100%;
     }
     p {
       margin: 0;
@@ -101,10 +137,16 @@
         margin-bottom: 2.3rem;
       }
       &:last-of-type {
+        margin-bottom: auto;
+
         @include mobile {
-          margin-bottom: 15.3rem;
+          margin-bottom: 2.3rem;
         }
       }
+    }
+    a {
+      font-size: inherit;
+      font-weight: inherit;
     }
   }
 }

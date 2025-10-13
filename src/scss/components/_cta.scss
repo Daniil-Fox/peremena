@@ -28,7 +28,7 @@
   &__img {
     width: 100%;
     height: 100%;
-    padding-bottom: 60.3%;
+    padding-bottom: 57.6%;
     position: relative;
     border-radius: 4rem;
     overflow: hidden;
@@ -81,14 +81,18 @@
   }
 
   &__row {
+    flex-direction: column;
     height: auto;
-    padding: 3.4rem 6rem;
+    padding: 3.1rem 6rem;
     background: var(--white);
     border-radius: 4rem;
 
     @include mobile {
       padding: 3.1rem 4rem;
-      flex-direction: column;
+    }
+
+    a {
+      text-decoration: underline;
     }
   }
   &__capture {

@@ -35,14 +35,20 @@ function applyCornerSmoothing() {
 
   document.querySelectorAll(".corner-smooth-40").forEach((el) => {
     renderSquircle(el, {
-      cornerRadius: 40,
+      cornerRadius: isMob ? 25 : 40,
       cornerSmoothing: 0.5,
     });
   });
   document.querySelectorAll(".corner-smooth-60").forEach((el) => {
     renderSquircle(el, {
-      cornerRadius: 60,
+      cornerRadius: isMob ? 40 : 60,
       cornerSmoothing: 0.5,
+    });
+  });
+  document.querySelectorAll(".corner-smooth-60-smooth").forEach((el) => {
+    renderSquircle(el, {
+      cornerRadius: isMob ? 40 : 60,
+      cornerSmoothing: 1,
     });
   });
   document.querySelectorAll(".corner-smooth-10").forEach((el) => {
@@ -113,3 +119,15 @@ window.addEventListener("resize", throttledResize);
 window.addEventListener("load", () => {
   applyCornerSmoothing();
 });
+
+const buttons = document.querySelectorAll(".portfolio__label input");
+
+if (buttons.length > 0) {
+  buttons.forEach((btn) => {
+    btn.addEventListener("change", (e) => {
+      setTimeout(() => {
+        applyCornerSmoothing();
+      }, 0);
+    });
+  });
+}

@@ -30,15 +30,22 @@
   <link rel="preload" href="fonts/WixMadeforText-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="owl/owl.carousel.min.css">
+
+
+
+  <script defer src="jquery.js"></script>
+  <script defer src="owl/owl.carousel.min.js"></script>
   <script defer src="js/main.js"></script>
 </head>
+
 
   <body class="page__body">
     <div class="site-container">
       <header class="header">
   <div class="container">
     <div class="header__container">
-      <div class="header__overlay corner-smooth-60"></div>
+      <div class="header__overlay corner-smooth-40"></div>
       <a href="#" class="header__logo logo">
         <svg class="">
           <use xlink:href="img/sprite.svg#logo"></use>
@@ -148,13 +155,96 @@
       </ul>
     </nav>
 
-    <button class="btn btn--light btn-reset f-menu__btn">Обратная связь</button>
+    <button class="btn btn--light btn-reset f-menu__btn modal-btn">
+      Обратная связь
+    </button>
   </div>
 </div>
 
     </div>
   </div>
 </header>
+
+<div class="modal">
+  <section class="cta">
+    <div class="container">
+      <div class="cta__container">
+        <button class="btn-reset modal__close modal__close--md">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L29 29M29 1L1 29" stroke="black" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+        <div class="cta__content">
+          <div class="cta__header corner-smooth-40">
+            <h2 class="title2 cta__title">напишите нам</h2>
+
+            <button class="btn-reset modal__close">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L29 29M29 1L1 29" stroke="black" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="cta__img cta__img--mob">
+            <img src="./img/hero-bg.webp" alt="" />
+          </div>
+          <form action="#" class="modal__form form corner-smooth-40">
+            <div class="form__field form__field--long">
+              <input type="text" class="form__input input-name" name="Имя" />
+              <label class="form__label">как ваше имя?</label>
+            </div>
+            <div class="form__field">
+              <select name="Способ связи" class="visually-hidden select-contact">
+                <option value="Telegram">Telegram</option>
+                <option value="Whatsapp">Whatsapp</option>
+                <option value="Email">Email</option>
+              </select>
+              <div class="dropdown form__dropdown filled">
+                <div class="dropdown__header">
+                  <div class="dropdown__label">где с вами связаться?</div>
+                  <div class="dropdown__capture">Whatsapp</div>
+                  <div class="dropdown__btn">
+                    <svg class="">
+                      <use xlink:href="img/sprite.svg#arr-down"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="dropdown__body">
+                  <div class="dropdown__content">
+                    <div class="dropdown__item">Telegram</div>
+                    <div class="dropdown__item">Whatsapp</div>
+                    <div class="dropdown__item">Email</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form__field">
+              <input type="text" class="form__input input-tel" name="Телефон" style="display: block" />
+              <input type="email" class="form__input input-email" name="Почта" style="display: none" />
+              <label class="form__label">телефон/почта</label>
+            </div>
+            <div class="form__field form__field--long">
+              <textarea class="form__input form__input--area input-mess" name="Сообщение"></textarea>
+              <label class="form__label">введите текст сообщения</label>
+            </div>
+            <button class="btn btn-reset btn--accent form__btn" disabled>
+              отправить
+            </button>
+          </form>
+        </div>
+        <div class="cta__img">
+          <img src="./img/hero-bg.webp" alt="" />
+        </div>
+        <div class="cta__row flex al-c jc-sb corner-smooth-40">
+          <p class="desc1 cta__capture">Не любите заполнять формы?</p>
+          <p class="desc1 cta__capture">
+            Пишите на
+            <a href="mailto:hello@peremena.ru" class="link-btn">hello@peremena.ru</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
 
       <main class="main">
         <section class="prices">
@@ -473,14 +563,17 @@
         </div>
         <form action="#" class="cta__form form corner-smooth-40">
           <div class="form__field form__field--long">
-            <input id="cta-name" type="text" class="form__input" name="Имя" />
-            <label for="cta-name" class="form__label">как ваше имя?</label>
+            <div class="form__field-wrapper">
+              <input type="text" class="form__input input-name" name="Имя" />
+              <label class="form__label">как ваше имя?</label>
+            </div>
           </div>
           <div class="form__field">
-            <select name="Способ связи" class="visually-hidden" id="">
-              <option value="Способ1">Способ1</option>
-              <option value="Способ2">Способ2</option>
-              <option value="Способ3">Способ3</option>
+            <select name="Способ связи" class="visually-hidden select-contact">
+              <option value="">где с вами связаться?</option>
+              <option value="Telegram">Telegram</option>
+              <option value="Whatsapp">Whatsapp</option>
+              <option value="Email">Email</option>
             </select>
 
             <div class="dropdown form__dropdown">
@@ -495,32 +588,39 @@
               </div>
               <div class="dropdown__body">
                 <div class="dropdown__content">
-                  <div class="dropdown__item">Способ1</div>
-                  <div class="dropdown__item">Способ2</div>
-                  <div class="dropdown__item">Способ3</div>
+                  <div class="dropdown__item"></div>
+                  <div class="dropdown__item">Telegram</div>
+                  <div class="dropdown__item">Whatsapp</div>
+                  <div class="dropdown__item">Email</div>
                 </div>
               </div>
             </div>
           </div>
           <div class="form__field">
-            <input
-              id="tel"
-              type="text"
-              class="form__input"
-              name="Телефон/почта"
-            />
-            <label for="tel" class="form__label">телефон/почта</label>
+            <div class="form__field-wrapper">
+              <input
+                type="text"
+                class="form__input input-tel"
+                name="Телефон"
+                style="display: block"
+              />
+              <input
+                type="email"
+                class="form__input input-email"
+                name="Почта"
+                style="display: none"
+              />
+              <label class="form__label">телефон/почта</label>
+            </div>
           </div>
           <div class="form__field form__field--long">
-            <textarea
-              id="mess"
-              type="text"
-              class="form__input form__input--area"
-              name="Сообщение"
-            ></textarea>
-            <label for="mess" class="form__label"
-              >введите текст сообщения</label
-            >
+            <div class="form__field-wrapper form__field-wrapper--area">
+              <textarea
+                class="form__input form__input--area input-mess"
+                name="Сообщение"
+              ></textarea>
+              <label class="form__label">введите текст сообщения</label>
+            </div>
           </div>
           <button class="btn btn-reset btn--accent form__btn" disabled>
             отправить
@@ -533,9 +633,11 @@
       <div class="cta__row flex al-c jc-sb corner-smooth-40">
         <p class="desc1 cta__capture">Не любите заполнять формы?</p>
         <p class="desc1 cta__capture">
-          Пишите на <a href="mailto:hello@peremena.ru" class="link-btn"
+          Пишите на
+          <a href="mailto:hello@peremena.ru" class="link-btn"
             >hello@peremena.ru</a
           >
+          или <a href="#" class="link-btn">whatsapp</a>
         </p>
       </div>
     </div>
@@ -687,7 +789,25 @@
             <use xlink:href="img/sprite.svg#logo"></use>
           </svg>
         </a>
-
+        <div class="header__socials">
+          <ul class="list-reset">
+            <li>
+              <a href="#" target="_blank">
+                <img src="./img/socials/tg.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><img src="./img/socials/tg.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><img src="./img/socials/tg.svg" alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
         <div class="footer__links">
           <a href="#" class="f-nav__link link-btn"
             >Политика обработки персональных данных</a

@@ -3,6 +3,8 @@
   margin: 3rem 0;
   position: relative;
   z-index: 50;
+  transition: transform 0.3s, top 0.3s;
+  z-index: 100;
   &__burger {
     display: none;
     @include mobile {
@@ -18,11 +20,13 @@
     align-items: center;
     justify-content: space-between;
     padding: 2.4rem 6rem;
+    padding-bottom: 2.6rem;
     padding-right: 5.9rem;
-
+    border-radius: 4rem;
+    box-shadow: 0 4px 60px 0 rgba(0, 0, 0, 0.07);
     @include mobile {
       padding: 2.8rem 4rem;
-      border-radius: 6rem;
+      border-radius: 4rem;
     }
   }
   &__overlay {
@@ -33,8 +37,7 @@
     width: 100%;
     height: 100%;
     background: var(--white);
-    border-radius: 6rem;
-    box-shadow: 0 4px 60px 0 rgba(0, 0, 0, 0.07);
+    // border-radius: 6rem;
   }
   &__nav {
     @include mobile {
@@ -57,12 +60,45 @@
         width: 4rem;
         height: 4rem;
         border-radius: 1.2rem;
-        background-color: var(--black);
 
         a {
           display: block;
           width: 100%;
           height: 100%;
+          position: relative;
+          overflow: hidden;
+          &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: var(--dirty-blue);
+            mix-blend-mode: screen;
+            opacity: 0;
+            transition: opacity 0.3s ease, background-color 0.3s ease-in;
+          }
+        }
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+
+        @include hover {
+          a::after {
+            opacity: 1;
+          }
+        }
+        &:focus {
+          outline: none;
+          a::after {
+            opacity: 1;
+          }
+        }
+        &:active {
+          a::after {
+            background-color: var(--accent-cyan);
+            opacity: 1;
+          }
         }
       }
     }
@@ -73,4 +109,17 @@
     position: relative;
     z-index: 99;
   }
+}
+
+.header--fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.header--hidden {
+  transform: translateY(-200%);
 }

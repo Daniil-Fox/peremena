@@ -6,6 +6,9 @@
     padding: 2.5rem 0;
   }
   &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     border-radius: 4rem;
     padding: 2.4rem 6rem 2.6rem;
     background-color: var(--white);
@@ -38,11 +41,30 @@
   }
 
   &__slider {
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
+    .owl-stage-outer {
+      padding: 0 calc((100% - var(--content-width)) / 2);
+
+      @include mobile {
+        padding: 0 var(--container-offset);
+      }
+    }
+    .owl-stage {
+      display: flex;
+      transition-timing-function: linear !important;
+    }
+
+    .owl-item {
+      width: calc(100% / 4 - 30px - var(--container-offset)) !important;
+    }
+
     @include mobile {
-      margin: 0 calc(-1 * var(--container-offset));
-      padding: 0 var(--container-offset);
-      .swiper-slide {
-        width: auto;
+      .owl-item {
+        width: 100% !important;
       }
     }
   }
@@ -63,6 +85,7 @@
       height: 100%;
       user-select: none;
       object-fit: contain;
+      user-select: none;
     }
   }
 
