@@ -404,9 +404,6 @@ a {
 .owl-carousel .owl-stage-outer {
   overflow: visible;
 }
-.owl-carousel .owl-item {
-  width: auto !important;
-}
 
 .logo {
   width: 18rem;
@@ -1182,6 +1179,11 @@ a {
     -webkit-transform: rotateX(180deg);
     transform: rotateX(180deg);
   }
+}
+.nav ul li.current_page_item a {
+  color: var(--accent-cyan);
+  pointer-events: none;
+  cursor: default;
 }
 .nav ul li svg {
   width: 1rem;
@@ -2649,32 +2651,33 @@ a {
 .clients__slider {
   cursor: -webkit-grab;
   cursor: grab;
+  padding: 0 calc((100% - var(--content-width)) / 2);
+}
+@media (max-width: 600px) {
+  .clients__slider {
+    padding: 0 var(--container-offset);
+  }
 }
 .clients__slider:active {
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
-.clients__slider .owl-stage-outer {
-  padding: 0 calc((100% - var(--content-width)) / 2);
-}
-@media (max-width: 600px) {
-  .clients__slider .owl-stage-outer {
-    padding: 0 var(--container-offset);
-  }
-}
 .clients__slider .owl-stage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition-timing-function: linear !important;
-  transition-timing-function: linear !important;
-}
-.clients__slider .owl-item {
-  width: calc(25% - 30px - var(--container-offset)) !important;
 }
 @media (max-width: 600px) {
-  .clients__slider .owl-item {
-    width: 100% !important;
+  .clients__slider .item {
+    width: auto;
+  }
+}
+.clients__slider:not(:last-child) {
+  margin-bottom: 3rem;
+}
+@media (max-width: 600px) {
+  .clients__slider:not(:last-child) {
+    margin-bottom: 2rem;
   }
 }
 .clients__card {
@@ -2748,18 +2751,16 @@ a {
 .team__slider {
   cursor: -webkit-grab;
   cursor: grab;
+  padding: 0 calc((100% - var(--content-width)) / 2);
+}
+@media (max-width: 600px) {
+  .team__slider {
+    padding: 0 var(--container-offset);
+  }
 }
 .team__slider:active {
   cursor: -webkit-grabbing;
   cursor: grabbing;
-}
-.team__slider .owl-stage-outer {
-  padding: 0 calc((100% - var(--content-width)) / 2);
-}
-@media (max-width: 600px) {
-  .team__slider .owl-stage-outer {
-    padding: 0 var(--container-offset);
-  }
 }
 .team__slider .owl-stage {
   display: -webkit-box;
@@ -2768,15 +2769,9 @@ a {
   -webkit-transition-timing-function: linear !important;
   transition-timing-function: linear !important;
 }
-.team__slider .owl-item {
-  width: calc(25% - 26px - var(--container-offset)) !important;
-}
-.team__slider .owl-item:last-child {
-  margin-right: 0 !important;
-}
 @media (max-width: 600px) {
-  .team__slider .owl-item {
-    width: 100% !important;
+  .team__slider .item {
+    width: auto;
   }
 }
 

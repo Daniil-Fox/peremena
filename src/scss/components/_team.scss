@@ -31,33 +31,27 @@
     }
   }
 
+
+
   &__slider {
     cursor: grab;
-
+    padding: 0 calc((100% - var(--content-width)) / 2);
+    @include mobile {
+      padding: 0 var(--container-offset);
+    }
     &:active {
       cursor: grabbing;
     }
-    .owl-stage-outer {
-      padding: 0 calc((100% - var(--content-width)) / 2);
 
-      @include mobile {
-        padding: 0 var(--container-offset);
-      }
-    }
     .owl-stage {
       display: flex;
       transition-timing-function: linear !important;
     }
 
-    .owl-item {
-      width: calc(100% / 4 - 26px - var(--container-offset)) !important; // 30px margin / 4 = 7.5px, но учитываем что margin-right у последнего убирается
-    }
-    .owl-item:last-child {
-      margin-right: 0 !important;
-    }
+
     @include mobile {
-      .owl-item {
-        width: 100% !important;
+      .item {
+        width: auto;
       }
     }
   }
