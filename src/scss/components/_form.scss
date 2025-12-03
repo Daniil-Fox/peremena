@@ -20,6 +20,9 @@
       input:not(:disabled) ~ .form__label {
         color: rgba(0, 0, 0, 0.45);
       }
+      textarea:not(:disabled)  ~ .form__label {
+        color: rgba(0, 0, 0, 0.45);
+      }
     }
 
     &-wrapper {

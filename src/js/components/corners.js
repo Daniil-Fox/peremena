@@ -34,6 +34,10 @@ function applyCornerSmoothing() {
   isMob = window.matchMedia("(max-width: 600px)").matches;
 
   document.querySelectorAll(".corner-smooth-40").forEach((el) => {
+    // Временно пропускаем элементы testi__item-content
+    if (el.classList.contains("testi__item-content")) {
+      return;
+    }
     renderSquircle(el, {
       cornerRadius: isMob ? 25 : 40,
       cornerSmoothing: 0.5,

@@ -1,0 +1,239 @@
+.single {
+  padding: 3rem 0 16rem;
+  @include mobile {
+    padding-bottom: 10rem;
+  }
+  &__header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+
+    margin-bottom: 6rem;
+
+    @include mobile {
+      margin-bottom: 4rem;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__content {
+    grid-column: 4 span;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    @include mobile {
+      padding: 4rem;
+      background-color: var(--white);
+      border-radius: 4rem;
+    }
+  }
+  &__cover {
+    grid-column: 8 span;
+    position: relative;
+
+    border-radius: 4rem;
+    overflow: hidden;
+
+    @include mobile {
+      flex-grow: 1;
+    }
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    padding: 5rem 6rem;
+    background-color: var(--white);
+    border-radius: 4rem;
+    @include mobile {
+      padding: 0;
+      background-color: transparent;
+      border-radius: 0;
+    }
+  }
+
+  &__author {
+    padding: 6rem;
+    border-radius: 4rem;
+    background-color: var(--white);
+    @include mobile {
+      padding: 0;
+      background-color: transparent;
+      border-radius: 0;
+    }
+  }
+}
+
+.author {
+  &__img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @include mobile {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__name {
+    margin: 0;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 150%;
+    color: var(--black);
+  }
+
+  &__time {
+    display: block;
+    font-weight: 200;
+    font-size: 2rem;
+    line-height: 150%;
+    color: var(--black);
+
+    @include mobile {
+      display: none;
+    }
+
+    &_mob {
+      display: none;
+      @include mobile {
+        display: block;
+        margin-bottom: -2rem;
+      }
+    }
+  }
+}
+
+.text-content {
+  margin: 0;
+  font-weight: 200;
+  font-size: 2rem;
+  line-height: 150%;
+  color: var(--black);
+
+  * {
+    margin: 0;
+  }
+  h3 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 120%;
+    text-transform: lowercase;
+    color: var(--black);
+  }
+  & > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    @include mobile {
+      gap: 3rem;
+      &:not(.figures) {
+        gap: 4rem;
+        padding: 4rem;
+        border-radius: 4rem;
+        background-color: var(--white);
+      }
+    }
+
+    & > *:nth-child(odd):not(figure) {
+      flex-basis: 42.8rem;
+      @include mobile {
+        flex-basis: 100%;
+      }
+    }
+    & > *:nth-child(even):not(figure) {
+      flex-basis: 134.2rem;
+      @include mobile {
+        flex-basis: 100%;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+
+      @include mobile {
+        margin-bottom: 3rem;
+      }
+    }
+
+    & > *:not(figure) {
+      flex-grow: 1;
+      padding: 6rem;
+      border-radius: 4rem;
+      overflow: hidden;
+      background-color: var(--white);
+      height: auto;
+      @include mobile {
+        padding: 0;
+        border-radius: 0;
+        background-color: transparent;
+      }
+      * {
+        &:not(:last-child) {
+          margin-bottom: 1.2rem;
+        }
+      }
+    }
+  }
+  // & > *:nth-child(odd):not(figure) {
+  //   flex-basis: 42.8rem;
+  // }
+  // & > *:nth-child(even):not(figure) {
+  //   flex-basis: 134.2rem;
+  // }
+
+  figure {
+    border-radius: 4rem;
+    overflow: hidden;
+    flex-basis: calc(50% - 1rem);
+    flex-grow: 1;
+    height: auto;
+
+    @include mobile {
+      flex-basis: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .mb-large {
+    &:not(:last-child) {
+      margin-bottom: 6rem;
+
+      @include mobile {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+}

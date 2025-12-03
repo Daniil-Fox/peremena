@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <section class="blog blog_main">
+        <div class="container">
+          <div class="blog__header heading">
+            <div class="heading__title">
+              <h1 class="title2 blog__title">
+                блог
+                перемены
+              </h1>
+            </div>
+            <div class="blog__buttons portfolio__buttons corner-smooth-40">
+              <label class="portfolio__label">
+                <input type="checkbox" class="visually-hidden" name="категория" id="all" checked />
+                <div class="portfolio__btn corner-smooth-10 btn--grey btn-reset btn btn--small">
+                  все статьи
+                </div>
+              </label>
+              <label class="portfolio__label">
+                <input type="checkbox" class="visually-hidden" name="категория" id="brand" />
+                <div class="portfolio__btn corner-smooth-10 btn--grey btn-reset btn btn--small">
+                  брендинг
+                </div>
+              </label>
+              <label class="portfolio__label">
+                <input type="checkbox" class="visually-hidden" name="категория" id="design" />
+                <div class="portfolio__btn corner-smooth-10 btn--grey btn-reset btn btn--small">
+                  дизайн
+                </div>
+              </label>
+              <label class="portfolio__label">
+                <input type="checkbox" class="visually-hidden" name="категория" id="poligraph" />
+                <div class="portfolio__btn corner-smooth-10 btn--grey btn-reset btn btn--small">
+                  маркетинг
+                </div>
+              </label>
+              <label class="portfolio__label">
+                <input type="checkbox" class="visually-hidden" name="категория" id="preza" />
+                <div class="portfolio__btn corner-smooth-10 btn--grey btn-reset btn btn--small">
+                  интервью
+                </div>
+              </label>
+              <label class="portfolio__label">
+                <input type="checkbox" class="visually-hidden" name="категория" id="sites" />
+                <div class="portfolio__btn corner-smooth-10 btn--grey btn-reset btn btn--small">
+                  новости
+                </div>
+              </label>
+
+            </div>
+          </div>
+
+          <div class="blog__grid">
+            <article class="blog__item blog-card">
+              <div class="blog-card__img">
+                <img src="./img/blog/01.webp" alt="">
+              </div>
+              <div class="blog-card__content">
+                <a href="#" class="blog-card__title">
+                  как&nbsp;брендинг влияет на&nbsp;продажи и&nbsp;узнаваемость компании
+                </a>
+              </div>
+            </article>
+            <article class="blog__item blog-card">
+              <div class="blog-card__img">
+                <img src="./img/blog/02.webp" alt="">
+              </div>
+              <div class="blog-card__content">
+                <a href="#" class="blog-card__title">
+                  статистики, графики, цифры
+                </a>
+              </div>
+            </article>
+            <article class="blog__item blog-card">
+              <div class="blog-card__img">
+                <img src="./img/blog/03.webp" alt="">
+              </div>
+              <div class="blog-card__content">
+                <a href="#" class="blog-card__title">
+                  дизайн архитектуры, нюансы, секреты
+                </a>
+              </div>
+            </article>
+          </div>
+          <button class="btn btn-reset blog__more">
+            еще
+          </button>
+        </div>
+      </section>
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

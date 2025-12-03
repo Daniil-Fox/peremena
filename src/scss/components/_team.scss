@@ -34,26 +34,50 @@
 
 
   &__slider {
-    cursor: grab;
     padding: 0 calc((100% - var(--content-width)) / 2);
     @include mobile {
+      cursor: grab;
       padding: 0 var(--container-offset);
-    }
-    &:active {
-      cursor: grabbing;
+      &:active {
+        cursor: grabbing;
+      }
+      &.is-hint {
+        .owl-stage-outer {
+          will-change: transform;
+          animation: team-wiggle 1200ms ease-out 1;
+          animation-delay: 0.5s;
+        }
+      }
     }
 
     .owl-stage {
       display: flex;
       transition-timing-function: linear !important;
+
     }
 
+    &.off {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3rem;
+    }
 
     @include mobile {
       .item {
         width: auto;
       }
     }
+
+  }
+}
+
+@include mobile {
+  @keyframes team-wiggle {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-8px); }
+    50% { transform: translateX(0); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
   }
 }
 

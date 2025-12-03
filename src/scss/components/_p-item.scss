@@ -85,9 +85,7 @@
     }
   }
 
-  &--long {
-    grid-column: 2 span;
-  }
+
 
   &--all {
     display: flex;
@@ -127,4 +125,8 @@
       transform: scale(1.05);
     }
   }
+}
+
+.portfolio__grid--double .p-item--long {
+  grid-column: 2 span;
 }

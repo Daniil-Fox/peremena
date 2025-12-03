@@ -2,8 +2,10 @@ import "./components/header.js";
 import "./components/inputs.js";
 import "./components/dropdown.js";
 import "./components/sliders.js";
+import "./components/testi.js";
 import "./components/corners.js";
 import "./functions/validate-forms.js";
+import "./components/before-after.js";
 import CustomTextarea from "./components/textarea.js";
 
 // Инициализация кастомных textarea

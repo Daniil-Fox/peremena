@@ -1,8 +1,6 @@
 .case {
-  padding: 13rem 0 2.6rem;
-  @include mobile {
-    padding: 3rem 0;
-  }
+  padding: 3rem 0 2.6rem;
+
   &__hero {
     // height: 82rem;
     border-radius: 4rem;
@@ -24,7 +22,11 @@
       aspect-ratio: 1 / 1;
     }
   }
-
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 2.6rem;
+    }
+  }
   &__img {
     &:not(:last-child) {
       margin-bottom: 2.6rem;
@@ -33,6 +35,19 @@
       width: 100%;
       height: auto;
       object-fit: contain;
+    }
+  }
+
+  &__container {
+    @include mobile {
+      display: none;
+    }
+    &--mob {
+      display: none;
+
+      @include mobile {
+        display: block;
+      }
     }
   }
 }
