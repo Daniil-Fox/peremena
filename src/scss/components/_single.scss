@@ -1,8 +1,6 @@
 .single {
-  padding: 3rem 0 16rem;
-  @include mobile {
-    padding-bottom: 10rem;
-  }
+  padding: 3rem 0 10rem;
+
   &__header {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -28,6 +26,7 @@
       padding: 4rem;
       background-color: var(--white);
       border-radius: 4rem;
+      gap: 3rem;
     }
   }
   &__cover {
@@ -140,6 +139,7 @@
   * {
     margin: 0;
   }
+  h2,
   h3 {
     margin: 0;
     font-weight: 400;
@@ -147,73 +147,116 @@
     line-height: 120%;
     text-transform: lowercase;
     color: var(--black);
+
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
   }
-  & > div {
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 2.2rem;
+    line-height: 130%;
+    text-transform: lowercase;
+    color: var(--black);
+
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+  &__container {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
 
-    @include mobile {
-      gap: 3rem;
-      &:not(.figures) {
-        gap: 4rem;
-        padding: 4rem;
-        border-radius: 4rem;
-        background-color: var(--white);
-      }
-    }
-
-    & > *:nth-child(odd):not(figure) {
-      flex-basis: 42.8rem;
-      @include mobile {
-        flex-basis: 100%;
-      }
-    }
-    & > *:nth-child(even):not(figure) {
-      flex-basis: 134.2rem;
-      @include mobile {
-        flex-basis: 100%;
-      }
-    }
-
     &:not(:last-child) {
-      margin-bottom: 2rem;
-
-      @include mobile {
-        margin-bottom: 3rem;
-      }
+      margin-bottom: 3rem;
     }
 
-    & > *:not(figure) {
-      flex-grow: 1;
-      padding: 6rem;
-      border-radius: 4rem;
-      overflow: hidden;
-      background-color: var(--white);
-      height: auto;
+    &:not(&_separated) {
       @include mobile {
-        padding: 0;
-        border-radius: 0;
-        background-color: transparent;
-      }
-      * {
-        &:not(:last-child) {
-          margin-bottom: 1.2rem;
+        padding: 4.5rem 4rem;
+        background-color: var(--white);
+        border-radius: 4rem;
+        gap: 4rem;
+        & > * {
+          border-radius: 0;
+          background-color: transparent;
+          padding: 0;
         }
       }
     }
+
+    &_nowrap {
+      flex-wrap: nowrap;
+    }
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
-  // & > *:nth-child(odd):not(figure) {
-  //   flex-basis: 42.8rem;
-  // }
-  // & > *:nth-child(even):not(figure) {
-  //   flex-basis: 134.2rem;
-  // }
+
+  &__block {
+    position: relative;
+    padding: 6rem;
+    border-radius: 4rem;
+    background-color: var(--white);
+    flex: 1 1 calc(25% - 1.5rem);
+    min-width: calc(25% - 1.5rem);
+
+    & > * {
+      position: relative;
+      z-index: 3;
+    }
+    &_3 {
+      flex: 0 0 calc(25% - 1.5rem);
+      min-width: calc(25% - 1.5rem);
+    }
+    &_4 {
+      flex: 0 0 calc(33.333% - 1.5rem);
+      min-width: calc(33.333% - 1.5rem);
+    }
+    &_5 {
+      flex: 0 0 calc(41.667% - 1.15rem);
+      min-width: calc(41.667% - 1.15rem);
+    }
+    &_6 {
+      flex: 0 0 calc(50% - 1rem);
+      min-width: calc(50% - 1rem);
+    }
+    &_7 {
+      flex: 0 0 calc(58.333% - 0.89rem);
+      min-width: calc(58.333% - 0.89rem);
+    }
+
+    @include mobile {
+      padding: 4.5rem 4rem;
+      flex: 1;
+      min-width: 100%;
+    }
+  }
+
+  &__block-bg {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-position: bottom;
+    }
+  }
 
   figure {
     border-radius: 4rem;
     overflow: hidden;
-    flex-basis: calc(50% - 1rem);
+    flex-basis: calc(25% - 1rem);
     flex-grow: 1;
     height: auto;
 
@@ -222,8 +265,34 @@
     }
 
     img {
+      display: block;
       width: 100%;
       height: 100%;
+    }
+  }
+
+  p {
+    font-family: var(--second-family);
+    font-weight: 200;
+    font-size: 2rem;
+    line-height: 150%;
+    color: var(--black);
+
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+  }
+  b,
+  strong {
+    font-weight: 300;
+  }
+
+  ul,
+  ol {
+    padding-left: 2rem;
+
+    li:not(:last-child) {
+      margin-bottom: 0.5em;
     }
   }
 

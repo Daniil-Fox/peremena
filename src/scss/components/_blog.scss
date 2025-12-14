@@ -8,9 +8,12 @@
       padding-bottom: 10rem;
     }
   }
+  &_page {
+    padding: 8rem 0;
+  }
   &:not(.blog_main) &__grid {
     & > *:first-child {
-      grid-row: 2 span;
+      // grid-row: 2 span;
     }
 
     & > * {
@@ -21,6 +24,7 @@
       }
     }
   }
+
   &__title {
     line-height: 100%;
   }
@@ -70,8 +74,8 @@
       left: 0;
       bottom: 0;
       width: 100%;
-      height: 100%;
-      background-image: linear-gradient(to top, #000, transparent);
+      height: 50%;
+      background-image: linear-gradient(to top, rgba(#000, 0.9), transparent);
     }
     img {
       width: 100%;
