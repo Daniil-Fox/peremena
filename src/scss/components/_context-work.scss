@@ -1,0 +1,73 @@
+.context-work {
+  padding: 5rem 0;
+  @include mobile {
+    padding: 3rem 0;
+  }
+  &__title {
+    padding: 5rem 6rem;
+    border-radius: 4rem;
+    background-color: var(--white);
+
+    margin-bottom: 4rem;
+
+    @include mobile {
+      padding: 3.5rem 4rem;
+      font-size: 3rem;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+
+    counter-reset: stepps;
+  }
+
+  &__step {
+    counter-increment: steps;
+    flex-grow: 1;
+    background-color: var(--white);
+    padding: 5.5rem 6rem;
+    border-radius: 4rem;
+    @include mobile {
+      width: 100%;
+      padding: 4.5rem 4rem;
+    }
+    &:nth-child(8n + 1),
+    &:nth-child(8n + 2),
+    &:nth-child(8n + 5),
+    &:nth-child(8n + 6) {
+      flex-basis: calc(50% - 2rem);
+      @include mobile {
+        flex-basis: auto;
+      }
+    }
+
+    &:nth-child(8n + 4) {
+      flex-basis: 58rem;
+      @include mobile {
+        flex-basis: auto;
+      }
+    }
+
+    &:nth-child(8n + 3) {
+      flex-basis: 118rem;
+      @include mobile {
+        flex-basis: auto;
+      }
+    }
+    &:nth-child(8n + 7) {
+      flex-basis: 42rem;
+      @include mobile {
+        flex-basis: auto;
+      }
+    }
+    &:nth-child(8n + 8) {
+      flex-basis: 134rem;
+      @include mobile {
+        flex-basis: auto;
+      }
+    }
+  }
+}

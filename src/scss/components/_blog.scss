@@ -3,7 +3,7 @@
 
   &_main {
     padding-top: 3rem;
-    padding-bottom: 16rem;
+    padding-bottom: 13rem;
     @include mobile {
       padding-bottom: 10rem;
     }
@@ -14,6 +14,16 @@
   &_general &__grid {
     & > *:first-child {
       grid-row: 2 span;
+    }
+
+    @include mobile {
+      & > * {
+        display: none;
+        &:nth-child(1),
+        &:nth-child(2) {
+          display: block;
+        }
+      }
     }
   }
   &:not(.blog_main) &__grid {

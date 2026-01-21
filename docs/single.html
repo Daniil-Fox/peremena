@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
-<head>
+  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -40,9 +40,9 @@
 </head>
 
 
-<body class="page__body">
-  <div class="site-container">
-    <div class="page-loader"
+  <body class="page__body">
+    <div class="site-container">
+      <div class="page-loader"
   style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fff; z-index: 9999; opacity: 1; transition: opacity 0.6s ease-out; pointer-events: none;">
 </div>
 
@@ -151,8 +151,19 @@
     <div class="container">
       <div class="cta__container">
         <button class="btn-reset modal__close modal__close--md">
-          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L29 29M29 1L1 29" stroke="black" stroke-width="2" stroke-linecap="round" />
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 30 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 1L29 29M29 1L1 29"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
           </svg>
         </button>
         <div class="cta__content">
@@ -160,37 +171,72 @@
             <h2 class="title2 cta__title">напишите нам</h2>
 
             <button class="btn-reset modal__close">
-              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L29 29M29 1L1 29" stroke="black" stroke-width="2" stroke-linecap="round" />
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 1L29 29M29 1L1 29"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
               </svg>
             </button>
           </div>
           <div class="cta__img cta__img--mob">
             <img src="./img/hero-bg.webp" alt="" />
           </div>
-          <form action="#" class="modal__form form corner-smooth-40">
+          <form
+            action="#"
+            class="modal__form form corner-smooth-40"
+            novalidate="novalidate"
+          >
             <div class="form__field form__field--long">
-              <input type="text" class="form__input input-name" name="Имя" />
-              <label class="form__label">как ваше имя?</label>
+              <div class="form__field-wrapper">
+                <input
+                  id="name123"
+                  type="text"
+                  class="form__input input-name"
+                  name="Имя"
+                />
+                <label for="name123" class="form__label">как ваше имя?</label>
+              </div>
             </div>
-            <div class="form__field">
-              <select name="Способ связи" class="visually-hidden select-contact">
+            <div class="form__field form__field--long">
+              <label for="contact-method-modal" class="visually-hidden"
+                >где с вами связаться?</label
+              >
+              <select
+                id="contact-method-modal"
+                name="Способ связи"
+                class="visually-hidden select-contact"
+                aria-label="где с вами связаться?"
+              >
+                <option value="">где с вами связаться?</option>
                 <option value="Telegram">Telegram</option>
                 <option value="Whatsapp">Whatsapp</option>
                 <option value="Email">Email</option>
               </select>
-              <div class="dropdown form__dropdown filled">
+
+              <div class="dropdown form__dropdown">
                 <div class="dropdown__header">
                   <div class="dropdown__label">где с вами связаться?</div>
-                  <div class="dropdown__capture">Whatsapp</div>
+                  <div class="dropdown__capture">где с вами связаться?</div>
                   <div class="dropdown__btn">
                     <svg class="">
-                      <use xlink:href="img/sprite.svg#arr-down"></use>
+                      <use
+                        xlink:href="https://peremena.store/wp-content/themes/peremena/assets/img/sprite.svg#arr-down"
+                      ></use>
                     </svg>
                   </div>
                 </div>
                 <div class="dropdown__body">
                   <div class="dropdown__content">
+                    <div class="dropdown__item"></div>
                     <div class="dropdown__item">Telegram</div>
                     <div class="dropdown__item">Whatsapp</div>
                     <div class="dropdown__item">Email</div>
@@ -198,16 +244,83 @@
                 </div>
               </div>
             </div>
-            <div class="form__field">
-              <input type="text" class="form__input input-tel" name="Телефон" style="display: block" />
-              <input type="email" class="form__input input-email" name="Почта" style="display: none" />
-              <label class="form__label">телефон/почта</label>
+            <div class="form__field" style="display: none">
+              <div class="form__field-wrapper">
+                <input
+                  id="tel123"
+                  type="text"
+                  class="form__input input-tel"
+                  name="Телефон"
+                  style="display: block"
+                  disabled=""
+                />
+                <input
+                  type="email"
+                  class="form__input input-email"
+                  name="Почта"
+                  style="display: none"
+                  disabled=""
+                />
+                <label for="tel123" class="form__label">телефон/email</label>
+              </div>
             </div>
             <div class="form__field form__field--long">
-              <textarea class="form__input form__input--area input-mess" name="Сообщение"></textarea>
-              <label class="form__label">введите текст сообщения</label>
+              <div class="form__field-wrapper form__field-wrapper--area">
+                <textarea
+                  id="msg123"
+                  class="form__input form__input--area input-mess"
+                  name="Сообщение"
+                ></textarea>
+                <label for="msg123" class="form__label"
+                  >введите текст сообщения</label
+                >
+                <div class="textarea-scrollbar disabled">
+                  <button
+                    class="textarea-scroll-btn textarea-scroll-up disabled"
+                    type="button"
+                    disabled=""
+                  >
+                    <svg
+                      width="8"
+                      height="6"
+                      viewBox="0 0 8 6"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2.84767 1.3828C3.19874 0.961515 3.37427 0.750872 3.57584 0.656461C3.8446 0.53058 4.15539 0.53058 4.42415 0.656461C4.62572 0.750871 4.80126 0.961513 5.15233 1.3828L6.94977 3.53973C7.52958 4.23549 7.81948 4.58338 7.85673 4.872C7.9064 5.25682 7.72897 5.63564 7.40154 5.84385C7.15597 6 6.70313 6 5.79744 6L2.20256 6C1.29687 6 0.844028 6 0.598457 5.84385C0.27103 5.63564 0.0936002 5.25682 0.143268 4.872C0.180518 4.58338 0.470422 4.23549 1.05023 3.53972L2.84767 1.3828Z"
+                      ></path>
+                    </svg>
+                  </button>
+                  <div class="textarea-scroll-track">
+                    <div class="textarea-scroll-thumb"></div>
+                  </div>
+                  <button
+                    class="textarea-scroll-btn textarea-scroll-down disabled"
+                    type="button"
+                    disabled=""
+                  >
+                    <svg
+                      width="8"
+                      height="6"
+                      viewBox="0 0 8 6"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2.84767 4.6172C3.19874 5.03849 3.37427 5.24913 3.57584 5.34354C3.8446 5.46942 4.15539 5.46942 4.42415 5.34354C4.62572 5.24913 4.80126 5.03849 5.15233 4.6172L6.94977 2.46027C7.52958 1.76451 7.81948 1.41662 7.85673 1.128C7.9064 0.743177 7.72897 0.364358 7.40154 0.156153C7.15597 3.32783e-07 6.70313 2.65766e-07 5.79744 1.31732e-07L2.20256 -4.00277e-07C1.29687 -5.34311e-07 0.844028 -6.01328e-07 0.598457 0.156152C0.27103 0.364356 0.0936002 0.743176 0.143268 1.128C0.180518 1.41662 0.470422 1.76451 1.05023 2.46028L2.84767 4.6172Z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </div>
-            <button class="btn btn-reset btn--accent form__btn" disabled>
+            <button
+              type="submit"
+              class="btn btn-reset btn--accent form__btn"
+              aria-label="Отправить форму обратной связи"
+              disabled=""
+            >
               отправить
             </button>
           </form>
@@ -219,13 +332,16 @@
           <p class="desc1 cta__capture">Не любите заполнять формы?</p>
           <p class="desc1 cta__capture">
             Пишите на
-            <a href="mailto:hello@peremena.ru" class="link-btn">hello@peremena.ru</a>
+            <a href="mailto:hello@peremena.ru" class="link-btn"
+              >hello@peremena.ru</a
+            >
           </p>
         </div>
       </div>
     </div>
   </section>
 </div>
+
 
 <script>
   (function () {
@@ -241,432 +357,623 @@
     }
   })();
 </script>
-    <main class="main">
-      <section class="single">
-        <div class="container">
-          <div class="single__header">
-            <div class="single__content">
-              <time class="author__time author__time_mob" datetime="2025-12-01">
-                01.12.2025
-              </time>
-              <h1 class="single__title title2">
-                как&nbsp;брендинг влияет на&nbsp;продажи и&nbsp;узнаваемость компании
-              </h1>
-              <div class="single__author author">
-                <div class="author__row">
-                  <div class="author__img">
-                    <img src="./img/blog/author.webp" alt="">
-                  </div>
-                  <p class="author__name">
-                    Дмитрий Бондаренко
-                  </p>
-                </div>
-                <time class="author__time" datetime="2025-12-01">
+      <main class="main">
+        <section class="single">
+          <div class="container">
+            <div class="single__header">
+              <div class="single__content">
+                <time
+                  class="author__time author__time_mob"
+                  datetime="2025-12-01"
+                >
                   01.12.2025
                 </time>
+                <h1 class="single__title title2">
+                  как&nbsp;брендинг влияет на&nbsp;продажи и&nbsp;узнаваемость
+                  компании
+                </h1>
+                <div class="single__author author">
+                  <div class="author__row">
+                    <div class="author__img">
+                      <img src="./img/blog/author.webp" alt="" />
+                    </div>
+                    <p class="author__name">Дмитрий Бондаренко</p>
+                  </div>
+                  <time class="author__time" datetime="2025-12-01">
+                    01.12.2025
+                  </time>
+                </div>
               </div>
-            </div>
-            <div class="single__cover">
-              <img src="./img/blog/main.webp" alt="">
+              <div class="single__cover">
+                <img src="./img/blog/main.webp" alt="" />
+              </div>
             </div>
           </div>
-        </div>
-        <div class="container">
-          <div class="single__container text-content">
-            <div class="text-content__container">
-
-              <div class="text-content__block text-content__block_3">
-                <h3>
-                  Что такое бренд?
-                </h3>
-              </div>
-
-              <div class="text-content__block">
-                <p>
-                  Надёжная основа вашего бренда.
-                  Это не&nbsp;просто картинка. Это лицо вашего бизнеса для клиентов.
-                </p>
-                <p>
-                  Мы&nbsp;создаём логотипы
-                  и&nbsp;систему стиля (цвета, шрифты, правила) с&nbsp;фокусом на&nbsp;ясность, функциональность
-                  и&nbsp;долговечность. Убираем лишнее, чтобы оставалось только&nbsp;то, что работает на&nbsp;вашу
-                  репутацию и&nbsp;доверие.
-                </p>
-                <p>
-                  Надёжная основа вашего бренда.
-                  Это не&nbsp;просто картинка. Это лицо вашего бизнеса для клиентов.
-                </p>
-                <p>
-                  Мы&nbsp;создаём логотипы
-                  и&nbsp;систему стиля (цвета, шрифты, правила) с&nbsp;фокусом на&nbsp;ясность, функциональность
-                  и&nbsp;долговечность. Убираем лишнее, чтобы оставалось только&nbsp;то, что работает на&nbsp;вашу
-                  репутацию и&nbsp;доверие.
-                </p>
-              </div>
-            </div>
-
-            <div class="text-content__container">
-              <div class="text-content__block text-content__block_3">
-                <h3>
-                  Комментарий нашего дизайнера<br>
-                  Ефима лакиенко
-                </h3>
-              </div>
-
-              <div class="text-content__block">
-                <p>
-                  Надёжная основа вашего бренда.
-                </p>
-                <p>
-                  Это не&nbsp;просто картинка. Это лицо вашего бизнеса для клиентов.<br>
-                  Мы&nbsp;создаём логотипы и&nbsp;систему стиля (цвета, шрифты, правила) с&nbsp;фокусом на&nbsp;ясность,
-                  функциональность и&nbsp;долговечность. Убираем лишнее, чтобы оставалось только&nbsp;то, что работает
-                  на&nbsp;вашу репутацию и&nbsp;доверие.
-                </p>
-              </div>
-            </div>
-
-            <div class="text-content__container mb-large figures">
-              <figure>
-                <img src="./img/blog/case1.jpg" alt="">
-              </figure>
-              <figure>
-                <img src="./img/case4.png" alt="">
-              </figure>
-            </div>
-
-            <div class="text-content__container">
-              <div class="text-content__block text-content__block_3">
-                <h3>
-                  Влияние<br>
-                  на продажи
-                </h3>
-              </div>
-
-              <div class="text-content__block">
-                <p>Надёжная основа вашего бренда.</p>
-                <p>Это не&nbsp;просто картинка. Это лицо вашего бизнеса для клиентов.
-                  Мы&nbsp;создаём логотипы и&nbsp;систему стиля (цвета, шрифты, правила) с&nbsp;фокусом на&nbsp;ясность,
-                  функциональность и&nbsp;долговечность. Убираем лишнее, чтобы оставалось только&nbsp;то, что работает
-                  на&nbsp;вашу репутацию и&nbsp;доверие.</p>
-                <p>
-                  Надёжная основа вашего бренда.
-                </p>
-                <p>Надёжная основа вашего бренда.</p>
-                <p>Это не&nbsp;просто картинка. Это лицо вашего бизнеса для клиентов.
-                  Мы&nbsp;создаём логотипы и&nbsp;систему стиля (цвета, шрифты, правила) с&nbsp;фокусом на&nbsp;ясность,
-                  функциональность и&nbsp;долговечность. Убираем лишнее, чтобы оставалось только&nbsp;то, что работает
-                  на&nbsp;вашу репутацию и&nbsp;доверие.</p>
-                <p>
-                  Надёжная основа вашего бренда.
-                </p>
-                <p>Надёжная основа вашего бренда.</p>
-                <p>Это не&nbsp;просто картинка. Это лицо вашего бизнеса для клиентов.
-                  Мы&nbsp;создаём логотипы и&nbsp;систему стиля (цвета, шрифты, правила) с&nbsp;фокусом на&nbsp;ясность,
-                  функциональность и&nbsp;долговечность. Убираем лишнее, чтобы оставалось только&nbsp;то, что работает
-                  на&nbsp;вашу репутацию и&nbsp;доверие.</p>
-                <p>
-                  Надёжная основа вашего бренда.
-                </p>
-              </div>
-            </div>
-
-            <div class="text-content__container text-content__container_separated mb-large">
-              <figure>
-                <img src="./img/blog/graph.jpg" alt="">
-              </figure>
-              <figure>
-                <img src="./img/blog/graph.jpg" alt="">
-              </figure>
-            </div>
-
-            <div class="text-content__container">
-              <div class="text-content__block text-content__block_3">
-                <h3>
-                  Влияние<br>
-                  на продажи
-                </h3>
-              </div>
-              <div class="text-content__block">
-                <p>Надёжная основа вашего бренда.</p>
-                <p>Это не&nbsp;просто картинка. Это лицо вашего бизнеса для клиентов.
-                  Мы&nbsp;создаём логотипы и&nbsp;систему стиля (цвета, шрифты, правила) с&nbsp;фокусом на&nbsp;ясность,
-                  функциональность и&nbsp;долговечность. Убираем лишнее, чтобы оставалось только&nbsp;то, что работает
-                  на&nbsp;вашу репутацию и&nbsp;доверие.</p>
-              </div>
-            </div>
-
-            <div class="text-content__container text-content__container_separated">
-              <div class="text-content__block">
-                <h4>
-                  Графические и цифровые дизайнеры
-                </h4>
-                <p>
-                  Графический дизайнер - разрабатывает логотипы, баннеры, плакаты и контент для соцсетей, опираясь
-                  на композицию, цвета и типографику.​ А также именно это направление ответственно за создание
-                  фирменного стиля компании, упаковывается, как правило в брендбук (гайдбук).
-                  Веб-дизайнер - создаёт макеты сайтов, лендингов и приложений с учётом интерактивности и удобства.​
-                  UX/UI-дизайнер - обеспечивает функциональность и внешний вид интерфейсов цифровых продуктов, улучшая
-                  пользовательский опыт.​
-                  Motion-дизайнер - работает с анимацией, спецэффектами и видео для рекламы и медиа.
-                </p>
-              </div>
-              <div class="text-content__block ">
-                <h4>
-                  Графические и цифровые дизайнеры
-                </h4>
-                <p>
-                  Графический дизайнер - разрабатывает логотипы, баннеры, плакаты и контент для соцсетей, опираясь
-                  на композицию, цвета и типографику.​ А также именно это направление ответственно за создание
-                  фирменного стиля компании, упаковывается, как правило в брендбук (гайдбук).
-                  Веб-дизайнер - создаёт макеты сайтов, лендингов и приложений с учётом интерактивности и удобства.​
-                  UX/UI-дизайнер - обеспечивает функциональность и внешний вид интерфейсов цифровых продуктов, улучшая
-                  пользовательский опыт.​
-                  Motion-дизайнер - работает с анимацией, спецэффектами и видео для рекламы и медиа.
-                </p>
-              </div>
-              <div class="text-content__block">
-                <h4>
-                  Графические и цифровые дизайнеры
-                </h4>
-                <p>
-                  Графический дизайнер - разрабатывает логотипы, баннеры, плакаты и контент для соцсетей, опираясь
-                  на композицию, цвета и типографику.​ А также именно это направление ответственно за создание
-                  фирменного стиля компании, упаковывается, как правило в брендбук (гайдбук).
-                  Веб-дизайнер - создаёт макеты сайтов, лендингов и приложений с учётом интерактивности и удобства.​
-                  UX/UI-дизайнер - обеспечивает функциональность и внешний вид интерфейсов цифровых продуктов, улучшая
-                  пользовательский опыт.​
-                  Motion-дизайнер - работает с анимацией, спецэффектами и видео для рекламы и медиа.
-                </p>
-              </div>
-            </div>
-
-            <div class="text-content__container">
-              <div class="text-content__block text-content__block_7">
-                <h4>
-                  Текстовый логотип (Wordmark)
-                </h4>
-                <p>
-                  Узнаваемость достигается исключительно за счёт уникального начертания шрифта, цвета и композиции букв.
-                  Максимальная фокусировка на названии бренда, высокая читаемость и чистота восприятия.
-                </p>
-                <p>
-                  Примеры: Google, Яндекс
-                </p>
-              </div>
-              <figure>
-                <picture>
-                  <source srcset="./img/blog/brands/01-mob.webp" media="(max-width: 576px)">
-                  <img src="./img/blog/brands/01.webp" alt="">
-                </picture>
-              </figure>
-            </div>
-            <div class="text-content__container">
-              <div class="text-content__block text-content__block_7">
-                <h4>
-                  Текстовый логотип со встроенным элементом (Integral Wordmark)
-                </h4>
-                <p>
-                  Эволюция классического текстового логотипа, где в саму графику букв интегрирован фирменный графический
-                  элемент (символ, паттерн, деталь). Этот элемент несёт смысловую нагрузку, усиливает идентичность и,
-                  что ключевое, может существовать отдельно как полноценный символ бренда.
-                </p>
-                <p>
-                  Примеры: Amazon, Citibank
-                </p>
-              </div>
-              <figure>
-                <picture>
-                  <source srcset="./img/blog/brands/02-mob.webp" media="(max-width: 576px)">
-                  <img src="./img/blog/brands/02.webp" alt="">
-                </picture>
-              </figure>
-            </div>
-
-            <div class="text-content__container text-content__container_separated">
-              <div class="text-content__block text-content__block_4" style="min-height: 45rem;">
-                <h4>
-                  Корпоративный (бизнес-мерч)
-                </h4>
-                <p>
-                  <b>Цель:</b> Укрепление культуры, лояльности
-                </p>
-                <p>
-                  <b>Примеры:</b> Футболки, рюкзаки, пауэрбанки для&nbsp;сотрудников и клиентов
-                </p>
-                <div class="text-content__block-bg">
-                  <picture>
-                    <source srcset="./img/blog/blocks/01-mob.webp" type="image/webp" media="(max-width: 576px)">
-                    <img loading="lazy" src="./img/blog/blocks/01.webp" class="image" width="" height=""
-                      aria-hidden="true" alt="">
-                  </picture>
+          <div class="container">
+            <div class="single__container text-content">
+              <div class="text-content__container">
+                <div class="text-content__block text-content__block_3">
+                  <h3>Что такое бренд?</h3>
                 </div>
-              </div>
-              <div class="text-content__block text-content__block_4" style="min-height: 45rem;">
-                <h4>
-                  Событийный
-                </h4>
-                <p>
-                  <b>Цель:</b> Продвижение мероприятий, создание памяти
-                </p>
-                <p>
-                  <b>Примеры:</b> Сумки, браслеты, блокноты для конференций и фестивалей
-                </p>
-                <div class="text-content__block-bg">
-                  <picture>
-                    <source srcset="./img/blog/blocks/02-mob.webp" type="image/webp" media="(max-width: 576px)">
-                    <img loading="lazy" src="./img/blog/blocks/02.webp" class="image" width="" height=""
-                      aria-hidden="true" alt="">
-                  </picture>
-                </div>
-              </div>
-              <div class="text-content__block text-content__block_4" style="min-height: 45rem;">
-                <h4>
-                  Социальный и благотворительный
-                </h4>
-                <p>
-                  <b>Цель:</b> Поддержка инициатив, позиционирование
-                </p>
-                <p>
-                  <b>Примеры:</b> Продукция с&nbsp;посылом, часть средств от которой идет на добрые дела
-                </p>
-                <div class="text-content__block-bg">
-                  <picture>
-                    <source srcset="./img/blog/blocks/03-mob.webp" type="image/webp" media="(max-width: 576px)">
-                    <img loading="lazy" src="./img/blog/blocks/03.webp" class="image" width="" height=""
-                      aria-hidden="true" alt="">
-                  </picture>
+
+                <div class="text-content__block">
+                  <p>
+                    Надёжная основа вашего бренда. Это не&nbsp;просто картинка.
+                    Это лицо вашего бизнеса для клиентов.
+                  </p>
+                  <p>
+                    Мы&nbsp;создаём логотипы и&nbsp;систему стиля (цвета,
+                    шрифты, правила) с&nbsp;фокусом на&nbsp;ясность,
+                    функциональность и&nbsp;долговечность. Убираем лишнее, чтобы
+                    оставалось только&nbsp;то, что работает на&nbsp;вашу
+                    репутацию и&nbsp;доверие.
+                  </p>
+                  <p>
+                    Надёжная основа вашего бренда. Это не&nbsp;просто картинка.
+                    Это лицо вашего бизнеса для клиентов.
+                  </p>
+                  <p>
+                    Мы&nbsp;создаём логотипы и&nbsp;систему стиля (цвета,
+                    шрифты, правила) с&nbsp;фокусом на&nbsp;ясность,
+                    функциональность и&nbsp;долговечность. Убираем лишнее, чтобы
+                    оставалось только&nbsp;то, что работает на&nbsp;вашу
+                    репутацию и&nbsp;доверие.
+                  </p>
                 </div>
               </div>
 
-              <div class="text-content__block text-content__block_3" style="min-height: 45rem;">
-                <h4>
-                  Социальный и благотворительный
-                </h4>
-                <p>
-                  <b>Цель:</b> Поддержка инициатив, позиционирование
-                </p>
-                <p>
-                  <b>Примеры:</b> Продукция с&nbsp;посылом, часть средств от которой идет на добрые дела
-                </p>
-                <div class="text-content__block-bg">
-                  <picture>
-                    <source srcset="./img/blog/blocks/04-mob.webp" type="image/webp" media="(max-width: 576px)">
-                    <img loading="lazy" src="./img/blog/blocks/04.webp" class="image" width="" height=""
-                      aria-hidden="true" alt="">
-                  </picture>
+              <div class="text-content__container">
+                <div class="text-content__block text-content__block_3">
+                  <h3>
+                    Комментарий нашего дизайнера<br />
+                    Ефима лакиенко
+                  </h3>
                 </div>
-              </div>
-              <div class="text-content__block text-content__block_3" style="min-height: 45rem;">
-                <h4>
-                  Социальный и благотворительный
-                </h4>
-                <p>
-                  <b>Цель:</b> Поддержка инициатив, позиционирование
-                </p>
-                <p>
-                  <b>Примеры:</b> Продукция с&nbsp;посылом, часть средств от которой идет на добрые дела
-                </p>
-                <div class="text-content__block-bg">
-                  <picture>
-                    <source srcset="./img/blog/blocks/05-mob.webp" type="image/webp" media="(max-width: 576px)">
-                    <img loading="lazy" src="./img/blog/blocks/05.webp" class="image" width="" height=""
-                      aria-hidden="true" alt="">
-                  </picture>
-                </div>
-              </div>
-              <div class="text-content__block text-content__block_3" style="min-height: 45rem;">
-                <h4>
-                  Социальный и благотворительный
-                </h4>
-                <p>
-                  <b>Цель:</b> Поддержка инициатив, позиционирование
-                </p>
-                <p>
-                  <b>Примеры:</b> Продукция с&nbsp;посылом, часть средств от которой идет на добрые дела
-                </p>
-                <div class="text-content__block-bg">
-                  <picture>
-                    <source srcset="./img/blog/blocks/06-mob.webp" type="image/webp" media="(max-width: 576px)">
-                    <img loading="lazy" src="./img/blog/blocks/06.webp" class="image" width="" height=""
-                      aria-hidden="true" alt="">
-                  </picture>
-                </div>
-              </div>
-              <div class="text-content__block text-content__block_3" style="min-height: 45rem;">
-                <h4>
-                  Социальный и благотворительный
-                </h4>
-                <p>
-                  <b>Цель:</b> Поддержка инициатив, позиционирование
-                </p>
-                <p>
-                  <b>Примеры:</b> Продукция с&nbsp;посылом, часть средств от которой идет на добрые дела
-                </p>
-                <div class="text-content__block-bg">
-                  <picture>
-                    <source srcset="./img/blog/blocks/07-mob.webp" type="image/webp" media="(max-width: 576px)">
-                    <img loading="lazy" src="./img/blog/blocks/07.webp" class="image" width="" height=""
-                      aria-hidden="true" alt="">
-                  </picture>
-                </div>
-              </div>
-            </div>
 
-            <div class="text-content__container text-content__container_nowrap text-content__container_separated">
-              <div class="text-content__block  text-content__block_3">
-                <h3>
-                  Как создать мерч для бренда: пошаговое руководство
-                </h3>
+                <div class="text-content__block">
+                  <p>Надёжная основа вашего бренда.</p>
+                  <p>
+                    Это не&nbsp;просто картинка. Это лицо вашего бизнеса для
+                    клиентов.<br />
+                    Мы&nbsp;создаём логотипы и&nbsp;систему стиля (цвета,
+                    шрифты, правила) с&nbsp;фокусом на&nbsp;ясность,
+                    функциональность и&nbsp;долговечность. Убираем лишнее, чтобы
+                    оставалось только&nbsp;то, что работает на&nbsp;вашу
+                    репутацию и&nbsp;доверие.
+                  </p>
+                </div>
               </div>
-              <div class="text-content__container text-content__container_separated">
-                <div class="text-content__block text-content__block_4">
-                  <p><b>Шаг 1: Поставьте стратегическую цель</b></p>
-                  <p>Это не&nbsp;просто картинка. Это лицо вашего бизнеса для клиентов.
-                    Мы&nbsp;создаём логотипы и&nbsp;систему стиля (цвета, шрифты, правила) с&nbsp;фокусом
-                    на&nbsp;ясность,
-                    функциональность и&nbsp;долговечность. Убираем лишнее, чтобы оставалось только&nbsp;то, что работает
-                    на&nbsp;вашу репутацию и&nbsp;доверие.</p>
+
+              <div class="text-content__container mb-large figures">
+                <figure>
+                  <img src="./img/blog/case1.jpg" alt="" />
+                </figure>
+                <figure>
+                  <img src="./img/case4.png" alt="" />
+                </figure>
+              </div>
+
+              <div class="text-content__container">
+                <div class="text-content__block text-content__block_3">
+                  <h3>
+                    Влияние<br />
+                    на продажи
+                  </h3>
                 </div>
-                <div class="text-content__block text-content__block_4">
-                  <p><b>Шаг 1: Поставьте стратегическую цель</b></p>
-                  <p>Это не&nbsp;просто картинка. Это лицо вашего бизнеса для клиентов.
-                    Мы&nbsp;создаём логотипы и&nbsp;систему стиля (цвета, шрифты, правила) с&nbsp;фокусом
-                    на&nbsp;ясность,
-                    функциональность и&nbsp;долговечность. Убираем лишнее, чтобы оставалось только&nbsp;то, что работает
-                    на&nbsp;вашу репутацию и&nbsp;доверие.</p>
+
+                <div class="text-content__block">
+                  <p>Надёжная основа вашего бренда.</p>
+                  <p>
+                    Это не&nbsp;просто картинка. Это лицо вашего бизнеса для
+                    клиентов. Мы&nbsp;создаём логотипы и&nbsp;систему стиля
+                    (цвета, шрифты, правила) с&nbsp;фокусом на&nbsp;ясность,
+                    функциональность и&nbsp;долговечность. Убираем лишнее, чтобы
+                    оставалось только&nbsp;то, что работает на&nbsp;вашу
+                    репутацию и&nbsp;доверие.
+                  </p>
+                  <p>Надёжная основа вашего бренда.</p>
+                  <p>Надёжная основа вашего бренда.</p>
+                  <p>
+                    Это не&nbsp;просто картинка. Это лицо вашего бизнеса для
+                    клиентов. Мы&nbsp;создаём логотипы и&nbsp;систему стиля
+                    (цвета, шрифты, правила) с&nbsp;фокусом на&nbsp;ясность,
+                    функциональность и&nbsp;долговечность. Убираем лишнее, чтобы
+                    оставалось только&nbsp;то, что работает на&nbsp;вашу
+                    репутацию и&nbsp;доверие.
+                  </p>
+                  <p>Надёжная основа вашего бренда.</p>
+                  <p>Надёжная основа вашего бренда.</p>
+                  <p>
+                    Это не&nbsp;просто картинка. Это лицо вашего бизнеса для
+                    клиентов. Мы&nbsp;создаём логотипы и&nbsp;систему стиля
+                    (цвета, шрифты, правила) с&nbsp;фокусом на&nbsp;ясность,
+                    функциональность и&nbsp;долговечность. Убираем лишнее, чтобы
+                    оставалось только&nbsp;то, что работает на&nbsp;вашу
+                    репутацию и&nbsp;доверие.
+                  </p>
+                  <p>Надёжная основа вашего бренда.</p>
                 </div>
-                <div class="text-content__block text-content__block_4">
-                  <p><b>Шаг 1: Поставьте стратегическую цель</b></p>
-                  <p>Это не&nbsp;просто картинка. Это лицо вашего бизнеса для клиентов.
-                    Мы&nbsp;создаём логотипы и&nbsp;систему стиля (цвета, шрифты, правила) с&nbsp;фокусом
-                    на&nbsp;ясность,
-                    функциональность и&nbsp;долговечность. Убираем лишнее, чтобы оставалось только&nbsp;то, что работает
-                    на&nbsp;вашу репутацию и&nbsp;доверие.</p>
-                </div>
-                <div class="text-content__block text-content__block_4">
-                  <p><b>Шаг 1: Поставьте стратегическую цель</b></p>
-                  <p>Это не&nbsp;просто картинка. Это лицо вашего бизнеса для клиентов.
-                    Мы&nbsp;создаём логотипы и&nbsp;систему стиля (цвета, шрифты, правила) с&nbsp;фокусом
-                    на&nbsp;ясность,
-                    функциональность и&nbsp;долговечность. Убираем лишнее, чтобы оставалось только&nbsp;то, что работает
-                    на&nbsp;вашу репутацию и&nbsp;доверие.</p>
+              </div>
+
+              <div
+                class="text-content__container text-content__container_separated mb-large"
+              >
+                <figure>
+                  <img src="./img/blog/graph.jpg" alt="" />
+                </figure>
+                <figure>
+                  <img src="./img/blog/graph.jpg" alt="" />
+                </figure>
+              </div>
+
+              <div class="text-content__container">
+                <div class="text-content__block text-content__block_3">
+                  <h3>
+                    Влияние<br />
+                    на продажи
+                  </h3>
                 </div>
                 <div class="text-content__block">
-                  <p><b>Шаг 1: Поставьте стратегическую цель</b></p>
-                  <p>Это не&nbsp;просто картинка. Это лицо вашего бизнеса для клиентов.
-                    Мы&nbsp;создаём логотипы и&nbsp;систему стиля (цвета, шрифты, правила) с&nbsp;фокусом
-                    на&nbsp;ясность,
-                    функциональность и&nbsp;долговечность. Убираем лишнее, чтобы оставалось только&nbsp;то, что работает
-                    на&nbsp;вашу репутацию и&nbsp;доверие.</p>
+                  <p>Надёжная основа вашего бренда.</p>
+                  <p>
+                    Это не&nbsp;просто картинка. Это лицо вашего бизнеса для
+                    клиентов. Мы&nbsp;создаём логотипы и&nbsp;систему стиля
+                    (цвета, шрифты, правила) с&nbsp;фокусом на&nbsp;ясность,
+                    функциональность и&nbsp;долговечность. Убираем лишнее, чтобы
+                    оставалось только&nbsp;то, что работает на&nbsp;вашу
+                    репутацию и&nbsp;доверие.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="text-content__container text-content__container_separated"
+              >
+                <div class="text-content__block">
+                  <h4>Графические и цифровые дизайнеры</h4>
+                  <p>
+                    Графический дизайнер - разрабатывает логотипы, баннеры,
+                    плакаты и контент для соцсетей, опираясь на композицию,
+                    цвета и типографику.​ А также именно это направление
+                    ответственно за создание фирменного стиля компании,
+                    упаковывается, как правило в брендбук (гайдбук).
+                    Веб-дизайнер - создаёт макеты сайтов, лендингов и приложений
+                    с учётом интерактивности и удобства.​ UX/UI-дизайнер -
+                    обеспечивает функциональность и внешний вид интерфейсов
+                    цифровых продуктов, улучшая пользовательский опыт.​
+                    Motion-дизайнер - работает с анимацией, спецэффектами
+                    и видео для рекламы и медиа.
+                  </p>
+                </div>
+                <div class="text-content__block">
+                  <h4>Графические и цифровые дизайнеры</h4>
+                  <p>
+                    Графический дизайнер - разрабатывает логотипы, баннеры,
+                    плакаты и контент для соцсетей, опираясь на композицию,
+                    цвета и типографику.​ А также именно это направление
+                    ответственно за создание фирменного стиля компании,
+                    упаковывается, как правило в брендбук (гайдбук).
+                    Веб-дизайнер - создаёт макеты сайтов, лендингов и приложений
+                    с учётом интерактивности и удобства.​ UX/UI-дизайнер -
+                    обеспечивает функциональность и внешний вид интерфейсов
+                    цифровых продуктов, улучшая пользовательский опыт.​
+                    Motion-дизайнер - работает с анимацией, спецэффектами
+                    и видео для рекламы и медиа.
+                  </p>
+                </div>
+                <div class="text-content__block">
+                  <h4>Графические и цифровые дизайнеры</h4>
+                  <p>
+                    Графический дизайнер - разрабатывает логотипы, баннеры,
+                    плакаты и контент для соцсетей, опираясь на композицию,
+                    цвета и типографику.​ А также именно это направление
+                    ответственно за создание фирменного стиля компании,
+                    упаковывается, как правило в брендбук (гайдбук).
+                    Веб-дизайнер - создаёт макеты сайтов, лендингов и приложений
+                    с учётом интерактивности и удобства.​ UX/UI-дизайнер -
+                    обеспечивает функциональность и внешний вид интерфейсов
+                    цифровых продуктов, улучшая пользовательский опыт.​
+                    Motion-дизайнер - работает с анимацией, спецэффектами
+                    и видео для рекламы и медиа.
+                  </p>
+                </div>
+              </div>
+
+              <div class="text-content__container">
+                <div class="text-content__block text-content__block_7">
+                  <h4>Текстовый логотип (Wordmark)</h4>
+                  <p>
+                    Узнаваемость достигается исключительно за счёт уникального
+                    начертания шрифта, цвета и композиции букв. Максимальная
+                    фокусировка на названии бренда, высокая читаемость и чистота
+                    восприятия.
+                  </p>
+                  <p>Примеры: Google, Яндекс</p>
+                </div>
+                <figure>
+                  <picture>
+                    <source
+                      srcset="./img/blog/brands/01-mob.webp"
+                      media="(max-width: 576px)"
+                    />
+                    <img src="./img/blog/brands/01.webp" alt="" />
+                  </picture>
+                </figure>
+              </div>
+              <div class="text-content__container">
+                <div class="text-content__block text-content__block_7">
+                  <h4>
+                    Текстовый логотип со встроенным элементом (Integral
+                    Wordmark)
+                  </h4>
+                  <p>
+                    Эволюция классического текстового логотипа, где в саму
+                    графику букв интегрирован фирменный графический элемент
+                    (символ, паттерн, деталь). Этот элемент несёт смысловую
+                    нагрузку, усиливает идентичность и, что ключевое, может
+                    существовать отдельно как полноценный символ бренда.
+                  </p>
+                  <p>Примеры: Amazon, Citibank</p>
+                </div>
+                <figure>
+                  <picture>
+                    <source
+                      srcset="./img/blog/brands/02-mob.webp"
+                      media="(max-width: 576px)"
+                    />
+                    <img src="./img/blog/brands/02.webp" alt="" />
+                  </picture>
+                </figure>
+              </div>
+
+              <div
+                class="text-content__container text-content__container_separated"
+              >
+                <div
+                  class="text-content__block text-content__block_4"
+                  style="min-height: 45rem"
+                >
+                  <h4>Корпоративный (бизнес-мерч)</h4>
+                  <p><b>Цель:</b> Укрепление культуры, лояльности</p>
+                  <p>
+                    <b>Примеры:</b> Футболки, рюкзаки, пауэрбанки
+                    для&nbsp;сотрудников и клиентов
+                  </p>
+                  <div class="text-content__block-bg">
+                    <picture>
+                      <source
+                        srcset="./img/blog/blocks/01-mob.webp"
+                        type="image/webp"
+                        media="(max-width: 576px)"
+                      />
+                      <img
+                        loading="lazy"
+                        src="./img/blog/blocks/01.webp"
+                        class="image"
+                        width=""
+                        height=""
+                        aria-hidden="true"
+                        alt=""
+                      />
+                    </picture>
+                  </div>
+                </div>
+                <div
+                  class="text-content__block text-content__block_4"
+                  style="min-height: 45rem"
+                >
+                  <h4>Событийный</h4>
+                  <p><b>Цель:</b> Продвижение мероприятий, создание памяти</p>
+                  <p>
+                    <b>Примеры:</b> Сумки, браслеты, блокноты для конференций и
+                    фестивалей
+                  </p>
+                  <div class="text-content__block-bg">
+                    <picture>
+                      <source
+                        srcset="./img/blog/blocks/02-mob.webp"
+                        type="image/webp"
+                        media="(max-width: 576px)"
+                      />
+                      <img
+                        loading="lazy"
+                        src="./img/blog/blocks/02.webp"
+                        class="image"
+                        width=""
+                        height=""
+                        aria-hidden="true"
+                        alt=""
+                      />
+                    </picture>
+                  </div>
+                </div>
+                <div
+                  class="text-content__block text-content__block_4"
+                  style="min-height: 45rem"
+                >
+                  <h4>Социальный и благотворительный</h4>
+                  <p><b>Цель:</b> Поддержка инициатив, позиционирование</p>
+                  <p>
+                    <b>Примеры:</b> Продукция с&nbsp;посылом, часть средств от
+                    которой идет на добрые дела
+                  </p>
+                  <div class="text-content__block-bg">
+                    <picture>
+                      <source
+                        srcset="./img/blog/blocks/03-mob.webp"
+                        type="image/webp"
+                        media="(max-width: 576px)"
+                      />
+                      <img
+                        loading="lazy"
+                        src="./img/blog/blocks/03.webp"
+                        class="image"
+                        width=""
+                        height=""
+                        aria-hidden="true"
+                        alt=""
+                      />
+                    </picture>
+                  </div>
+                </div>
+
+                <div
+                  class="text-content__block text-content__block_3"
+                  style="min-height: 45rem"
+                >
+                  <h4>Социальный и благотворительный</h4>
+                  <p><b>Цель:</b> Поддержка инициатив, позиционирование</p>
+                  <p>
+                    <b>Примеры:</b> Продукция с&nbsp;посылом, часть средств от
+                    которой идет на добрые дела
+                  </p>
+                  <div class="text-content__block-bg">
+                    <picture>
+                      <source
+                        srcset="./img/blog/blocks/04-mob.webp"
+                        type="image/webp"
+                        media="(max-width: 576px)"
+                      />
+                      <img
+                        loading="lazy"
+                        src="./img/blog/blocks/04.webp"
+                        class="image"
+                        width=""
+                        height=""
+                        aria-hidden="true"
+                        alt=""
+                      />
+                    </picture>
+                  </div>
+                </div>
+                <div
+                  class="text-content__block text-content__block_3"
+                  style="min-height: 45rem"
+                >
+                  <h4>Социальный и благотворительный</h4>
+                  <p><b>Цель:</b> Поддержка инициатив, позиционирование</p>
+                  <p>
+                    <b>Примеры:</b> Продукция с&nbsp;посылом, часть средств от
+                    которой идет на добрые дела
+                  </p>
+                  <div class="text-content__block-bg">
+                    <picture>
+                      <source
+                        srcset="./img/blog/blocks/05-mob.webp"
+                        type="image/webp"
+                        media="(max-width: 576px)"
+                      />
+                      <img
+                        loading="lazy"
+                        src="./img/blog/blocks/05.webp"
+                        class="image"
+                        width=""
+                        height=""
+                        aria-hidden="true"
+                        alt=""
+                      />
+                    </picture>
+                  </div>
+                </div>
+                <div
+                  class="text-content__block text-content__block_3"
+                  style="min-height: 45rem"
+                >
+                  <h4>Социальный и благотворительный</h4>
+                  <p><b>Цель:</b> Поддержка инициатив, позиционирование</p>
+                  <p>
+                    <b>Примеры:</b> Продукция с&nbsp;посылом, часть средств от
+                    которой идет на добрые дела
+                  </p>
+                  <div class="text-content__block-bg">
+                    <picture>
+                      <source
+                        srcset="./img/blog/blocks/06-mob.webp"
+                        type="image/webp"
+                        media="(max-width: 576px)"
+                      />
+                      <img
+                        loading="lazy"
+                        src="./img/blog/blocks/06.webp"
+                        class="image"
+                        width=""
+                        height=""
+                        aria-hidden="true"
+                        alt=""
+                      />
+                    </picture>
+                  </div>
+                </div>
+                <div
+                  class="text-content__block text-content__block_3"
+                  style="min-height: 45rem"
+                >
+                  <h4>Социальный и благотворительный</h4>
+                  <p><b>Цель:</b> Поддержка инициатив, позиционирование</p>
+                  <p>
+                    <b>Примеры:</b> Продукция с&nbsp;посылом, часть средств от
+                    которой идет на добрые дела
+                  </p>
+                  <div class="text-content__block-bg">
+                    <picture>
+                      <source
+                        srcset="./img/blog/blocks/07-mob.webp"
+                        type="image/webp"
+                        media="(max-width: 576px)"
+                      />
+                      <img
+                        loading="lazy"
+                        src="./img/blog/blocks/07.webp"
+                        class="image"
+                        width=""
+                        height=""
+                        aria-hidden="true"
+                        alt=""
+                      />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="text-content__container text-content__container_nowrap text-content__container_separated"
+              >
+                <div class="text-content__block text-content__block_3">
+                  <h3>Как создать мерч для бренда: пошаговое руководство</h3>
+                </div>
+                <div
+                  class="text-content__container text-content__container_separated"
+                >
+                  <div class="text-content__block text-content__block_4">
+                    <p><b>Шаг 1: Поставьте стратегическую цель</b></p>
+                    <p>
+                      Это не&nbsp;просто картинка. Это лицо вашего бизнеса для
+                      клиентов. Мы&nbsp;создаём логотипы и&nbsp;систему стиля
+                      (цвета, шрифты, правила) с&nbsp;фокусом на&nbsp;ясность,
+                      функциональность и&nbsp;долговечность. Убираем лишнее,
+                      чтобы оставалось только&nbsp;то, что работает на&nbsp;вашу
+                      репутацию и&nbsp;доверие.
+                    </p>
+                  </div>
+                  <div class="text-content__block text-content__block_4">
+                    <p><b>Шаг 1: Поставьте стратегическую цель</b></p>
+                    <p>
+                      Это не&nbsp;просто картинка. Это лицо вашего бизнеса для
+                      клиентов. Мы&nbsp;создаём логотипы и&nbsp;систему стиля
+                      (цвета, шрифты, правила) с&nbsp;фокусом на&nbsp;ясность,
+                      функциональность и&nbsp;долговечность. Убираем лишнее,
+                      чтобы оставалось только&nbsp;то, что работает на&nbsp;вашу
+                      репутацию и&nbsp;доверие.
+                    </p>
+                  </div>
+                  <div class="text-content__block text-content__block_4">
+                    <p><b>Шаг 1: Поставьте стратегическую цель</b></p>
+                    <p>
+                      Это не&nbsp;просто картинка. Это лицо вашего бизнеса для
+                      клиентов. Мы&nbsp;создаём логотипы и&nbsp;систему стиля
+                      (цвета, шрифты, правила) с&nbsp;фокусом на&nbsp;ясность,
+                      функциональность и&nbsp;долговечность. Убираем лишнее,
+                      чтобы оставалось только&nbsp;то, что работает на&nbsp;вашу
+                      репутацию и&nbsp;доверие.
+                    </p>
+                  </div>
+                  <div class="text-content__block text-content__block_4">
+                    <p><b>Шаг 1: Поставьте стратегическую цель</b></p>
+                    <p>
+                      Это не&nbsp;просто картинка. Это лицо вашего бизнеса для
+                      клиентов. Мы&nbsp;создаём логотипы и&nbsp;систему стиля
+                      (цвета, шрифты, правила) с&nbsp;фокусом на&nbsp;ясность,
+                      функциональность и&nbsp;долговечность. Убираем лишнее,
+                      чтобы оставалось только&nbsp;то, что работает на&nbsp;вашу
+                      репутацию и&nbsp;доверие.
+                    </p>
+                  </div>
+                  <div class="text-content__block">
+                    <p><b>Шаг 1: Поставьте стратегическую цель</b></p>
+                    <p>
+                      Это не&nbsp;просто картинка. Это лицо вашего бизнеса для
+                      клиентов. Мы&nbsp;создаём логотипы и&nbsp;систему стиля
+                      (цвета, шрифты, правила) с&nbsp;фокусом на&nbsp;ясность,
+                      функциональность и&nbsp;долговечность. Убираем лишнее,
+                      чтобы оставалось только&nbsp;то, что работает на&nbsp;вашу
+                      репутацию и&nbsp;доверие.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="text-content__container text-content__container_separated"
+              >
+                <div class="text-content__block text-content__block_has-img">
+                  <div class="img">
+                    <img src="./img/case1.jpg" alt="" />
+                  </div>
+                  <div class="block-content">
+                    <h4>Графические и цифровые дизайнеры</h4>
+                    <p>
+                      Графический дизайнер - разрабатывает логотипы, баннеры,
+                      плакаты и контент для соцсетей, опираясь на композицию,
+                      цвета и типографику.​ А также именно это направление
+                      ответственно за создание фирменного стиля компании,
+                      упаковывается, как правило в брендбук (гайдбук).
+                      Веб-дизайнер - создаёт макеты сайтов, лендингов
+                      и приложений с учётом интерактивности и удобства.​
+                      UX/UI-дизайнер - обеспечивает функциональность и внешний
+                      вид интерфейсов цифровых продуктов, улучшая
+                      пользовательский опыт.​ Motion-дизайнер - работает
+                      с анимацией, спецэффектами и видео для рекламы и медиа.
+                    </p>
+                  </div>
+                </div>
+                <div class="text-content__block text-content__block_has-img">
+                  <div class="img">
+                    <img src="./img/case1.jpg" alt="" />
+                  </div>
+                  <div class="block-content">
+                    <h4>Графические и цифровые дизайнеры</h4>
+                    <p>
+                      Графический дизайнер - разрабатывает логотипы, баннеры,
+                      плакаты и контент для соцсетей, опираясь на композицию,
+                      цвета и типографику.​ А также именно это направление
+                      ответственно за создание фирменного стиля компании,
+                      упаковывается, как правило в брендбук (гайдбук).
+                      Веб-дизайнер - создаёт макеты сайтов, лендингов
+                      и приложений с учётом интерактивности и удобства.​
+                      UX/UI-дизайнер - обеспечивает функциональность и внешний
+                      вид интерфейсов цифровых продуктов, улучшая
+                      пользовательский опыт.​ Motion-дизайнер - работает
+                      с анимацией, спецэффектами и видео для рекламы и медиа.
+                    </p>
+                  </div>
+                </div>
+                <div class="text-content__block text-content__block_has-img">
+                  <div class="img">
+                    <img src="./img/case1.jpg" alt="" />
+                  </div>
+                  <div class="block-content">
+                    <h4>Графические и цифровые дизайнеры</h4>
+                    <p>
+                      Графический дизайнер - разрабатывает логотипы, баннеры,
+                      плакаты и контент для соцсетей, опираясь на композицию,
+                      цвета и типографику.​ А также именно это направление
+                      ответственно за создание фирменного стиля компании,
+                      упаковывается, как правило в брендбук (гайдбук).
+                      Веб-дизайнер - создаёт макеты сайтов, лендингов
+                      и приложений с учётом интерактивности и удобства.​
+                      UX/UI-дизайнер - обеспечивает функциональность и внешний
+                      вид интерфейсов цифровых продуктов, улучшая
+                      пользовательский опыт.​ Motion-дизайнер - работает
+                      с анимацией, спецэффектами и видео для рекламы и медиа.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
-    <div class="cookie-notice" id="cookie-notice">
+        </section>
+      </main>
+      <div class="cookie-notice" id="cookie-notice">
   <div class="cookie-notice__container">
     <div class="cookie-notice__content">
       <div class="cookie-notice__text">
@@ -1146,7 +1453,6 @@
   </div>
 </footer>
 
-  </div>
-</body>
-
+    </div>
+  </body>
 </html>
