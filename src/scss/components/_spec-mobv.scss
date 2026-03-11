@@ -1,0 +1,52 @@
+.spec-mobv {
+  margin-bottom: 4rem;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    align-items: flex-start;
+    padding: 16rem 8rem;
+    background-color: var(--black);
+    border-radius: 4rem;
+
+    background-image:
+      radial-gradient(
+        50% 50% at 50% 50%,
+        rgb(255, 228, 0) 0%,
+        rgb(255, 228, 0, 0) 100%
+      ),
+      radial-gradient(
+        50% 50% at 50% 50%,
+        rgb(255, 228, 0) 0%,
+        rgb(255, 228, 0, 0) 100%
+      );
+    background-size: var(--bg-size) var(--bg-size);
+    background-position: var(--bg-pos-1), var(--bg-pos-2);
+    background-repeat: no-repeat;
+
+    animation: move-bg 15s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+
+    @include mobile {
+      padding: 5rem;
+      gap: 1rem;
+    }
+  }
+
+  &__item {
+    flex-grow: 1;
+    height: 73.6rem;
+    border-radius: 4rem;
+    overflow: hidden;
+    @include mobile {
+      border-radius: 2rem;
+      height: 43.3rem;
+    }
+    &:nth-child(even) {
+      margin-top: 5.6rem;
+      @include mobile {
+        margin-top: 8rem;
+      }
+    }
+  }
+}

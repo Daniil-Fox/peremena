@@ -180,6 +180,47 @@ a {
   }
 }
 
+.modal--service {
+  .cta__header {
+    padding: 5.5rem 6rem;
+
+    @include mobile {
+      padding: 4.5rem 4rem;
+      align-items: flex-start;
+    }
+
+    p {
+      margin: 0;
+
+      font-weight: 300;
+      font-size: 2rem;
+      line-height: 150%;
+      color: var(--black);
+    }
+  }
+
+  .form__btn {
+    margin-top: 9.5rem;
+    @include mobile {
+      margin-top: 2rem;
+    }
+  }
+
+  .modal__close {
+    top: 6rem;
+    right: 6rem;
+    flex-shrink: 0;
+    svg {
+      stroke: var(--white);
+      stroke-width: 2px;
+
+      @include mobile {
+        stroke: var(--black);
+      }
+    }
+  }
+}
+
 .just-validate-error-label {
   display: none;
 }

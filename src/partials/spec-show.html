@@ -1,0 +1,82 @@
+<section class="spec-show">
+  <div class="container">
+    <div class="spec-show__container">
+      <h2 class="spec-show__title spec-show__title_uncage">
+        Это не курс. Это витрина решений
+      </h2>
+
+      <div class="spec-show__covers">
+        <div class="spec-show__item spec-show__item_1">
+          <img src="./img/showcase/01.webp" aria-hidden="true" alt="" />
+        </div>
+        <div class="spec-show__item spec-show__item_2">
+          <img src="./img/showcase/04.webp" aria-hidden="true" alt="" />
+        </div>
+        <div class="spec-show__item spec-show__item_3">
+          <img src="./img/showcase/03.webp" aria-hidden="true" alt="" />
+        </div>
+        <div class="spec-show__item spec-show__item_4">
+          <img src="./img/showcase/02.webp" aria-hidden="true" alt="" />
+        </div>
+
+        <div class="spec-show__decor spec-show__decor_1">
+          <img src="./img/givi/decor1.webp" alt="" />
+        </div>
+        <div class="spec-show__decor spec-show__decor_2">
+          <img src="./img/givi/decor2.webp" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const section = document.querySelector(".spec-show");
+    const items = document.querySelectorAll(".spec-show__item img");
+    const decors = document.querySelectorAll(".spec-show__decor");
+
+    let isVisible = false;
+    let mouseX = 0;
+    let mouseY = 0;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            isVisible = true;
+            document.addEventListener("mousemove", handleMouseMove);
+          } else {
+            isVisible = false;
+            document.removeEventListener("mousemove", handleMouseMove);
+          }
+        });
+      },
+      { threshold: 0.1 },
+    ); // хотя бы 10% в поле зрения
+
+    observer.observe(section);
+
+    function handleMouseMove(e) {
+      if (!isVisible) return;
+      mouseX = e.clientX / window.innerWidth;
+      mouseY = e.clientY / window.innerHeight;
+      requestAnimationFrame(updateParallax);
+    }
+
+    function updateParallax() {
+      const moveX = (mouseX - 0.5) * 20; // регулируй силу
+      const moveY = (mouseY - 0.5) * 20;
+
+      items.forEach((item, index) => {
+        const factor = (index + 1) * 0.5; // разные скорости
+        item.style.transform = `translate(${moveX * factor}px, ${moveY * factor}px)`;
+      });
+
+      decors.forEach((decor, index) => {
+        const factor = (index + 1) * 0.3;
+        decor.style.transform = `translate(${-moveX * factor}px, ${-moveY * factor}px)`;
+      });
+    }
+  });
+</script>

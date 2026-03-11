@@ -1,0 +1,16 @@
+.spec-text {
+  margin-bottom: 4rem;
+  &__container {
+    padding: 5.6rem var(--container-offset);
+    background-color: var(--white);
+    text-align: center;
+    border-radius: 4rem;
+
+    p {
+      margin: 0 auto;
+      &:not(:last-child) {
+        margin-bottom: 1em;
+      }
+    }
+  }
+}

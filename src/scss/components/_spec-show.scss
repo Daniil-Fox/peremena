@@ -1,0 +1,148 @@
+.spec-show {
+  margin-bottom: 4rem;
+  &__container {
+    padding: 8rem 7rem;
+    height: 75.74vh;
+    max-height: 95rem;
+    background-color: var(--white);
+    border-radius: 4rem;
+    overflow: hidden;
+
+    @include mobile {
+      padding: 0;
+      height: auto;
+      max-height: unset;
+    }
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    font-size: 5rem;
+    line-height: 120%;
+    text-transform: lowercase;
+    color: var(--black);
+
+    &_uncage {
+      font-family: var(--font10);
+      font-size: 4.8rem;
+      font-weight: 600;
+    }
+    @include mobile {
+      font-size: 3.6rem;
+    }
+  }
+  &__covers {
+    position: relative;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    height: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 80%;
+    -webkit-perspective: 1600px;
+    perspective: 1600px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+  &__item {
+    position: absolute;
+
+    z-index: 1;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__item_1 {
+    width: 57rem;
+    left: 0;
+    top: 2rem;
+    transform: translate3d(25rem, 0rem, -10rem) rotateX(-10deg) rotateY(30deg)
+      rotateZ(5deg) skewX(5deg);
+
+    @include mobile {
+      width: 24rem;
+
+      transform: translate3d(25rem, 0rem, -10rem) rotateX(-14deg) rotateY(37deg)
+        rotateZ(-4deg) skewX(5deg);
+    }
+  }
+  &__item_2 {
+    width: 44rem;
+    right: 0;
+    top: 0;
+
+    transform: translate3d(0rem, 4rem, -10rem) rotateX(0deg) rotateY(-53deg)
+      rotateZ(5deg) skewX(0deg);
+
+    @include mobile {
+      width: 32rem;
+      right: -8rem;
+      transform: translate3d(-2rem, 0rem, 4rem) rotateX(15deg) rotateY(-28deg)
+        rotateZ(5deg) skewX(0deg);
+    }
+  }
+  &__item_3 {
+    width: 45rem;
+    left: 0;
+    bottom: 0;
+
+    transform: translate3d(35rem, -10rem, -10rem) rotateX(5deg) rotateY(42deg)
+      rotateZ(-6deg) skewX(0deg);
+
+    @include mobile {
+      width: 38rem;
+      left: -10rem;
+
+      transform: translate3d(0rem, 0rem, -10rem) rotateX(5deg) rotateY(42deg)
+        rotateZ(-6deg) skewX(0deg);
+    }
+  }
+  &__item_4 {
+    width: 54rem;
+    right: 0;
+    bottom: 0;
+
+    transform: translate3d(0rem, -5rem, -10rem) rotateX(20deg) rotateY(-45deg)
+      rotateZ(12deg) skewX(0deg);
+
+    @include mobile {
+      width: 26rem;
+      bottom: 2rem;
+      transform: translate3d(2rem, 0rem, 0rem) rotateX(23deg) rotateY(-45deg)
+        rotateZ(20deg) skewX(0deg);
+    }
+  }
+
+  &__decor {
+    position: absolute;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__decor_2 {
+    left: 0;
+    bottom: 0;
+    width: 44rem;
+    aspect-ratio: 1 / 1;
+  }
+
+  &__decor_1 {
+    right: -10.5rem;
+    top: -10rem;
+    transform: translateZ(10rem);
+    width: 28.5rem;
+    aspect-ratio: 1 / 1;
+  }
+}

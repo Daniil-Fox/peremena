@@ -1,0 +1,60 @@
+<section class="spec-hero">
+  <div class="container">
+    <div class="spec-hero__container">
+      <div class="spec-hero__img spec-hero__img_pc">
+        <picture>
+          <source srcset="./img/givi/hero-pc.webp" type="image/webp" />
+          <img
+            loading="lazy"
+            src="./img/givi/hero-pc.jpg"
+            class="image"
+            width="1450"
+            height="720"
+            alt=""
+          />
+        </picture>
+      </div>
+      <div class="spec-hero__img spec-hero__img_mob">
+        <picture>
+          <source srcset="./img/givi/hero-mob.webp" type="image/webp" />
+          <img
+            loading="lazy"
+            src="./img/givi/hero-mob.jpg"
+            class="image"
+            width="320"
+            height="627"
+            alt=""
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const videoSections = document.querySelectorAll('.spec-video');
+
+  videoSections.forEach(section => {
+    const videos = section.querySelectorAll('video');
+
+    videos.forEach(video => {
+      video.loop = true; // делаем видео цикличным
+      video.muted = true; // часто требуется для автозапуска
+      video.playsInline = true; // для мобильных
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.05) { // 5% видно
+            video.play().catch(e => console.log('Autoplay failed:', e));
+          } else {
+            video.pause();
+          }
+        });
+      }, { threshold: [0, 0.05, 0.1] }); // проверяем на 0%, 5%, 10%
+
+      observer.observe(video);
+    });
+  });
+});
+</script>

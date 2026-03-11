@@ -1,4 +1,149 @@
-<div class="modal">
+<div class="modal modal--service">
+  <section class="cta">
+    <div class="container">
+      <div class="cta__container">
+        <button class="btn-reset modal__close modal__close--md">
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 30 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 1L29 29M29 1L1 29"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+        <div class="cta__content">
+          <div class="cta__header corner-smooth-40">
+            <h2 class="title2 cta__title">название услуги</h2>
+            <p>Заполните необходимые данные, наш менеджер с вами свяжется</p>
+
+            <button class="btn-reset modal__close">
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 1L29 29M29 1L1 29"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="cta__img cta__img--mob">
+            <img src="./img/hero-bg.webp" alt="" />
+          </div>
+          <form
+            action="#"
+            class="modal__form form corner-smooth-40"
+            novalidate="novalidate"
+          >
+            <div class="form__field form__field--long">
+              <div class="form__field-wrapper">
+                <input
+                  id="name123"
+                  type="text"
+                  class="form__input input-name"
+                  name="Имя"
+                />
+                <label for="name123" class="form__label">как ваше имя?</label>
+              </div>
+            </div>
+            <div class="form__field form__field--long">
+              <label for="contact-method-modal" class="visually-hidden"
+                >где с вами связаться?</label
+              >
+              <select
+                id="contact-method-modal"
+                name="Способ связи"
+                class="visually-hidden select-contact"
+                aria-label="где с вами связаться?"
+              >
+                <option value="">где с вами связаться?</option>
+                <option value="Telegram">Telegram</option>
+                <option value="Whatsapp">Whatsapp</option>
+                <option value="Email">Email</option>
+              </select>
+
+              <div class="dropdown form__dropdown">
+                <div class="dropdown__header">
+                  <div class="dropdown__label">где с вами связаться?</div>
+                  <div class="dropdown__capture">где с вами связаться?</div>
+                  <div class="dropdown__btn">
+                    <svg class="">
+                      <use
+                        xlink:href="https://peremena.store/wp-content/themes/peremena/assets/img/sprite.svg#arr-down"
+                      ></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="dropdown__body">
+                  <div class="dropdown__content">
+                    <div class="dropdown__item"></div>
+                    <div class="dropdown__item">Telegram</div>
+                    <div class="dropdown__item">Whatsapp</div>
+                    <div class="dropdown__item">Email</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form__field" style="display: none">
+              <div class="form__field-wrapper">
+                <input
+                  id="tel123"
+                  type="text"
+                  class="form__input input-tel"
+                  name="Телефон"
+                  style="display: block"
+                  disabled=""
+                />
+                <input
+                  type="email"
+                  class="form__input input-email"
+                  name="Почта"
+                  style="display: none"
+                  disabled=""
+                />
+                <label for="tel123" class="form__label">телефон/email</label>
+              </div>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-reset btn--accent form__btn"
+              aria-label="Отправить форму обратной связи"
+              disabled=""
+            >
+              отправить
+            </button>
+          </form>
+        </div>
+        <div class="cta__img">
+          <img src="./img/hero-bg.webp" alt="" />
+        </div>
+        <div class="cta__row flex al-c jc-sb corner-smooth-40">
+          <p class="desc1 cta__capture">Не любите заполнять формы?</p>
+          <p class="desc1 cta__capture">
+            Пишите на
+            <a href="mailto:hello@peremena.ru" class="link-btn"
+              >hello@peremena.ru</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- <div class="modal">
   <section class="cta">
     <div class="container">
       <div class="cta__container">
@@ -192,4 +337,4 @@
       </div>
     </div>
   </section>
-</div>
+</div> -->

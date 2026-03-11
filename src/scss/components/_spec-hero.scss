@@ -1,0 +1,126 @@
+:root {
+  --bg-size: 150rem;
+  --bg-pos-1: -85rem -85rem;
+  --bg-pos-2: 85rem 50rem;
+  --bg-pos-3: 85rem -85rem;
+  --bg-pos-4: -85rem 50rem;
+
+  @include mobile {
+    --bg-size: 80rem;
+    --bg-pos-1: -40rem -40rem;
+    --bg-pos-2: 40rem 15rem;
+    --bg-pos-3: 40rem -40rem;
+    --bg-pos-4: -40rem 15rem;
+  }
+}
+
+.spec-desctop {
+  @include mobile {
+    display: none;
+  }
+}
+.spec-mobile {
+  display: none;
+  @include mobile {
+    display: block;
+  }
+}
+.spec-hero {
+  height: 74.75vh;
+  max-height: 95rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 4rem;
+  @include mobile {
+    height: 29rem;
+  }
+  .container {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__container {
+    padding: 9.2rem 10rem;
+    background-color: var(--black);
+    flex-grow: 1;
+    width: 100%;
+    position: relative;
+    border-radius: 4rem;
+    overflow: hidden;
+
+    background-image:
+      radial-gradient(
+        50% 50% at 50% 50%,
+        rgb(255, 228, 0) 0%,
+        rgb(255, 228, 0, 0) 100%
+      ),
+      radial-gradient(
+        50% 50% at 50% 50%,
+        rgb(255, 228, 0) 0%,
+        rgb(255, 228, 0, 0) 100%
+      );
+    background-size: var(--bg-size) var(--bg-size);
+    background-position: var(--bg-pos-1), var(--bg-pos-2);
+    background-repeat: no-repeat;
+
+    animation: move-bg 15s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+
+    @include mobile {
+      background-image: none;
+      padding: 0;
+      animation: none;
+    }
+  }
+
+  &__img {
+    border-radius: 2rem;
+    overflow: hidden;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__img_pc {
+    height: 72rem;
+    width: 145rem;
+
+    @include mobile {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__img_mob {
+    width: 32rem;
+    height: 62.7rem;
+    position: absolute;
+    z-index: 2;
+    right: 10rem;
+    bottom: 9.2rem;
+
+    @include mobile {
+      display: none;
+    }
+  }
+}
+
+@keyframes move-bg {
+  0% {
+    background-position: var(--bg-pos-1), var(--bg-pos-2);
+  }
+  45% {
+    background-position: var(--bg-pos-3), var(--bg-pos-4);
+  }
+
+  65% {
+    background-position: var(--bg-pos-2), var(--bg-pos-3);
+  }
+  100% {
+    background-position: var(--bg-pos-1), var(--bg-pos-2);
+  }
+}
